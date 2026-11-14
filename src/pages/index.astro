@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Carousel from '../components/Carousel.astro';
+import Photo from '../components/Photo.astro';
+import ProductCards from '../components/ProductCards.astro';
+import Callout from '../components/Callout.astro';
+const slides=[
+ {id:'ACF-011',label:'Rampas e acessos',title:'Soluções que acompanham a sua obra.',href:'/corrimaos/inox-rampas/'},
+ {id:'ACF-009',label:'Escadarias',title:'Corrimãos de parede em duas alturas.',href:'/corrimaos/aluminio-escadarias/'},
+ {id:'ACF-003',label:'Acessibilidade',title:'Do acesso ao percurso.',href:'/acessibilidade-e-normas/'},
+];
+---
+<Layout title="Início">
+<section class="home-hero wrap">
+<div class="hero-copy"><span class="eyebrow"><span class="red-line"></span> Alfa Corrimão / Construção civil</span><h1>Corrimãos.<br/>Guarda-corpos.<br/><em>Vidro.</em></h1><p>Corrimãos para escadarias e rampas, guarda-corpos e vidro para edifícios, construtoras e condomínios.</p><div class="button-row"><a class="button" href="/contato/">Solicitar orçamento <span aria-hidden="true">↗</span></a><a class="text-link" href="/obras-realizadas/">Conheça as aplicações <span aria-hidden="true">↓</span></a></div><div class="hero-footnote"><span>Escadarias</span><span>Rampas</span><span>Áreas comuns</span></div></div>
+<Carousel slides={slides} name="Destaques de produtos e obras" hero/>
+</section>
+<div class="service-strip"><div class="wrap"><span>Para construtoras</span><span>Para condomínios</span><span>Para responsáveis por obras</span><a href="/construtoras-e-condominios/">Conheça o atendimento ↗</a></div></div>
+<section class="section wrap"><div class="section-heading"><div><span class="eyebrow">Soluções Alfa</span><h2>Da escadaria à rampa.<br/>Um projeto conectado.</h2></div><p>Conheça os dois produtos prioritários e as demais soluções para o seu edifício.</p></div><ProductCards/></section>
+<section class="section section-muted"><div class="wrap split"><div class="editorial-photo"><Photo id="ACF-023"/><span class="photo-label">Guarda-corpos / Áreas comuns</span></div><div class="editorial-copy"><span class="eyebrow">Para quem constrói e administra</span><h2>A sua obra começa<br/>com uma boa conversa.</h2><p>Obra nova, readequação de condomínio ou contratação por etapas: apresente a necessidade e as informações disponíveis.</p><ul class="feature-list"><li><strong>Escadarias e rampas</strong><span>Corrimãos de alumínio e inox no mesmo fornecedor.</span></li><li><strong>Atendimento técnico</strong><span>Fale com o engenheiro Ernani e tire suas dúvidas.</span></li><li><strong>Informações para orçamento</strong><span>Compartilhe fotos, medidas e projeto, se disponíveis.</span></li></ul><a class="text-link" href="/construtoras-e-condominios/">Soluções para sua obra ↗</a></div></div></section>
+<section class="section wrap"><div class="section-heading"><div><span class="eyebrow">Acessibilidade e projeto</span><h2>Informação clara.<br/>Escolhas bem orientadas.</h2></div><p>O corrimão integra a circulação da edificação. Conheça a relação entre acessibilidade, projeto e adequações para vistoria.</p></div><div class="info-grid"><a href="/corrimaos/aluminio-escadarias/"><span>01</span><h3>Escadarias de edifícios</h3><p>Corrimão duplo de parede em alumínio para escadas residenciais, comerciais e industriais.</p><b>Conhecer produto ↗</b></a><a href="/corrimaos/inox-rampas/"><span>02</span><h3>Rampas de acesso</h3><p>Corrimão duplo em inox para rampas de acessibilidade em edifícios e empreendimentos.</p><b>Conhecer produto ↗</b></a><a href="/acessibilidade-e-normas/"><span>03</span><h3>Acessibilidade e normas</h3><p>Entenda o papel do corrimão e a importância da avaliação do projeto.</p><b>Saiba mais ↗</b></a></div></section>
+<Callout/>
+</Layout>

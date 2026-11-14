@@ -1,0 +1,6 @@
+---
+import Photo from './Photo.astro';
+import {products} from '../data/site';
+const {all=true}=Astro.props;
+---
+<div class:list={['product-grid',{'two-columns':!all}]}>{(all?products:products.slice(0,2)).map(p=><a class="product-card" href={p.href}><div class="photo-frame"><Photo id={p.image} sizes="(max-width: 650px) 100vw, 45vw"/></div><div class="product-card-body"><span class="eyebrow">{p.eyebrow}</span><h3>{p.title}</h3><p>{p.text}</p><span class="text-link">Ver solução <span aria-hidden="true">↗</span></span></div></a>)}</div>

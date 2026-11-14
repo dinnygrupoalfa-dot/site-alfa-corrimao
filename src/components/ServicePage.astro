@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Carousel from './Carousel.astro';
+import Callout from './Callout.astro';
+const {kind}=Astro.props;
+const glass=kind==='vidro';
+const title=glass?'Vidro temperado':'Guarda-corpos';
+const slides=glass?[
+{id:'ACF-028',label:'Vidro / Sacadas',title:'Fechamento de varanda com painéis transparentes.'},
+{id:'ACF-030',label:'Vidro / Portas',title:'Porta de correr com vidro fosco e trilho aparente.'},
+{id:'ACF-034',label:'Vidro / Varandas',title:'Painéis de vidro em varanda com vista urbana.'}
+]:[
+{id:'ACF-005',label:'Guarda-corpos / Acessos',title:'Painéis de vidro e estrutura metálica em escadaria.'},
+{id:'ACF-024',label:'Guarda-corpos / Escadas',title:'Guarda-corpo metálico preto em escadaria interna.'},
+{id:'ACF-023',label:'Guarda-corpos / Áreas comuns',title:'Guarda-corpos de vidro no perímetro da área de piscina.'}
+];
+---
+<Layout title={title}><section class="page-heading wrap"><span class="eyebrow">Soluções Alfa / {title}</span><h1>{glass?<>Vidro que integra<br/>os <em>espaços.</em></>:<>Guarda-corpos para<br/>a sua <em>obra.</em></>}</h1><p class="lead">{glass?'Fechamentos de sacadas e portas de vidro. Conheça as aplicações do acervo e apresente seu projeto.':'Aplicações em escadarias, sacadas e áreas comuns de edifícios e condomínios.'}</p></section><section class="wrap showcase"><Carousel slides={slides} name={'Galeria de '+title}/></section><section class="section wrap"><div class="section-heading"><div><span class="eyebrow">Aplicações</span><h2>{glass?'Um olhar para\ncada ambiente.':'Cada espaço tem\nsuas necessidades.'}</h2></div><p>{glass?'As imagens apresentam fechamentos e portas. Tipo de vidro, dimensões e ferragens devem ser definidos para o projeto; não são inferidos somente pela fotografia.':'O acervo apresenta guarda-corpos metálicos e soluções com painéis de vidro. A composição e os detalhes da instalação dependem da aplicação e do projeto.'}</p></div><div class="info-grid"><a href="/construtoras-e-condominios/"><span>01</span><h3>Edifícios e condomínios</h3><p>Apresente o contexto da obra e as áreas envolvidas.</p><b>Conhecer atendimento ↗</b></a><a href="/obras-realizadas/"><span>02</span><h3>Aplicações do acervo</h3><p>Veja outros registros organizados por tipo de solução.</p><b>Ver galeria ↗</b></a><a href={glass?'/guarda-corpos/':'/vidro-temperado/'}><span>03</span><h3>{glass?'Guarda-corpos':'Soluções em vidro'}</h3><p>Explore soluções complementares para o mesmo projeto.</p><b>Conhecer solução ↗</b></a></div></section><Callout/></Layout>

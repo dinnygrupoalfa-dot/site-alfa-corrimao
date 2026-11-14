@@ -1,0 +1,134 @@
+[
+  {
+    "id": "ACF-001",
+    "originalName": "alfa-corrimao-duplo-parede-branco-escadaria-dois-lances-ac370.jpeg",
+    "alt": "Escada interna em dois lances com corrimãos brancos duplos fixados às paredes; patamar e retorno visíveis.",
+    "application": "Escadaria de prédio / parede",
+    "source": "https://drive.google.com/file/d/1dI8vJxEoQ5Nu9QeutXLNwnH4HkoCXB8j/view",
+    "materialEvidence": "Material não verificável pela imagem",
+    "reviewStatus": "Seleção visual preliminar; aprovação editorial pendente",
+    "width": 1024,
+    "height": 768
+  },
+  {
+    "id": "ACF-003",
+    "originalName": "alfa-corrimao-duplo-inox-rampa-externa-curva-01.jpg",
+    "alt": "Rampa externa sinuosa com corrimão tubular metálico polido em duas alturas, vegetação nas laterais.",
+    "application": "Rampa externa de acessibilidade",
+    "source": "https://drive.google.com/file/d/10ZJijjJGlEbGKPw4DLHBCEAJI8nlME2b/view",
+    "materialEvidence": "Inox identificado no nome da fonte; liga não informada",
+    "reviewStatus": "Seleção visual preliminar; aprovação editorial pendente",
+    "width": 1280,
+    "height": 768
+  },
+  {
+    "id": "ACF-004",
+    "originalName": "alfa-corrimao-duplo-inox-rampa-acesso-reta-02.jpg",
+    "alt": "Rampa de acesso reta em área de entrada, com dois corrimãos metálicos paralelos em cada lateral.",
+    "application": "Rampa de acesso em prédio",
+    "source": "https://drive.google.com/file/d/1-EV7IRCG-fwRVstJsHdEQVAA42E2pKvu/view",
+    "materialEvidence": "Inox identificado no nome da fonte; liga não informada",
+    "reviewStatus": "Seleção visual preliminar; aprovação editorial pendente",
+    "width": 768,
+    "height": 768
+  },
+  {
+    "id": "ACF-005",
+    "originalName": "alfa-guarda-corpo-vidro-metal-escadaria-edificio-ac360.jpeg",
+    "alt": "Escadaria de acesso a edifício com painéis transparentes de vidro, estrutura metálica e corrimãos polidos.",
+    "application": "Guarda-corpo de vidro em escadaria",
+    "source": "https://drive.google.com/file/d/1RCMCR-FUQGty9iH9Ek0CVZLl8TcYvns-/view",
+    "materialEvidence": "Estrutura metálica; liga não confirmada",
+    "reviewStatus": "Seleção visual preliminar; aprovação editorial pendente",
+    "width": 1024,
+    "height": 768
+  },
+  {
+    "id": "ACF-007",
+    "originalName": "alfa-corrimao-duplo-branco-patamar-escadaria-detalhe-ac380.jpeg",
+    "alt": "Detalhe do encontro e continuidade de dois corrimãos tubulares brancos em patamar de escada, com suportes na parede.",
+    "application": "Escadaria; detalhe de execução",
+    "source": "https://drive.google.com/file/d/1mdSOgKSgBFlHV9v6A2vbb7hRxX4tfdcv/view",
+    "materialEvidence": "Material específico não verificável pela foto",
+    "reviewStatus": "Seleção visual preliminar; aprovação editorial pendente",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "ACF-009",
+    "originalName": "alfa-corrimao-duplo-branco-escadaria-piso-escuro-ac366.jpeg",
+    "alt": "Vista frontal de escadaria interna com degraus escuros antiderrapantes e corrimãos brancos duplos nas duas paredes.",
+    "application": "Escadaria de prédio; vista geral",
+    "source": "https://drive.google.com/file/d/1DmPQW0X_K_v2D8kuWREqFhW8wKlYZHbE/view",
+    "materialEvidence": "Material específico não verificável pela foto",
+    "reviewStatus": "Seleção visual preliminar; aprovação editorial pendente",
+    "width": 960,
+    "height": 1280
+  },
+  {
+    "id": "ACF-011",
+    "originalName": "alfa-corrimao-duplo-metal-polido-rampa-externa-edificio-vista-geral-2026.jpeg",
+    "alt": "Vista ampla de rampa externa de acesso a edifício com corrimãos tubulares metálicos em duas alturas, guarda-corpos de vidro e escada ao lado.",
+    "application": "Rampa externa de acesso; composição arquitetônica",
+    "source": "https://drive.google.com/file/d/1lJJK7P7fbZ7fJDmqc6JNBzqi2GvHglOc/view",
+    "materialEvidence": "Metal polido visível; inox não confirmado tecnicamente",
+    "reviewStatus": "Seleção visual preliminar; aprovação editorial pendente",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "ACF-023",
+    "originalName": "alfa-guarda-corpo-vidro-piscina-condominio-ac359.jpeg",
+    "alt": "Vista panorâmica de área de piscina em condomínio com guarda-corpos de vidro e perfis metálicos claros no perímetro.",
+    "application": "Guarda-corpo em área comum e piscina",
+    "source": "https://drive.google.com/file/d/1S4HzvmQOXPWlzq-6apO5S2Bl1KDJdpZI/view",
+    "materialEvidence": "Vidro e metal visíveis; composição e liga a confirmar",
+    "reviewStatus": "Seleção visual preliminar; aprovação editorial pendente",
+    "width": 1024,
+    "height": 765
+  },
+  {
+    "id": "ACF-024",
+    "originalName": "alfa-guarda-corpo-metalico-preto-escadaria-interna-ac355.jpeg",
+    "alt": "Escadaria interna clara com guarda-corpo metálico preto de barras horizontais e corrimão escuro, junto a parede com faixa vermelha.",
+    "application": "Guarda-corpo metálico em escada interna",
+    "source": "https://drive.google.com/file/d/1PJ06I2tYAB-DLq_xAQa33bCnDi-CMEG1/view",
+    "materialEvidence": "Metal preto; confirmar material e acabamento específicos",
+    "reviewStatus": "Seleção visual preliminar; aprovação editorial pendente",
+    "width": 1024,
+    "height": 768
+  },
+  {
+    "id": "ACF-028",
+    "originalName": "alfa-fechamento-vidro-sacada-varanda-predio-vista-cidade-15.jpg",
+    "alt": "Fechamento transparente de varanda/sacada alta com painéis verticais, vista panorâmica da cidade e corrimão ao fundo.",
+    "application": "Envidraçamento/fechamento de sacada",
+    "source": "https://drive.google.com/file/d/1AI4xQz_6qqPPHC6nDBxKILcNpezPWW4b/view",
+    "materialEvidence": "Nome original menciona vidro temperado; composição/espessura não verificadas",
+    "reviewStatus": "Seleção visual preliminar; aprovação editorial pendente",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "ACF-030",
+    "originalName": "alfa-porta-vidro-fosco-correr-trilho-aparente-inox-01.jpg",
+    "alt": "Porta de vidro fosco de correr com ferragens metálicas e roldanas em trilho aparente, em ambiente interno.",
+    "application": "Porta de correr em vidro e metal",
+    "source": "https://drive.google.com/file/d/1_KDzkuvxOl6gZaRC4tG2jNk18SqL-4Fg/view",
+    "materialEvidence": "Arquivo original 'porta_aco-inox_vidro-temperado_01.jpg'; conferir material de vidro/ferragens",
+    "reviewStatus": "Seleção visual preliminar; aprovação editorial pendente",
+    "width": 1000,
+    "height": 756
+  },
+  {
+    "id": "ACF-034",
+    "originalName": "alfa-fechamento-vidro-sacada-panorama-urbano-10.jpg",
+    "alt": "Varanda elevada protegida por painéis verticais transparentes que fecham a frente e a lateral, com vista panorâmica de prédios e céu.",
+    "application": "Fechamento de sacada/varanda em vidro",
+    "source": "https://drive.google.com/file/d/18qEXPS4mRNaYHwrdf1KSiY6nNy7mGfW9/view",
+    "materialEvidence": "Origem identifica vidro temperado; confirmar antes de alegação técnica",
+    "reviewStatus": "Seleção visual preliminar; aprovação editorial pendente",
+    "width": 1280,
+    "height": 960
+  }
+]

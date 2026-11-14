@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Carousel from './Carousel.astro';
+import Callout from './Callout.astro';
+import {products,whatsapp} from '../data/site';
+const {kind}=Astro.props;
+const aluminum=kind==='aluminio';
+const product=products[aluminum?0:1];
+const related=products[aluminum?1:0];
+const slides=aluminum?[
+ {id:'ACF-009',label:'Escadaria / Vista geral',title:'Corrimãos duplos acompanhando o lance da escada.'},
+ {id:'ACF-007',label:'Escadaria / Detalhe',title:'Continuidade dos corrimãos no patamar.'},
+ {id:'ACF-001',label:'Escadaria / Dois lances',title:'Corrimãos brancos fixados às paredes.'}
+]:[
+ {id:'ACF-003',label:'Rampa / Percurso externo',title:'Dois níveis de apoio ao longo da rampa.'},
+ {id:'ACF-004',label:'Rampa / Acesso',title:'Corrimãos nas laterais do percurso.'},
+ {id:'ACF-011',label:'Rampa / Vista geral',title:'Rampa, escadaria e guarda-corpos no acesso ao edifício.'}
+];
+---
+<Layout title={aluminum?'Corrimão duplo de alumínio para escadarias':'Corrimão duplo de inox para rampas'} description={product.text}>
+<div class="wrap breadcrumb"><a href="/">Início</a><span>/</span><a href="/corrimaos/">Corrimãos</a><span>/</span><span>{aluminum?'Alumínio para escadarias':'Inox para rampas'}</span></div>
+<section class="wrap product-hero"><div><span class="eyebrow">{product.eyebrow}</span><h1>{aluminum?<>Corrimão duplo<br/>de <em>alumínio.</em></>:<>Corrimão duplo<br/>de <em>inox.</em></>}</h1><p class="lead">{aluminum?'Para escadarias de prédios residenciais, comerciais e industriais.':'Para rampas de acessibilidade em edifícios, condomínios e empreendimentos.'}</p><p>{aluminum?'Instalado na parede da escadaria, com tubo redondo e acessórios em alumínio.':'Uma solução para os percursos de acesso de pessoas com deficiência ou mobilidade reduzida.'}</p><div class="button-row"><a class="button" href={whatsapp('Olá! Gostaria de um orçamento de '+product.title.toLowerCase()+' para minha obra.')} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a><a class="text-link" href="#detalhes">Conhecer o produto ↓</a></div></div><Carousel slides={slides} name={aluminum?'Galeria de corrimãos em escadarias':'Galeria de corrimãos em rampas'} hero/></section>
+<section id="detalhes" class="section wrap"><div class="section-heading"><div><span class="eyebrow">Produto e aplicação</span><h2>{aluminum?'Apoio contínuo.\nDo lance ao patamar.':'Acessos que conectam\nos espaços.'}</h2></div><p>{aluminum?'Aplicação em escadarias, incluindo escadas de emergência, conforme as necessidades do edifício e de seu projeto.':'Para rampas de acesso em condomínios, empresas e obras. Apresente o percurso e as informações do projeto para orçamento.'}</p></div>
+<div class="detail-grid"><article><h3>{aluminum?'Composição em alumínio':'Corrimão duplo em aço inox'}</h3><p>{aluminum?'Tubo redondo de 38,1 mm e acessórios em alumínio, com instalação em parede de escadaria.':'Produto destinado a rampas de acessibilidade. As especificações de material, acabamento e fixação integram a definição técnica da solução.'}</p></article><article><h3>{aluminum?'Acabamentos e cores':'Para o percurso da rampa'}</h3><p>{aluminum?'Branco, preto, bronze e variações de cinza estão entre as opções informadas pela Alfa. Consulte as opções para o seu projeto.':'Corrimãos em duas alturas de apoio. O traçado e os detalhes de instalação precisam acompanhar o projeto de acessibilidade da edificação.'}</p>{aluminum&&<div class="swatches" aria-label="Referências visuais de cores: branco, preto, bronze e cinza"><i style="--swatch:#e9e9e5"></i><i style="--swatch:#252525"></i><i style="--swatch:#8b6a45"></i><i style="--swatch:#8c8d8d"></i><small>Cores ilustrativas</small></div>}</article><article><h3>{aluminum?'Estrutura leve':'Escadaria e rampa no mesmo projeto'}</h3><p>{aluminum?'Estrutura leve, agilidade na instalação e facilidade de manutenção estão entre as características informadas para este produto.':'A Alfa trabalha também com corrimão de parede em alumínio para escadarias. Você pode apresentar as duas necessidades na mesma solicitação.'}</p></article></div></section>
+<section class="section section-muted"><div class="wrap split text-split"><div><span class="eyebrow">Acessibilidade e normas</span><h2>O projeto orienta<br/>cada aplicação.</h2></div><div><p>Os dois produtos prioritários foram apresentados pela Alfa com referência à ABNT NBR 9050. A avaliação técnica deve considerar o projeto e os requisitos aplicáveis à edificação.</p><p>O fornecimento de corrimãos pode integrar as adequações da obra. A instalação, isoladamente, não garante a emissão de AVCB.</p><a class="text-link" href="/acessibilidade-e-normas/">Entenda a relação com as normas ↗</a></div></div></section>
+<section class="section wrap"><div class="section-heading"><div><span class="eyebrow">Do projeto ao orçamento</span><h2>Conte o que sua obra precisa.</h2></div></div><ol class="steps"><li><span>01</span><h3>Apresente a obra</h3><p>Informe cidade, tipo de edifício e serviço desejado.</p></li><li><span>02</span><h3>Compartilhe as informações</h3><p>Fotos, medidas aproximadas, planta ou memorial, se disponíveis.</p></li><li><span>03</span><h3>Fale com o engenheiro</h3><p>Converse com Ernani e tire suas dúvidas.</p></li></ol></section>
+<section class="related wrap"><span class="eyebrow">Solução complementar</span><div><h2>{related.title}</h2><p>{related.text}</p><a class="text-link" href={related.href}>Conhecer a solução ↗</a></div></section>
+<Callout/>
+</Layout>

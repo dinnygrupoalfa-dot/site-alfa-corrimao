@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+import {site,nav,products,whatsapp} from '../data/site';
+interface Props {title:string; description?:string;}
+const {title,description=site.description}=Astro.props;
+const pathname=Astro.url.pathname;
+---
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>{title==='Início'?site.name+' | Corrimãos, guarda-corpos e vidro':title+' | '+site.name}</title>
+<meta name="description" content={description}/><meta name="robots" content="noindex, nofollow"/>
+<meta name="theme-color" content="#101112"/>
+<meta property="og:title" content={title+' | '+site.name}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/><meta property="og:locale" content="pt_BR"/>
+<link rel="icon" type="image/png" href="/images/acf-006.png"/>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="topbar"><div class="wrap"><span>Corrimãos · Guarda-corpos · Vidro</span><a href={'tel:'+site.landlineHref}>{site.landline}</a></div></div>
+<header class="header"><div class="wrap header-inner">
+<a href="/" class="brand" aria-label="Alfa Corrimão — início"><img src="/images/acf-006.png" width="220" height="80" alt="Alfa Corrimão" fetchpriority="high"/></a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
+<nav id="main-nav" aria-label="Menu principal">{nav.map(n=><a href={n.href} aria-current={pathname===n.href?'page':undefined}>{n.label}</a>)}</nav>
+<a class="button header-cta" href="/contato/">Pedir orçamento <span aria-hidden="true">↗</span></a>
+</div></header>
+<main id="conteudo"><slot/></main>
+<footer class="footer"><div class="wrap footer-grid">
+<div class="footer-brand"><a href="/" class="brand"><img src="/images/acf-006.png" width="220" height="80" alt="Alfa Corrimão" loading="lazy"/></a><p>Corrimãos, guarda-corpos e soluções em vidro para a sua obra.</p></div>
+<div><h2>Soluções</h2><ul>{products.map(p=><li><a href={p.href}>{p.title}</a></li>)}<li><a href="/acessibilidade-e-normas/">Acessibilidade e normas</a></li></ul></div>
+<div><h2>Alfa Corrimão</h2><ul><li><a href="/quem-somos/">Quem somos</a></li><li><a href="/construtoras-e-condominios/">Construtoras e condomínios</a></li><li><a href="/obras-realizadas/">Obras realizadas</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contato/">Contato e orçamentos</a></li></ul></div>
+<div><h2>Converse com a Alfa</h2><a class="footer-phone" href={'tel:+55'+site.phone}>{site.phoneLabel}</a><p>Atendimento técnico com Ernani</p><a href={'mailto:'+site.email}>{site.email}</a><p><a href={'tel:'+site.landlineHref}>{site.landline}</a></p></div>
+</div><div class="wrap footer-bottom"><span>© {new Date().getFullYear()} Alfa Corrimão</span><div><a href="/politica-de-privacidade/">Privacidade</a><a href="/termos-de-uso/">Termos de uso</a></div></div></footer>
+<a class="floating-contact" href={whatsapp()} target="_blank" rel="noopener noreferrer" aria-label="Conversar com a Alfa Corrimão no WhatsApp"><span aria-hidden="true">↗</span> WhatsApp</a>
+<script>import '../scripts/site';</script>
+</body></html>

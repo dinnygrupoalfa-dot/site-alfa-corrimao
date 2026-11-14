@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Photo from '../components/Photo.astro';
+import Callout from '../components/Callout.astro';
+const photos=[
+{id:'ACF-009',category:'escadarias',label:'Escadaria interna',title:'Corrimãos brancos em duas alturas'},
+{id:'ACF-007',category:'escadarias',label:'Escadaria / Patamar',title:'Detalhe de continuidade na parede'},
+{id:'ACF-003',category:'rampas',label:'Rampa externa',title:'Corrimãos acompanhando o percurso'},
+{id:'ACF-011',category:'rampas',label:'Acesso ao edifício',title:'Rampa e escadaria'},
+{id:'ACF-005',category:'guarda-corpos',label:'Guarda-corpos',title:'Vidro e metal em escadaria'},
+{id:'ACF-023',category:'guarda-corpos',label:'Áreas comuns',title:'Guarda-corpos no entorno da piscina'},
+{id:'ACF-024',category:'guarda-corpos',label:'Escadaria interna',title:'Guarda-corpo metálico preto'},
+{id:'ACF-028',category:'vidro',label:'Vidro / Sacadas',title:'Fechamento de varanda'},
+{id:'ACF-030',category:'vidro',label:'Vidro / Portas',title:'Porta de correr com vidro fosco'}
+];
+---
+<Layout title="Obras realizadas"><section class="page-heading wrap"><span class="eyebrow">Acervo Alfa / Aplicações</span><h1>O produto no<br/>seu <em>contexto.</em></h1><p class="lead">Registros do acervo da Alfa Corrimão, organizados por aplicação.</p></section><section class="section wrap compact-top" data-gallery><div class="filter-bar" role="group" aria-label="Filtrar fotografias">{[{id:'todos',label:'Todas'},{id:'escadarias',label:'Escadarias'},{id:'rampas',label:'Rampas'},{id:'guarda-corpos',label:'Guarda-corpos'},{id:'vidro',label:'Vidro'}].map(f=><button type="button" data-filter={f.id} aria-pressed={f.id==='todos'}>{f.label}</button>)}</div><p class="sr-only" data-gallery-status role="status" aria-live="polite"></p><div class="gallery-grid">{photos.map(p=><figure data-category={p.category}><button type="button" class="zoom-photo" aria-label={'Ampliar: '+p.title} data-zoom><Photo id={p.id} sizes="(max-width: 650px) 100vw, 33vw"/><span aria-hidden="true">↗</span></button><figcaption><span class="eyebrow">{p.label}</span><h2>{p.title}</h2></figcaption></figure>)}</div></section><Callout/></Layout>
