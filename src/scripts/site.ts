@@ -20,7 +20,7 @@ document.querySelectorAll<HTMLElement>('[data-carousel]').forEach(carousel=>{
  let timer:ReturnType<typeof setInterval>|undefined;
  const render=()=>{slides.forEach((slide,i)=>{slide.inert=i!==index;});counter.textContent=String(index+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');dots.forEach((dot,i)=>dot.setAttribute('aria-pressed',String(index===i)));pause.textContent=paused?'Reproduzir':'Pausar';pause.setAttribute('aria-label',paused?'Reproduzir automaticamente':'Pausar reprodução automática');pause.setAttribute('aria-pressed',String(paused));};
  const go=(next:number,manual=false)=>{index=(next+slides.length)%slides.length;if(manual){paused=true;status.textContent='Fotografia '+(index+1)+' de '+slides.length;}track.scrollTo({left:slides[index].offsetLeft-track.offsetLeft,behavior:reduced.matches?'instant':'smooth'});render();updateTimer();};
- const updateTimer=()=>{if(timer)clearInterval(timer);if(!paused&&!hovered&&!focused&&visible&&!document.hidden&&slides.length>1)timer=setInterval(()=>go(index+1),6500);};
+ const updateTimer=()=>{if(timer)clearInterval(timer);if(!paused&&!hovered&&!focused&&visible&&!document.hidden&&slides.length>1)timer=setInterval(()=>go(index+1),Number(carousel.dataset.interval)||6500);};
  carousel.querySelector('[data-prev]')?.addEventListener('click',()=>go(index-1,true));
  carousel.querySelector('[data-next]')?.addEventListener('click',()=>go(index+1,true));
  dots.forEach((dot,i)=>dot.addEventListener('click',()=>go(i,true)));

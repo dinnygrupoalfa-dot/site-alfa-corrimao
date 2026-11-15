@@ -1,0 +1,31 @@
+---
+interface Slide {src:string; alt:string; label:string; title:string; code?:string;}
+interface Props {slides:Slide[];name:string;intervalMs?:number;}
+const {slides,name,intervalMs=3500}=Astro.props;
+---
+<section class="carousel lp-carousel" data-carousel data-interval={intervalMs} aria-label={name} aria-roledescription="carrossel">
+  <div class="carousel-track" data-track tabindex="0" aria-label="Fotografias da Alfa Corrimão; use as setas para navegar">
+    {slides.map((slide,index)=>
+      <figure class="carousel-slide" data-slide role="group" aria-roledescription="slide" aria-label={String(index+1)+' de '+slides.length}>
+        <img src={slide.src} alt={slide.alt} loading={index===0?'eager':'lazy'} decoding="async" width="1280" height="960" />
+        <figcaption>
+          <span class="eyebrow">{slide.label}</span>
+          <span class="slide-title">{slide.title}</span>
+          {slide.code&&<small class="lp-photo-code">{slide.code}</small>}
+        </figcaption>
+      </figure>
+    )}
+  </div>
+  <div class="carousel-controls">
+    <span data-counter aria-live="off">01 / {String(slides.length).padStart(2,'0')}</span>
+    <div class="carousel-dots" aria-label="Escolher fotografia">
+      {slides.map((_,i)=><button type="button" data-goto={i} aria-label={'Ver fotografia '+(i+1)} aria-pressed={i===0}><span></span></button>)}
+    </div>
+    <div class="carousel-actions">
+      <button type="button" data-prev aria-label="Fotografia anterior">←</button>
+      <button type="button" data-pause aria-label="Pausar reprodução automática" aria-pressed="false">Pausar</button>
+      <button type="button" data-next aria-label="Próxima fotografia">→</button>
+    </div>
+  </div>
+  <span class="sr-only" data-carousel-status role="status" aria-live="polite"></span>
+</section>

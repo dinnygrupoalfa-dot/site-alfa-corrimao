@@ -10,6 +10,8 @@ export function buildQuoteMessage(fields) {
   'Cidade/estado: '+clean(fields.cidade),
   'Serviço: '+clean(fields.servico)];
  if(clean(fields.empresa))lines.push('Empresa/condomínio: '+clean(fields.empresa));
+ if(clean(fields.torres))lines.push('Torres/blocos: '+clean(fields.torres));
+ if(clean(fields.pavimentos))lines.push('Pavimentos: '+clean(fields.pavimentos));
  if(clean(fields.mensagem))lines.push('Sobre a obra: '+clean(fields.mensagem));
  return lines.join('\n');
 }
