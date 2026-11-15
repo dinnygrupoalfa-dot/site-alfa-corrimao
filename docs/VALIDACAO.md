@@ -24,3 +24,12 @@
 ## Limites
 
 Não foi enviada mensagem no WhatsApp nem testado recebimento pela equipe. Contatos continuam sujeitos à validação comercial. Não foi feito teste físico em aparelhos móveis; foi usada a emulação de viewport do navegador. A aprovação editorial das fotos e textos permanece pendente. O workflow CI executará os mesmos comandos no GitHub; esta documentação registra os resultados locais, não antecipa o status remoto.
+
+## Atualização de implantação — 15/11/2026 (fonte: Cloudflare Pages)
+
+- Branch: `main`; repositório `dinnygrupoalfa-dot/site-alfa-corrimao`.
+- Commit verificado: `a19ab33b7dcd892c9dd79d883472c3e4a09c85b8`.
+- Log remoto: **15 páginas compiladas**, incluindo `/corrimaos-para-predios/index.html`; upload e implantação concluídos com status **success**.
+- Endereço de revisão: https://alfa-corrimao-web.pages.dev/
+- **Não foi feita nova bateria de testes locais ou avaliação visual física de todos os dispositivos** nesta atualização; não reproduzir os testes da versão de 14 páginas como se fossem testes da versão de 15.
+- Em 15/11, as 11 fotos do Píer de Cubatão foram catalogadas somente no Drive. Documentação e catálogo foram atualizados; **nenhuma foto do píer foi colocada no site**.

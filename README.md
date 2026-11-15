@@ -21,7 +21,7 @@ npm run test:site
 npm run preview
 ```
 
-O build exporta as 14 páginas e seus recursos para `dist/`. Não depende de ChatGPT Sites, contas de visitantes, servidor de aplicação ou banco de dados.
+O build exporta **15 páginas** e seus recursos para `dist/`. Não depende de ChatGPT Sites, contas de visitantes, servidor de aplicação ou banco de dados.
 
 ## Páginas
 
@@ -32,6 +32,7 @@ O build exporta as 14 páginas e seus recursos para `dist/`. Não depende de Cha
 | Corrimãos | /corrimaos/ |
 | Alumínio para escadarias | /corrimaos/aluminio-escadarias/ |
 | Inox para rampas | /corrimaos/inox-rampas/ |
+| Landing para anúncios: escadarias e rampas | /corrimaos-para-predios/ (âncoras #escadarias e #rampas) |
 | Guarda-corpos | /guarda-corpos/ |
 | Vidro temperado | /vidro-temperado/ |
 | Acessibilidade e normas | /acessibilidade-e-normas/ |
@@ -54,13 +55,18 @@ O build exporta as 14 páginas e seus recursos para `dist/`. Não depende de Cha
 - `public/images/`: fotos originais do acervo, cópias WebP otimizadas e logotipo catalogado.
 - `docs/CONTEUDO-E-FONTES.md`: critérios editoriais e rastreabilidade.
 - `docs/PENDENCIAS.md`: validações comerciais e editoriais restantes.
-- `docs/CLOUDFLARE-PAGES.md`: parâmetros para futura integração, ainda não configurada.
+- `docs/CLOUDFLARE-PAGES.md`: integração GitHub–Cloudflare Pages ativa, publicação e indexação.
+- `docs/VALIDACAO.md`: resultados de testes, implantação e limites.
+- `docs/REVISOES-E-PRESTACAO-DE-CONTAS.md`: pedidos de Ernani/Enéias, estados, evidências e acompanhamento.
+- `docs/OBRA-PIER-CUBATAO.md`: 11 fotografias da obra catalogadas no Drive; encaixe proposto, sem publicação.
+- `src/pages/corrimaos-para-predios.astro`: landing comercial criada a partir do PDF de Ernani.
+- `src/data/landing-images.json` e `src/styles/landing.css`: rastreabilidade das 14 novas fotos da landing e estilo isolado.
 
 O formulário abre uma mensagem no WhatsApp; não envia automaticamente nem armazena os dados no site. Os testes não enviam mensagens.
 
 ## Fotografias
 
-12 fotografias reais do catálogo do Drive, preservadas por ID ACF; 8 distintas na página inicial. O logotipo é o arquivo ACF-006, sem redesenho. Cada imagem de produto carrega `data-image-id`; o catálogo em JSON mantém aplicação e origem. Legendas não atribuem ligas, dimensões ou conclusão da obra à fotografia.
+A versão inicial utilizou 12 fotografias do catálogo do Drive, preservadas por ID ACF; 8 distintas na página inicial. A landing de anúncios acrescentou **14 fotografias** específicas de escadarias e rampas ao repositório. O catálogo do Drive conta ainda com **11 fotos do Píer de Cubatão (ACF-115 a ACF-125)**, apenas catalogadas e copiadas para acervo organizado, **ainda não publicadas no site**. O logotipo é o arquivo ACF-006, sem redesenho. Cada imagem de produto carrega `data-image-id`; o catálogo em JSON mantém aplicação e origem. Legendas não atribuem ligas, dimensões ou conclusão da obra à fotografia.
 
 Para regenerar versões WebP após alterar uma imagem original:
 
@@ -70,12 +76,23 @@ npm run images:optimize
 
 ## Publicação
 
-Nenhuma publicação foi realizada. Não há comandos de deploy, tokens Cloudflare ou integração com Sites neste projeto. A publicação deverá usar exclusivamente a futura integração GitHub–Cloudflare Pages. O site atual, domínio e HostGator não fazem parte desta implementação.
+**Publicado para revisão:** https://alfa-corrimao-web.pages.dev/ por **Cloudflare Pages**, com integração GitHub na branch `main`.
 
-A versão de revisão está bloqueada para indexação em três camadas: meta robots, robots.txt e X-Robots-Tag. Consulte a documentação antes de liberar a versão definitiva.
+A landing comercial está em https://alfa-corrimao-web.pages.dev/corrimaos-para-predios/ e usa as âncoras `#escadarias` e `#rampas`. A implantação de 15/11/2026 do commit `a19ab33b7dcd892c9dd79d883472c3e4a09c85b8` concluiu com sucesso e confirmou **15 páginas geradas**. Commits na branch `main` iniciam nova compilação automaticamente.
+
+**O domínio `alfacorrimao.com.br` ainda não está conectado ao projeto Cloudflare**; não presumir migração, redirecionamento ou alteração do DNS/HostGator.
+
+A versão de revisão **continua** bloqueada para indexação em três camadas: meta robots, robots.txt e X-Robots-Tag. Consulte a documentação antes de liberar a versão definitiva.
 
 O workflow do GitHub executa apenas validações e disponibiliza o build como artefato privado temporário. Não configura hospedagem ou domínio.
 
 ## Direitos
 
 Marca e fotografias pertencem aos respectivos titulares. Conteúdo e imagens sujeitos à validação editorial da Alfa antes de publicação. Não há licença pública concedida ao acervo.
+
+## Estado editorial em 15/11/2026
+
+- Revisão solicitada por Enéias: retirar imagem **AC-380 / ACF-007** (corrimão aparenta estar torto); pedido **pendente**, sem alteração de páginas nesta etapa.
+- Selecionar mais fotos de escadarias de prédios para o site; **pendente**.
+- Lote 020 do **Píer de Cubatão**: 11 imagens examinadas, catalogadas e copiadas ao acervo, com identificação ACF-115–125, **não publicadas**.
+- Para registrar pedidos e provas antes/depois, consulte `docs/REVISOES-E-PRESTACAO-DE-CONTAS.md`.
