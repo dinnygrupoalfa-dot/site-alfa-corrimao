@@ -15,9 +15,11 @@ O blog está propositalmente sem artigos; isso não impede o funcionamento do si
 
 ## Demandas de revisão recebidas de Enéias — 15/11/2026
 
-1. **AC-380 / ACF-007**: imagem do corrimão que aparenta estar torto, segundo o solicitante. **Retirada pendente**; localizar substituição adequada antes de modificar o site. Referência em landing, página do produto e galeria Obras Realizadas.
+1. **AC-380 / ACF-007**: imagem do corrimão que aparenta estar torto, segundo o solicitante. **Retirada concluída em 16/11/2026**: referências no site e recursos publicados removidos; substituição editorial ainda não selecionada.
 2. **Escadarias de prédios**: Enéias solicita fotos mais representativas. Aguardando novo lote de Dinny, ainda sem substituição.
 3. **Píer de Cubatão**: 11 fotos examinadas e catalogadas no Drive (ACF-115–125); propor seção própria em **Obras Realizadas**, após confirmação do serviço efetivamente executado, materiais e direitos de divulgação. Sem mudança nas páginas públicas.
 4. **Vídeos do píer**: ainda não editados, silenciados nem publicados. Avaliar posteriormente.
 
 Acompanhamento e prova documental: `docs/REVISOES-E-PRESTACAO-DE-CONTAS.md` e `docs/OBRA-PIER-CUBATAO.md`.
+
+5. **Bloqueio definitivo de seis fotografias (16/11/2026):** AC-377, AC-379, AC-380, AC-381, AC-382 e AC-383. Não reutilizar em qualquer produto ou galeria. Foram excluídos 13 arquivos do Drive e 4 recursos do repositório. Ver registro REV-005. Fotografia substituta: pendente.

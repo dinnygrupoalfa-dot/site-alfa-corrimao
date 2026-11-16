@@ -44,7 +44,7 @@ As frases de apresentação são redação editorial baseada nesses serviços, s
 
 ## Imagens
 
-A imagem ACF-006 é o logotipo do acervo. As demais selecionadas: ACF-001, 003, 004, 005, 007, 009, 011, 023, 024, 028, 030 e 034.
+A imagem ACF-006 é o logotipo do acervo. As demais selecionadas: ACF-001, 003, 004, 005, 009, 011, 023, 024, 028, 030 e 034.
 
 A seleção foi examinada visualmente em conjunto. Fotos de rampas com metal aparente não são rotuladas nas legendas como liga específica. Códigos internos permanecem no código e no catálogo, sem poluir o texto comercial. Nenhum cliente é atribuído a uma fotografia sem comprovação.
 
@@ -58,3 +58,7 @@ A seleção final e os recortes ainda dependem da revisão editorial da Alfa.
 - Cópias organizadas: https://drive.google.com/drive/folders/17D9m_Tjud2UNN5loQ4VKgGMJ3TRBQ0dV
 - Detalhes por imagem, limitações e proposta de localização no site: `docs/OBRA-PIER-CUBATAO.md`.
 - **Nada do píer foi publicado**; atribuição do escopo executado pela Alfa e direitos de divulgação continuam sujeitos à confirmação.
+
+## Exclusão de imagens alheias à Alfa — 16/11/2026
+
+Dinny/Enéias informaram que as fotografias **AC-377, AC-379, AC-380, AC-381, AC-382 e AC-383 não representam serviços da Alfa Corrimão** e não podem mais ser utilizadas, exibidas ou reimportadas. Correspondências no catálogo: **ACF-050/AC-377, ACF-008/AC-379, ACF-007/AC-380**. AC-381 é também o arquivo original `corrimao_aluminio_parede_08.jpg` e suas três derivações no WordPress. **13 arquivos no Google Drive foram excluídos permanentemente; imagens e referências publicadas no site atual removidas.** O Catálogo Mestre mantém apenas três IDs de bloqueio histórico sem nome de arquivo ou links. Não extrair essas fotos de PDFs, backups ou commits antigos para novas campanhas.

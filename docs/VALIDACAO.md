@@ -33,3 +33,11 @@ Não foi enviada mensagem no WhatsApp nem testado recebimento pela equipe. Conta
 - Endereço de revisão: https://alfa-corrimao-web.pages.dev/
 - **Não foi feita nova bateria de testes locais ou avaliação visual física de todos os dispositivos** nesta atualização; não reproduzir os testes da versão de 14 páginas como se fossem testes da versão de 15.
 - Em 15/11, as 11 fotos do Píer de Cubatão foram catalogadas somente no Drive. Documentação e catálogo foram atualizados; **nenhuma foto do píer foi colocada no site**.
+
+## Exclusão de imagens indevidas — 16/11/2026
+
+- Commit `128366d3d9118096407fec366e68dcd2ac9493a2`: exclusão de recursos e referências das imagens AC-380/AC-377, remoção da entrada ACF-007 e do JSON de imagens da landing; cloudflare registrou status de implantação **success**.
+- O site atual **não inclui** as fotos AC-377, AC-379, AC-380, AC-381, AC-382, AC-383. As outras quatro não eram arquivos publicados identificados nesta versão Astro.
+- 13 arquivos relacionados foram excluídos do Drive; pesquisas posteriores por códigos AC-377/379/380/381/382/383 e pelas variantes WordPress da AC-381 deram lista vazia.
+- Catálogo Mestre atualizado com 122 arquivos ativos e três identificadores de bloqueio (ACF-007/008/050).
+- As correções não incluíram novos textos comerciais ou novas imagens. Revisão visual de Enéias e testes em celulares ainda não realizados nesta etapa.

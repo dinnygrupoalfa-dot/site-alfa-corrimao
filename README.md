@@ -96,3 +96,7 @@ Marca e fotografias pertencem aos respectivos titulares. Conteúdo e imagens suj
 - Selecionar mais fotos de escadarias de prédios para o site; **pendente**.
 - Lote 020 do **Píer de Cubatão**: 11 imagens examinadas, catalogadas e copiadas ao acervo, com identificação ACF-115–125, **não publicadas**.
 - Para registrar pedidos e provas antes/depois, consulte `docs/REVISOES-E-PRESTACAO-DE-CONTAS.md`.
+
+## Fotografias excluídas — 16/11/2026
+
+A pedido de Dinny, com informação de Enéias de que as imagens não pertencem aos serviços da Alfa Corrimão, ficam **proibidas de utilização e reimportação** as fotos **AC-377, AC-379, AC-380, AC-381, AC-382 e AC-383**. As entradas **ACF-007, ACF-008 e ACF-050** foram bloqueadas no Catálogo Mestre. O site não referencia mais AC-377/AC-380 e seus recursos foram excluídos do repositório atual; a publicação foi validada com sucesso pela Cloudflare no commit `128366d3d9118096407fec366e68dcd2ac9493a2`. Treze arquivos relacionados foram excluídos permanentemente do Drive, incluindo variantes do WordPress `corrimao_aluminio_parede_08`. Relatório sem imagens em `docs/REVISOES-E-PRESTACAO-DE-CONTAS.md`. O histórico Git e cópias antigas fora deste controle não são automaticamente apagados.
