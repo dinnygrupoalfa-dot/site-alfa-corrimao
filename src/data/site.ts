@@ -13,6 +13,9 @@ export const site = {
 };
 export const whatsapp = (message = 'Olá! Gostaria de solicitar um orçamento para minha obra.') =>
  'https://wa.me/55' + site.whatsappNumber + '?text=' + encodeURIComponent(message);
+// Atendimento técnico separado do WhatsApp comercial.
+export const technicalWhatsapp = (message = 'Olá! Gostaria de tirar uma dúvida técnica sobre corrimãos ou guarda-corpos para minha obra.') =>
+ 'https://wa.me/55' + site.phone + '?text=' + encodeURIComponent(message);
 export const nav = [
  {label:'Início',href:'/'},
  {label:'Quem somos',href:'/quem-somos/'},

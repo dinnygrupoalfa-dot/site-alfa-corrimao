@@ -73,3 +73,13 @@
 **Mudança:** no celular, logotipo, Menu, Orçamento e atalho de WhatsApp ficam lado a lado; WhatsApp flutuante e telefone fixo continuam; CTA de orçamento mantém o número comercial da Edna. O atalho de WhatsApp tem identificação acessível. Sem alterações de conteúdo, SEO ou fotos.
 
 **Estado:** implementação solicitada, aguardando confirmação do build/deploy e nova captura móvel de Dinny. **Home ainda não aprovada.**
+
+## REV-010 — Botões comerciais e rota técnica (17/11/2026)
+
+Decisões: botão principal da Home **Conheça nossas obras** para a galeria; CTA comercial compartilhado **Peça seu orçamento** para WhatsApp de Edna (11) 99753-1839; contato técnico identificado como **Equipe técnica**, WhatsApp de Ernani. O primeiro botão comercial foi testado pela usuária, com mensagem correta; demais links ainda precisam de teste.
+
+Texto de Enéias: corrimãos e guarda-corpos simples ou em duas alturas para escadarias de emergência e áreas comuns, referência à ABNT NBR 9050. A frase exata antiga não foi encontrada nos arquivos atuais do site. Redação sugerida (ainda não publicada): “Corrimãos e guarda-corpos simples ou em duas alturas para escadarias de emergência e áreas comuns, com soluções desenvolvidas conforme o projeto e os requisitos aplicáveis da ABNT NBR 9050.”
+
+**Somente oportunidade futura, não publicar:** corrimãos de ferro para grandes contratos públicos, inclusive Minha Casa Minha Vida. Requer avaliação de viabilidade e escopo; nenhuma página nova autorizada.
+
+Pendente: confirmação do deploy, revisão visual e teste da rota técnica. Home segue em revisão.
