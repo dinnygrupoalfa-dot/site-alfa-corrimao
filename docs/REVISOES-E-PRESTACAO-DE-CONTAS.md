@@ -41,3 +41,9 @@ O PDF deve consolidar os registros **somente após conferir**: pedido, antes/dep
 **Limites reais:** a exclusão na branch atual não apaga versões históricas de commits Git, versões anteriores dos PDFs já entregues, downloads salvos por terceiros, anexos antigos da conversa nem eventuais caches. Este registro é textual e não inclui as imagens reprovadas. Não afirmar exclusão de cópias sem verificação individual.
 
 **Resultado do pedido editorial:** fotos reprovadas não constam mais do site de produção. Fotos substitutas e validação final de Enéias continuam pendentes.
+
+## REV-006 — Organização autorizada do acervo (17/11/2026)
+
+Dinny autorizou explicitamente executar as etapas **1 a 3** do plano: comparar duplicatas, concentrar e organizar arquivos no Drive e atualizar o catálogo. A execução foi concluída: pasta `Fotos Novo Site Alfa` padronizada, originais reunidos em `00 - Originais recebidos`; quatro duplicatas de fotos soltas associadas a ACF-005/022/023/070; **39 imagens novas** catalogadas como ACF-126–164, todas com original/cópia e destino sugerido. Píer com **46 fotografias distintas** organizadas e 12 vídeos mantidos em originais. O Catálogo Mestre passa a **161 arquivos ativos**; as seis imagens excluídas continuam proibidas. Evidências: [Catálogo Mestre](https://docs.google.com/spreadsheets/d/1BDqAiSdnud_1P06w0_ObrgQagmCPHaOrszcr_lcUusA/edit) e `docs/ACERVO-LOTE-021.md`.
+
+**Não realizado:** edição/publicação de imagens do lote 021, alteração de páginas, testes pós-alterações, prints antes/depois e novo PDF final. Esses itens pertencem à etapa seguinte, que precisa de autorização própria.

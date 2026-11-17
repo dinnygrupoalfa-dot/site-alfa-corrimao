@@ -62,3 +62,11 @@ A seleção final e os recortes ainda dependem da revisão editorial da Alfa.
 ## Exclusão de imagens alheias à Alfa — 16/11/2026
 
 Dinny/Enéias informaram que as fotografias **AC-377, AC-379, AC-380, AC-381, AC-382 e AC-383 não representam serviços da Alfa Corrimão** e não podem mais ser utilizadas, exibidas ou reimportadas. Correspondências no catálogo: **ACF-050/AC-377, ACF-008/AC-379, ACF-007/AC-380**. AC-381 é também o arquivo original `corrimao_aluminio_parede_08.jpg` e suas três derivações no WordPress. **13 arquivos no Google Drive foram excluídos permanentemente; imagens e referências publicadas no site atual removidas.** O Catálogo Mestre mantém apenas três IDs de bloqueio histórico sem nome de arquivo ou links. Não extrair essas fotos de PDFs, backups ou commits antigos para novas campanhas.
+
+## Fontes do lote 021 — 17/11/2026
+
+- Pastas recebidas de Enéias em `ChatGPT` foram movidas (sem alterar bytes/IDs) para [Originais recebidos](https://drive.google.com/drive/folders/1xT0jvjfCrGJkCp7ZlTDtryKoigb5ZG1I). O destino central das fotos catalogadas continua [FOTOS — Acervo do novo site](https://drive.google.com/drive/folders/1hv4s4xkIuLZla4QzZ5wBLObs6g6cE6pQ).
+- `F12` corrimãos duplos NBR 9050 (17 arquivos, 15 idênticos a cópias anteriores, 2 novos); `F13` guarda-corpos/corrimãos metálicos (14 arquivos, 12 idênticos a cópias anteriores, 2 novos); `F14` quatro fotos soltas com nomes sugeridos por Enéias (todas já catalogadas como ACF-005/022/023/070); `F15` material bruto do Píer (70 fotos, 46 distintas e 24 cópias exatas internas; 12 vídeos originais).
+- Novos códigos: **ACF-126–129** (escadarias/guarda-corpos); **ACF-130–164** (Píer de Cubatão). Fotos antigas do píer: ACF-115–125. Total no catálogo após organização: **161 arquivos ativos**; imagens proibidas seguem bloqueadas.
+- Nomes 'Alfa Glass' e 'Alfa Top Glass' foram anotados como **referências comerciais sugeridas por Enéias**, não prova de especificação 304, propriedade de marca ou conformidade normativa.
+- URLs, identificação, critérios de uso e status de publicação: `docs/ACERVO-LOTE-021.md`.

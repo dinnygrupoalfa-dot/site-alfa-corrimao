@@ -90,7 +90,7 @@ O workflow do GitHub executa apenas validações e disponibiliza o build como ar
 
 Marca e fotografias pertencem aos respectivos titulares. Conteúdo e imagens sujeitos à validação editorial da Alfa antes de publicação. Não há licença pública concedida ao acervo.
 
-## Estado editorial em 15/11/2026
+## Histórico editorial de 15/11/2026 (superado por registros posteriores)
 
 - Revisão solicitada por Enéias: retirar imagem **AC-380 / ACF-007** (corrimão aparenta estar torto); pedido **pendente**, sem alteração de páginas nesta etapa.
 - Selecionar mais fotos de escadarias de prédios para o site; **pendente**.
@@ -100,3 +100,7 @@ Marca e fotografias pertencem aos respectivos titulares. Conteúdo e imagens suj
 ## Fotografias excluídas — 16/11/2026
 
 A pedido de Dinny, com informação de Enéias de que as imagens não pertencem aos serviços da Alfa Corrimão, ficam **proibidas de utilização e reimportação** as fotos **AC-377, AC-379, AC-380, AC-381, AC-382 e AC-383**. As entradas **ACF-007, ACF-008 e ACF-050** foram bloqueadas no Catálogo Mestre. O site não referencia mais AC-377/AC-380 e seus recursos foram excluídos do repositório atual; a publicação foi validada com sucesso pela Cloudflare no commit `128366d3d9118096407fec366e68dcd2ac9493a2`. Treze arquivos relacionados foram excluídos permanentemente do Drive, incluindo variantes do WordPress `corrimao_aluminio_parede_08`. Relatório sem imagens em `docs/REVISOES-E-PRESTACAO-DE-CONTAS.md`. O histórico Git e cópias antigas fora deste controle não são automaticamente apagados.
+
+## Acervo atualizado — Lote 021 (17/11/2026)
+
+O Google Drive foi reorganizado na pasta `Fotos Novo Site Alfa`: os lotes brutos recebidos e as quatro fotografias soltas foram movidos para `00 - Originais recebidos`, sem modificar seu conteúdo. O Catálogo Mestre agora contém **161 arquivos ativos (160 fotografias e um logotipo)**; 39 novos registros **ACF-126–164**, incluindo **4 fotos de escadaria/guarda-corpos** e **35 fotos complementares do Píer de Cubatão**. O total do píer é de **46 fotos distintas** no acervo, e 12 vídeos preservados. As fotos não foram publicadas no site nesta etapa. Veja `docs/ACERVO-LOTE-021.md` e [Catálogo Mestre](https://docs.google.com/spreadsheets/d/1BDqAiSdnud_1P06w0_ObrgQagmCPHaOrszcr_lcUusA/edit).

@@ -16,10 +16,18 @@ O blog está propositalmente sem artigos; isso não impede o funcionamento do si
 ## Demandas de revisão recebidas de Enéias — 15/11/2026
 
 1. **AC-380 / ACF-007**: imagem do corrimão que aparenta estar torto, segundo o solicitante. **Retirada concluída em 16/11/2026**: referências no site e recursos publicados removidos; substituição editorial ainda não selecionada.
-2. **Escadarias de prédios**: Enéias solicita fotos mais representativas. Aguardando novo lote de Dinny, ainda sem substituição.
-3. **Píer de Cubatão**: 11 fotos examinadas e catalogadas no Drive (ACF-115–125); propor seção própria em **Obras Realizadas**, após confirmação do serviço efetivamente executado, materiais e direitos de divulgação. Sem mudança nas páginas públicas.
+2. **Escadarias de prédios**: lote de Enéias recebido e catalogado em 17/11/2026; ACF-127 (vista geral) e ACF-126 (obra em andamento) são candidatas, **ainda não inseridas no site**.
+3. **Píer de Cubatão**: 46 fotografias distintas catalogadas (ACF-115–164), após deduplicação do lote bruto; propor seção própria em **Obras Realizadas** após validar escopo, autorização e imagem de pessoas. Nenhuma alteração nas páginas.
 4. **Vídeos do píer**: ainda não editados, silenciados nem publicados. Avaliar posteriormente.
 
 Acompanhamento e prova documental: `docs/REVISOES-E-PRESTACAO-DE-CONTAS.md` e `docs/OBRA-PIER-CUBATAO.md`.
 
 5. **Bloqueio definitivo de seis fotografias (16/11/2026):** AC-377, AC-379, AC-380, AC-381, AC-382 e AC-383. Não reutilizar em qualquer produto ou galeria. Foram excluídos 13 arquivos do Drive e 4 recursos do repositório. Ver registro REV-005. Fotografia substituta: pendente.
+
+## Concluído no lote 021 — 17/11/2026
+
+- Reorganizadas as entradas em `Fotos Novo Site Alfa/00 - Originais recebidos` e renomeadas as pastas com grafia de produtos/obras corrigida.
+- **27 duplicatas exatas** nas duas pastas de 31 fotos: não copiadas novamente; **4 novas** catalogadas como ACF-126–129.
+- Quatro imagens soltas com nomes fornecidos por Enéias: duplicatas exatas de ACF-005, ACF-022, ACF-023, ACF-070; nomes comerciais preservados como referências e nenhum novo código indevido.
+- Píer: 70 fotos brutas, 46 distintas, 24 cópias idênticas; 35 complementares novas ACF-130–164. Vídeos preservados e não editados.
+- A próxima tarefa é a **curadoria/integração nas páginas** e, após publicação comprovada, a prestação de contas antes/depois. Nada disso foi executado nesta rodada.

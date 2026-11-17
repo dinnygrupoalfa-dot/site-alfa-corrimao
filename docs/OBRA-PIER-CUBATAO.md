@@ -1,6 +1,6 @@
 # Obra em análise — Píer de Cubatão (lote 020)
 
-**Data da triagem:** 15/11/2026. **Status:** acervo catalogado no Drive; publicação e alterações no site **não autorizadas nesta etapa**.
+**Data da primeira triagem:** 15/11/2026. **Atualização do catálogo:** 17/11/2026. **Status:** acervo catalogado no Drive; publicação e alterações no site **não autorizadas nesta etapa**.
 
 ## Proveniência e identificação
 
@@ -45,3 +45,13 @@ Passarela e plataformas de piso tipo deck junto à água, com guarda-corpos tran
 - Após autorização de alteração do site, guardar evidências antes/depois e validar a publicação para a prestação de contas.
 
 **Governança:** catalogação documental concluída; nenhuma imagem do píer adicionada às páginas públicas neste lote.
+
+## Complemento do lote bruto — 17/11/2026
+
+- Os 70 arquivos JPEG da pasta original foram comparados: **46 fotografias distintas e 24 cópias idênticas**.
+- As 11 fotografias da seleção inicial **ACF-115–125** foram confirmadas como cópias exatas de arquivos do lote bruto.
+- **35 imagens complementares** receberam os códigos **ACF-130–164** e foram copiadas para a mesma pasta de portfólio, que agora contém **46 arquivos fotográficos**.
+- Os 12 vídeos permanecem na pasta de originais, sem edição e sem publicação.
+- Algumas fotos apresentam pessoas e outras são perspectivas repetitivas da mesma passarela (sem identidade binária); requerem seleção editorial antes da etapa de publicação.
+- A pasta de origem foi movida integralmente para `00 - Originais recebidos` sob `Fotos Novo Site Alfa`; os links/IDs internos foram mantidos.
+- Lista com links de todas as fotos complementares: [`ACERVO-LOTE-021.md`](ACERVO-LOTE-021.md). **Nenhuma imagem adicional do píer foi publicada neste lote.**
