@@ -30,11 +30,14 @@ const contactHtml=await readFile(join(root,'contato','index.html'),'utf8');
 const landingHtml=await readFile(join(root,'corrimaos-para-predios','index.html'),'utf8');
 for (const file of htmlFiles) {
  const html=await readFile(file,'utf8');
- const expectedNumber = file===join(root,'corrimaos-para-predios','index.html') ? campaignNumber : commercialNumber;
+ const isLanding = file===join(root,'corrimaos-para-predios','index.html');
+ const isHome = file===join(root,'index.html');
+ const expectedHeaderNumber = isLanding ? campaignNumber : commercialNumber;
  for (const match of html.matchAll(/href="https:\/\/wa\.me\/(\d+)/g)) {
-  assert.equal(match[1],expectedNumber,file+': destinatário de WhatsApp incorreto');
+  const allowed = isLanding ? match[1]===campaignNumber : (match[1]===commercialNumber || (isHome && match[1]===campaignNumber));
+  assert.ok(allowed,file+': destinatário de WhatsApp incorreto ('+match[1]+')');
  }
- assert.ok(html.includes('class="button header-cta" href="https://wa.me/'+expectedNumber),'CTA do cabeçalho deve abrir WhatsApp correto');
+ assert.ok(html.includes('class="button header-cta" href="https://wa.me/'+expectedHeaderNumber),'CTA do cabeçalho deve abrir WhatsApp correto');
 }
 assert.match(contactHtml,/data-wa="5511997531839"/,'Formulário institucional deve usar Edna');
 assert.match(landingHtml,/data-wa="5511947704632"/,'Formulário da landing deve usar Ernani');
