@@ -1,10 +1,10 @@
 ---
 import Photo from './Photo.astro';
 interface Slide {id:string; title:string; label:string; href?:string;}
-interface Props {slides:Slide[]; name:string; hero?:boolean;}
-const {slides,name,hero=false}=Astro.props;
+interface Props {slides:Slide[]; name:string; hero?:boolean; intervalMs?:number;}
+const {slides,name,hero=false,intervalMs=3500}=Astro.props;
 ---
-<section class:list={['carousel',{ 'hero-carousel':hero }]} data-carousel aria-label={name} aria-roledescription="carrossel">
+<section class:list={['carousel',{ 'hero-carousel':hero }]} data-carousel data-interval={intervalMs} aria-label={name} aria-roledescription="carrossel">
  <div class="carousel-track" data-track tabindex="0" aria-label="Fotografias; use as setas para navegar">
   {slides.map((slide,index)=><figure class="carousel-slide" data-slide role="group" aria-roledescription="slide" aria-label={String(index+1)+' de '+slides.length}>
    <Photo id={slide.id} eager={hero&&index===0} sizes={hero?'(max-width: 900px) 100vw, 62vw':'(max-width: 700px) 100vw, 80vw'}/>

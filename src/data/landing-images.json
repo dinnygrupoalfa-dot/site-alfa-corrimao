@@ -89,5 +89,19 @@
     "acervo": "rampa / acesso frontal",
     "source_url": "https://drive.google.com/file/d/1lv2AuHE3ZS_0QVAve2e63OcIlw5pEC5j/view",
     "status": "Fotografia do acervo Alfa; material exato não certificado por observação visual"
+  },
+  "acf-127.jpeg": {
+    "drive": "1W7-yqV9p6J77742bKnM4lmDMNdjO16_4",
+    "product": "escadarias",
+    "acervo": "ACF-127",
+    "source_url": "https://drive.google.com/file/d/1W7-yqV9p6J77742bKnM4lmDMNdjO16_4/view",
+    "status": "Foto enviada por Enéias, catalogada no lote 021; aplicação e aprovação final do site em revisão"
+  },
+  "acf-126.jpeg": {
+    "drive": "1PqQJEp3XDmK8Sfuw6P6kO1ZFYLu7G866",
+    "product": "escadarias",
+    "acervo": "ACF-126",
+    "source_url": "https://drive.google.com/file/d/1PqQJEp3XDmK8Sfuw6P6kO1ZFYLu7G866/view",
+    "status": "Foto de obra em andamento recebida de Enéias; material e especificações dependem de confirmação"
   }
 }
