@@ -55,3 +55,7 @@ Passarela e plataformas de piso tipo deck junto à água, com guarda-corpos tran
 - Algumas fotos apresentam pessoas e outras são perspectivas repetitivas da mesma passarela (sem identidade binária); requerem seleção editorial antes da etapa de publicação.
 - A pasta de origem foi movida integralmente para `00 - Originais recebidos` sob `Fotos Novo Site Alfa`; os links/IDs internos foram mantidos.
 - Lista com links de todas as fotos complementares: [`ACERVO-LOTE-021.md`](ACERVO-LOTE-021.md). **Nenhuma imagem adicional do píer foi publicada neste lote.**
+
+## Etapa 4 — galeria do site implantada (17/11/2026)
+
+**Esta atualização substitui o status histórico “não publicado” acima:** por decisão de Dinny, as 46 fotos distintas do Píer de Cubatão foram integradas à página https://alfa-corrimao-web.pages.dev/obras-realizadas/pier-de-cubatao/ . Também há destaque na Home e em Obras Realizadas. O commit `3454408165254b9839631d1d0317856a99b94533` compilou 16 páginas e foi implantado com sucesso no Cloudflare Pages. As fotografias com pessoas estão incluídas no álbum, com **revisão editorial e direitos de imagem ainda pendentes de confirmação**. O texto não atribui execução de deck, pergolado ou mobiliário à Alfa. Vídeos ainda não foram trabalhados. A aprovação final da página ainda depende da conferência de Dinny/Enéias/Ernani.

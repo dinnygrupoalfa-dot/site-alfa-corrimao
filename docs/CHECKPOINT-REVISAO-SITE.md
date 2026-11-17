@@ -51,7 +51,7 @@
 | --- | --- | --- | --- |
 | REV-005 | Exclusão das seis fotos indevidas (AC-377/379/380/381/382/383) | Executada, proibida reimportação | docs/REVISOES-E-PRESTACAO-DE-CONTAS.md |
 | REV-006 | Triagem das novas fotos, Catálogo Mestre ACF-126–164 | Concluído e verificado | docs/ACERVO-LOTE-021.md |
-| REV-007 | Uso editorial do lote 021: Home, produtos, Obras, Píer e landing | Preparado para validação Cloudflare | Commit da implantação |
+| REV-007 | Uso editorial do lote 021: Home, produtos, Obras, Píer e landing | **Publicado; aguarda revisão visual** | Commit `3454408165254b9839631d1d0317856a99b94533`; Cloudflare: 16 páginas, build e deploy success |
 | REV-008+ | Alterações solicitadas página a página | Ainda não abertas | Cada print e comentário recebido |
 
 **Domínio:** esta revisão usa o subdomínio `pages.dev`; não houve alteração do domínio oficial ou DNS. O conteúdo permanece em `noindex` até a aprovação final de publicação comercial.

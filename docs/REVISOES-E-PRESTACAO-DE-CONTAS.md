@@ -47,3 +47,13 @@ O PDF deve consolidar os registros **somente após conferir**: pedido, antes/dep
 Dinny autorizou explicitamente executar as etapas **1 a 3** do plano: comparar duplicatas, concentrar e organizar arquivos no Drive e atualizar o catálogo. A execução foi concluída: pasta `Fotos Novo Site Alfa` padronizada, originais reunidos em `00 - Originais recebidos`; quatro duplicatas de fotos soltas associadas a ACF-005/022/023/070; **39 imagens novas** catalogadas como ACF-126–164, todas com original/cópia e destino sugerido. Píer com **46 fotografias distintas** organizadas e 12 vídeos mantidos em originais. O Catálogo Mestre passa a **161 arquivos ativos**; as seis imagens excluídas continuam proibidas. Evidências: [Catálogo Mestre](https://docs.google.com/spreadsheets/d/1BDqAiSdnud_1P06w0_ObrgQagmCPHaOrszcr_lcUusA/edit) e `docs/ACERVO-LOTE-021.md`.
 
 **Não realizado:** edição/publicação de imagens do lote 021, alteração de páginas, testes pós-alterações, prints antes/depois e novo PDF final. Esses itens pertencem à etapa seguinte, que precisa de autorização própria.
+
+## REV-007 — Integração das fotos e publicação da galeria completa (17/11/2026)
+
+**Autorização:** Dinny, após conclusão das etapas de organização do acervo, solicitou executar a etapa de integração no site e fornecer o link da página inicial para conferência e revisão por prints, uma página de cada vez.
+
+**Alterações realizadas e verificadas:** (1) 50 imagens JPEG do acervo adicionadas ao repositório — **46 do Píer de Cubatão ACF-115–164** e **4 de escadarias/guarda-corpos ACF-126–129**; (2) nova galeria de obra `/obras-realizadas/pier-de-cubatao/` com todos os 46 códigos, filtros por tipo e ampliação; (3) destaque da obra na Home e no índice `/obras-realizadas/`; (4) escadarias ACF-126/127 no catálogo de produto e na landing de anúncios; (5) guarda-corpos ACF-128/129 na página de serviço; (6) carrosséis com intervalo de **3,5 s**; (7) checklist persistente de 16 páginas em `docs/CHECKPOINT-REVISAO-SITE.md`.
+
+**Evidência técnica:** commit `3454408165254b9839631d1d0317856a99b94533`, confirmação via API Cloudflare Pages de **build e deploy bem-sucedidos**, 16 páginas compiladas. O domínio oficial não foi tocado; site de revisão permanece com bloqueio de indexação.
+
+**Estado:** **publicado e tecnicamente compilado; ainda NÃO aprovado visualmente**. Prints antes/depois, correções pontuais e PDF final ficam para checkpoints subsequentes. As seis fotos reprovadas permanecem proibidas.

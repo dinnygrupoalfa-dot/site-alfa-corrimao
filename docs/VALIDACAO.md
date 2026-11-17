@@ -41,3 +41,13 @@ Não foi enviada mensagem no WhatsApp nem testado recebimento pela equipe. Conta
 - 13 arquivos relacionados foram excluídos do Drive; pesquisas posteriores por códigos AC-377/379/380/381/382/383 e pelas variantes WordPress da AC-381 deram lista vazia.
 - Catálogo Mestre atualizado com 122 arquivos ativos e três identificadores de bloqueio (ACF-007/008/050).
 - As correções não incluíram novos textos comerciais ou novas imagens. Revisão visual de Enéias e testes em celulares ainda não realizados nesta etapa.
+
+## Etapa 4 — imagens do lote 021 e galeria do Píer (17/11/2026)
+
+- Commit de implementação: `3454408165254b9839631d1d0317856a99b94533` na branch `main`.
+- Verificado na API oficial do Cloudflare Pages: etapas `initialize`, `clone_repo`, `build` e `deploy` com status **success**. Log de build: **16 páginas**. Log de deploy: **118 arquivos avaliados, 58 novos enviados e 60 já existentes**; conclusão “Your site was deployed!”.
+- 46 fotos catalogadas como **ACF-115–164**, todas integradas à galeria `/obras-realizadas/pier-de-cubatao/`, com imagens JPEG hospedadas no próprio site (não dependem de URLs de compartilhamento do Drive).
+- Novas ACF-126/127 nas páginas de escadarias e landing; ACF-128/129 na página de guarda-corpos e em Obras Realizadas.
+- Carrosséis do componente padrão com intervalo 3500 ms, pausa por interação, preferência por movimento reduzido e botões de navegação.
+- **Limite de verificação:** build e implantação estão confirmados; ainda falta inspeção visual real em navegador desktop/celular e validação editorial por Dinny, Ernani e Enéias. A ferramenta de navegação pública desta sessão não conseguiu carregar o domínio pages.dev, por isso não há comprovação visual independente nesta etapa.
+- Uma segunda implantação acrescentará execução automática do verificador de páginas/links/imagens após o build, para impedir regressões nas próximas revisões.

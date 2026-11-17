@@ -1,6 +1,6 @@
 # Pendências da revisão do site publicado no Cloudflare
 
-- Aprovação visual das **15 páginas** e da seleção de fotografias, incluindo a landing de anúncios. O logotipo disponível no acervo é de baixa resolução; substituir por versão oficial de melhor qualidade se houver, preservando a identidade.
+- Aprovação visual das **16 páginas** e da seleção de fotografias, incluindo a landing de anúncios. O logotipo disponível no acervo é de baixa resolução; substituir por versão oficial de melhor qualidade se houver, preservando a identidade.
 - Confirmar operacionalmente WhatsApp de Ernani, telefone fixo e e-mail. Não foram realizadas ligações nem envio de mensagens.
 - Validar liga/acabamento e detalhes de inox antes de acrescentar especificações. Não foi assumido inox 304.
 - Confirmar códigos de cinza RAL 9006, 9007 e 7034F antes de inseri-los no catálogo público.
@@ -16,8 +16,8 @@ O blog está propositalmente sem artigos; isso não impede o funcionamento do si
 ## Demandas de revisão recebidas de Enéias — 15/11/2026
 
 1. **AC-380 / ACF-007**: imagem do corrimão que aparenta estar torto, segundo o solicitante. **Retirada concluída em 16/11/2026**: referências no site e recursos publicados removidos; substituição editorial ainda não selecionada.
-2. **Escadarias de prédios**: lote de Enéias recebido e catalogado em 17/11/2026; ACF-127 (vista geral) e ACF-126 (obra em andamento) são candidatas, **ainda não inseridas no site**.
-3. **Píer de Cubatão**: 46 fotografias distintas catalogadas (ACF-115–164), após deduplicação do lote bruto; propor seção própria em **Obras Realizadas** após validar escopo, autorização e imagem de pessoas. Nenhuma alteração nas páginas.
+2. **Escadarias de prédios**: lote de Enéias recebido e catalogado em 17/11/2026; ACF-127 (vista geral) e ACF-126 (obra em andamento) **já integradas ao site** em 17/11, aguardando aprovação visual de Dinny/Enéias.
+3. **Píer de Cubatão**: 46 fotografias distintas catalogadas (ACF-115–164), após deduplicação do lote bruto; **galeria completa publicada** em `/obras-realizadas/pier-de-cubatao/` com 46 fotos; revisar fotos com pessoas e atribuições de materiais/escopo antes de aprovação editorial final.
 4. **Vídeos do píer**: ainda não editados, silenciados nem publicados. Avaliar posteriormente.
 
 Acompanhamento e prova documental: `docs/REVISOES-E-PRESTACAO-DE-CONTAS.md` e `docs/OBRA-PIER-CUBATAO.md`.
@@ -30,4 +30,16 @@ Acompanhamento e prova documental: `docs/REVISOES-E-PRESTACAO-DE-CONTAS.md` e `d
 - **27 duplicatas exatas** nas duas pastas de 31 fotos: não copiadas novamente; **4 novas** catalogadas como ACF-126–129.
 - Quatro imagens soltas com nomes fornecidos por Enéias: duplicatas exatas de ACF-005, ACF-022, ACF-023, ACF-070; nomes comerciais preservados como referências e nenhum novo código indevido.
 - Píer: 70 fotos brutas, 46 distintas, 24 cópias idênticas; 35 complementares novas ACF-130–164. Vídeos preservados e não editados.
-- A próxima tarefa é a **curadoria/integração nas páginas** e, após publicação comprovada, a prestação de contas antes/depois. Nada disso foi executado nesta rodada.
+- **Etapa 4 realizada em 17/11:** integração editorial nas páginas e implantação Cloudflare concluídas. Próximo passo: revisão visual página a página, prints antes/depois e aprovação de Dinny, Ernani e Enéias. A prestação de contas final depende dessas aprovações.
+
+## Checkpoint de conferência — iniciado em 17/11/2026
+
+- [x] Site Astro compilado e publicado no Cloudflare Pages (16 páginas; commit `3454408165254b9839631d1d0317856a99b94533`).
+- [x] Todas as 46 fotografias distintas do Píer integradas à sua galeria específica.
+- [x] Novas imagens ACF-126–129 incorporadas a páginas de escadarias/guarda-corpos/landing.
+- [ ] Conferir visualmente a **Home** no desktop e celular (checkpoint 01).
+- [ ] Receber feedback de Dinny/Ernani/Enéias; corrigir uma página de cada vez.
+- [ ] Aprovar separadamente as **16 páginas** e arquivar prints antes/depois.
+- [ ] Compor PDF final de prestação de contas com evidências verificadas.
+
+Veja `docs/CHECKPOINT-REVISAO-SITE.md`.

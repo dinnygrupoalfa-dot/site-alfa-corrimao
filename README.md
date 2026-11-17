@@ -21,7 +21,7 @@ npm run test:site
 npm run preview
 ```
 
-O build exporta **15 páginas** e seus recursos para `dist/`. Não depende de ChatGPT Sites, contas de visitantes, servidor de aplicação ou banco de dados.
+O build exporta **16 páginas** e seus recursos para `dist/`. Não depende de ChatGPT Sites, contas de visitantes, servidor de aplicação ou banco de dados.
 
 ## Páginas
 
@@ -38,6 +38,7 @@ O build exporta **15 páginas** e seus recursos para `dist/`. Não depende de Ch
 | Acessibilidade e normas | /acessibilidade-e-normas/ |
 | Construtoras e condomínios | /construtoras-e-condominios/ |
 | Obras realizadas | /obras-realizadas/ |
+| Píer de Cubatão — galeria completa | /obras-realizadas/pier-de-cubatao/ |
 | Contato e orçamentos | /contato/ |
 | Blog (sem artigos) | /blog/ |
 | Política de privacidade | /politica-de-privacidade/ |
@@ -66,7 +67,7 @@ O formulário abre uma mensagem no WhatsApp; não envia automaticamente nem arma
 
 ## Fotografias
 
-A versão inicial utilizou 12 fotografias do catálogo do Drive, preservadas por ID ACF; 8 distintas na página inicial. A landing de anúncios acrescentou **14 fotografias** específicas de escadarias e rampas ao repositório. O catálogo do Drive conta ainda com **11 fotos do Píer de Cubatão (ACF-115 a ACF-125)**, apenas catalogadas e copiadas para acervo organizado, **ainda não publicadas no site**. O logotipo é o arquivo ACF-006, sem redesenho. Cada imagem de produto carrega `data-image-id`; o catálogo em JSON mantém aplicação e origem. Legendas não atribuem ligas, dimensões ou conclusão da obra à fotografia.
+Na versão inicial, o acervo publicado utilizou 12 fotografias do catálogo do Drive, preservadas por ID ACF; 8 distintas na página inicial. A landing de anúncios acrescentou **14 fotografias** específicas de escadarias e rampas ao repositório. O catálogo do Drive conta ainda com **11 fotos do Píer de Cubatão (ACF-115 a ACF-125)**, apenas catalogadas e copiadas para acervo organizado, **ainda não publicadas no site**. O logotipo é o arquivo ACF-006, sem redesenho. Cada imagem de produto carrega `data-image-id`; o catálogo em JSON mantém aplicação e origem. Legendas não atribuem ligas, dimensões ou conclusão da obra à fotografia.
 
 Para regenerar versões WebP após alterar uma imagem original:
 
@@ -104,3 +105,9 @@ A pedido de Dinny, com informação de Enéias de que as imagens não pertencem 
 ## Acervo atualizado — Lote 021 (17/11/2026)
 
 O Google Drive foi reorganizado na pasta `Fotos Novo Site Alfa`: os lotes brutos recebidos e as quatro fotografias soltas foram movidos para `00 - Originais recebidos`, sem modificar seu conteúdo. O Catálogo Mestre agora contém **161 arquivos ativos (160 fotografias e um logotipo)**; 39 novos registros **ACF-126–164**, incluindo **4 fotos de escadaria/guarda-corpos** e **35 fotos complementares do Píer de Cubatão**. O total do píer é de **46 fotos distintas** no acervo, e 12 vídeos preservados. As fotos não foram publicadas no site nesta etapa. Veja `docs/ACERVO-LOTE-021.md` e [Catálogo Mestre](https://docs.google.com/spreadsheets/d/1BDqAiSdnud_1P06w0_ObrgQagmCPHaOrszcr_lcUusA/edit).
+
+## Integração do lote 021 no site — 17/11/2026
+
+**Publicação técnica confirmada:** commit `3454408165254b9839631d1d0317856a99b94533` implantado com sucesso no Cloudflare Pages; registro remoto mostrou **16 páginas Astro compiladas** e **118 ativos avaliados no upload**. O álbum completo do Píer de Cubatão está em https://alfa-corrimao-web.pages.dev/obras-realizadas/pier-de-cubatao/ com **46 fotografias distintas**; quatro imagens ACF-126–129 aparecem nas páginas de escadarias e guarda-corpos. A página inicial recebeu destaque do píer e a landing de anúncios inclui ACF-126/127. Os carrosséis convencionais avançam a cada **3500 ms** (respeitando preferência por movimento reduzido, interação e pausa). Fotos proibidas não foram adicionadas.
+
+**Revisão visual ainda pendente:** Dinny, Ernani e Enéias devem aprovar as páginas individualmente. Acompanhar em [docs/CHECKPOINT-REVISAO-SITE.md](docs/CHECKPOINT-REVISAO-SITE.md). O endereço `alfacorrimao.com.br` não foi alterado; a versão de revisão continua com `noindex, nofollow`. O comando `npm run build` agora inclui a verificação de links, imagens e páginas ao fim do build.
