@@ -43,3 +43,12 @@ Acompanhamento e prova documental: `docs/REVISOES-E-PRESTACAO-DE-CONTAS.md` e `d
 - [ ] Compor PDF final de prestação de contas com evidências verificadas.
 
 Veja `docs/CHECKPOINT-REVISAO-SITE.md`.
+
+## Checkpoint 01A — WhatsApp comercial (17/11/2026)
+
+- [x] Configuração de destinatário do WhatsApp comercial: **Edna, (11) 99753-1839**, distinta do telefone técnico do engenheiro.
+- [x] Botões de pedido de orçamento e atalhos do cabeçalho passam a apontar ao WhatsApp; fixo preservado no topo.
+- [x] Página de contato prioriza WhatsApp, mantendo formulário opcional ao final.
+- [ ] Conferir publicação e funcionamento no celular, com prints antes/depois e aprovação de Dinny.
+- [ ] Testar **recebimento real** de mensagem no WhatsApp da Edna (a compilação apenas verifica os links).
+- [ ] Confirmar responsividade em 320, 375 e 425 px antes de encerrar checkpoint.

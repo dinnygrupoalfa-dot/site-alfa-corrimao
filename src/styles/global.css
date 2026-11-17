@@ -7,3 +7,37 @@
 @media(max-width:800px){.wrap{width:calc(100% - 40px)}.home-hero{grid-template-columns:1fr;gap:35px;padding-top:40px}.hero-copy h1{font-size:clamp(3rem,8vw,4rem);max-width:650px}.hero-copy>p{max-width:560px}.hero-footnote{margin-top:28px;font-size:.72rem}.hero-carousel .carousel-slide>img{height:490px}.carousel-dots{display:flex}.carousel-controls{padding-inline:16px}.service-strip .wrap{flex-wrap:wrap;justify-content:flex-start;padding-block:20px;gap:12px 25px}.service-strip a{flex-basis:100%;margin-left:23px}.section{padding-block:65px}.section-heading{display:block;margin-bottom:30px}.section-heading>p{max-width:600px;margin-top:25px}.photo-frame img{height:270px}.product-card-body{padding:23px}.product-card h3{font-size:1.6rem}.split{grid-template-columns:1fr;gap:35px}.editorial-photo img{height:420px}.info-grid{grid-template-columns:1fr}.info-grid>a{border-right:0;border-bottom:1px solid var(--line);padding:28px}.info-grid>a:last-child{border-bottom:0}.info-grid>a>span{margin-bottom:22px}.callout{display:block;margin-bottom:65px;padding:35px}.callout .button{margin-top:28px}.page-heading{padding-block:55px 35px}.page-heading h1{font-size:clamp(2.7rem,7vw,4.5rem)}.compact-top{padding-top:15px}.product-hero{grid-template-columns:1fr;gap:30px;padding-bottom:35px}.product-hero h1{font-size:3.5rem}.product-hero .carousel-slide>img{height:490px}.detail-grid{grid-template-columns:1fr;gap:24px}.steps{grid-template-columns:1fr;gap:15px}.steps li>span{margin-bottom:20px}.related{grid-template-columns:1fr;gap:10px;margin-bottom:45px}.related h2{font-size:2rem}.showcase .carousel-slide>img{height:480px}.wide-photo img{height:380px}.gallery-grid{grid-template-columns:repeat(2,1fr);gap:25px}.zoom-photo img{height:270px}.contact-layout{grid-template-columns:1fr}.contact-card{max-width:none}.quote-form{padding:30px}.prose{max-width:calc(100% - 40px)}}
 @media(max-width:500px){.wrap{width:calc(100% - 32px)}.topbar{font-size:.62rem}.topbar .wrap{min-height:32px}.header-inner{min-height:80px;gap:10px}.brand{width:125px}.header-cta{font-size:.68rem;padding:10px;gap:8px;min-height:42px}.header-cta>span{display:none}.menu-toggle{padding:8px;font-size:.7rem;gap:8px;min-height:42px}.eyebrow{font-size:.62rem;letter-spacing:.12em;margin-bottom:20px}.hero-copy h1{font-size:3.05rem}.hero-copy>p{font-size:.97rem}.hero-footnote{gap:12px;font-size:.65rem}.hero-carousel .carousel-slide>img{height:400px}.carousel-slide figcaption{left:22px;right:20px;bottom:26px;max-width:90%}.slide-title{font-size:2rem}.carousel-controls{padding-inline:12px;gap:6px}.carousel-actions button{font-size:.7rem;min-width:32px;padding-inline:7px}.carousel-dots button{width:18px;min-width:18px;padding:5px}.service-strip .wrap{font-size:.72rem;gap:10px 18px}.section{padding-block:50px}.section-heading h2{font-size:2.1rem}.product-grid{grid-template-columns:1fr;gap:24px}.photo-frame img{height:300px}.product-card h3{font-size:1.8rem}.product-card p{font-size:.91rem}.editorial-photo img{height:350px}.callout{width:calc(100% - 32px);padding:30px 24px;margin-bottom:50px}.callout h2{font-size:2rem}.callout .button{width:100%}.footer{padding-block:45px 85px}.footer-grid{gap:35px 20px}.footer-brand{grid-column:1/-1}.footer-brand p{max-width:300px}.footer-grid>div:last-child{grid-column:1/-1}.footer-bottom{flex-direction:column;gap:12px}.footer-bottom>div{gap:20px}.footer li{font-size:.75rem}.floating-contact{right:15px;bottom:15px;font-size:.75rem;padding:8px 15px}.page-heading{padding-top:40px}.page-heading h1{font-size:2.9rem}.lead{font-size:1.05rem}.breadcrumb{font-size:.65rem;gap:8px}.product-hero h1{font-size:3.1rem}.product-hero .carousel-slide>img{height:410px}.product-hero .slide-title{font-size:1.45rem}.product-hero .lead{font-size:1.1rem}.showcase .carousel-slide>img{height:420px}.showcase .slide-title{font-size:1.7rem}.gallery-grid{grid-template-columns:1fr;gap:15px}.zoom-photo img{height:350px}.filter-bar{gap:8px}.filter-bar button{padding:8px 12px;font-size:.73rem}.quote-form,.contact-card{padding:24px}.form-grid{grid-template-columns:1fr}.form-grid .full{grid-column:auto}.quote-form .button{width:100%}.contact-card h2{font-size:2rem}.empty-state{padding:30px 24px}.empty-state h2{font-size:1.8rem}.wide-photo img{height:300px}.prose h2{font-size:1.55rem}.prose p{font-size:.98rem}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Checkpoint 01: canais comerciais e cabeçalho responsivo (17/11/2026). */
+.topbar-links{display:flex;align-items:center;gap:26px}
+.topbar-whatsapp{font-weight:700;color:#f2f2ee}
+.topbar-whatsapp:hover{color:var(--red)}
+.header-whatsapp{display:none;align-items:center;justify-content:center;min-height:44px;padding:9px 14px;border:1px solid #737777;color:#f5f5f1;font-size:.8rem;font-weight:700;white-space:nowrap}
+.header-whatsapp:hover{border-color:var(--red);color:white;background:#252628}
+.contact-heading .button-row{margin-top:22px}
+.contact-primary .button{max-width:100%}
+.contact-how{border:1px solid var(--line);padding:38px;background:var(--panel)}
+.contact-how h2{font-size:clamp(1.7rem,3vw,2.7rem)}
+.contact-how p:last-child{margin-bottom:0}
+.contact-extra{padding-top:10px;padding-bottom:80px}
+.contact-form-details{max-width:950px;border:1px solid #525456;background:#17191b;padding:25px 30px}
+.contact-form-details>summary{cursor:pointer;font-weight:750;font-size:1rem;color:#f6f5f2;line-height:1.5}
+.contact-form-details[open]>summary{margin-bottom:14px}
+.contact-form-details>.quote-form{margin-top:25px}
+@media(max-width:1050px){
+ .header-whatsapp{display:inline-flex}
+}
+@media(max-width:650px){
+ .topbar .wrap>span{display:none}
+ .topbar-links{width:100%;justify-content:space-between;gap:12px}
+ .header-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto;gap:10px 12px;padding-block:13px}
+ .header-inner>.brand{grid-column:1;grid-row:1}
+ .header-inner>.menu-toggle{grid-column:2;grid-row:1;margin-left:0;justify-self:end}
+ .header-inner>.header-cta{grid-column:1;grid-row:2;justify-self:stretch;min-height:44px;font-size:.8rem;white-space:nowrap}
+ .header-inner>.header-whatsapp{grid-column:2;grid-row:2;justify-self:end;min-height:44px;font-size:.8rem}
+ .header-inner>#main-nav{grid-column:1/-1;grid-row:3;order:initial;width:100%;flex-basis:auto}
+ .contact-primary .button{width:100%;gap:10px}
+ .contact-how{padding:26px}
+ .contact-form-details{padding:22px 16px}
+ .contact-form-details>.quote-form{padding:22px 15px}
+}

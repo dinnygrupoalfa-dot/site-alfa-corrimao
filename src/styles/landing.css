@@ -67,3 +67,10 @@
 .landing .lp-technical small{color:#bfc2c3}
 @media(max-width:1050px){.landing .lp-top-grid,.landing .lp-product-grid,.landing .lp-feature-grid,.landing .lp-close-grid{grid-template-columns:1fr}.landing .lp-top{padding:48px 0}.landing h1{max-width:16ch}.landing .lp-top .lp-carousel{max-width:none}.landing .lp-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.landing .lp-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.landing .lp-contact-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.landing .lp-top{padding:36px 0}.landing h1{font-size:clamp(2.55rem,11vw,3.6rem)}.landing .lp-lead{font-size:1.05rem}.landing .lp-actions .button,.landing .lp-actions .lp-outline{width:100%}.landing .lp-quicknav-inner{align-items:flex-start}.landing .lp-quicknav a{display:block}.landing .lp-section{padding:55px 0}.landing .lp-feature,.landing .lp-close,.landing .lp-technical{padding:55px 0}.landing .lp-card-grid,.landing .lp-steps{grid-template-columns:1fr}.landing .lp-card{padding:22px}.landing .lp-carousel .carousel-slide>img{height:390px}.landing .lp-carousel .carousel-slide figcaption{left:22px;right:18px;bottom:26px}.landing .lp-specs th,.landing .lp-specs td{display:block;width:100%;padding:12px}.landing .lp-specs th{border-bottom:0;padding-bottom:0}.landing .lp-specs td{padding-top:5px}.landing .lp-color{width:90px}.landing .lp-contact .quote-form{padding:22px}.landing .lp-contact .contact-card{padding:24px}}
+
+/* Orçamento imediato via WhatsApp; formulário continua como alternativa ao final. */
+.landing .lp-contact-grid>.contact-card{order:1}
+.landing .lp-contact-grid>.quote-form{order:2}
+@media(min-width:1051px){
+ .landing .lp-contact-grid{grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr)}
+}

@@ -111,3 +111,11 @@ O Google Drive foi reorganizado na pasta `Fotos Novo Site Alfa`: os lotes brutos
 **Publicação técnica confirmada:** commit `3454408165254b9839631d1d0317856a99b94533` implantado com sucesso no Cloudflare Pages; registro remoto mostrou **16 páginas Astro compiladas** e **118 ativos avaliados no upload**. O álbum completo do Píer de Cubatão está em https://alfa-corrimao-web.pages.dev/obras-realizadas/pier-de-cubatao/ com **46 fotografias distintas**; quatro imagens ACF-126–129 aparecem nas páginas de escadarias e guarda-corpos. A página inicial recebeu destaque do píer e a landing de anúncios inclui ACF-126/127. Os carrosséis convencionais avançam a cada **3500 ms** (respeitando preferência por movimento reduzido, interação e pausa). Fotos proibidas não foram adicionadas.
 
 **Revisão visual ainda pendente:** Dinny, Ernani e Enéias devem aprovar as páginas individualmente. Acompanhar em [docs/CHECKPOINT-REVISAO-SITE.md](docs/CHECKPOINT-REVISAO-SITE.md). O endereço `alfacorrimao.com.br` não foi alterado; a versão de revisão continua com `noindex, nofollow`. O comando `npm run build` agora inclui a verificação de links, imagens e páginas ao fim do build.
+
+## Atendimento e conversão — alteração de 17/11/2026
+
+- Canal central de **orçamentos pelo WhatsApp de Edna**: **(11) 99753-1839**, controlado por `site.whatsappNumber` e pela função `whatsapp()` em `src/data/site.ts`. O telefone de Ernani **(11) 94770-4632** permanece apenas como contato técnico; não é mais o número de destino do formulário de orçamento.
+- Telefone fixo mantido no topo: **(11) 4357-3447**.
+- Cabeçalho responsivo: `Pedir orçamento` e `WhatsApp` direcionam à conversa; atalho flutuante preservado. Home, landing e CTAs comerciais usam a mesma configuração centralizada, sem número duplicado em componentes.
+- Página `/contato/`: WhatsApp é o fluxo principal; formulário é **opcional, recolhido e ao final**.
+- A página de revisão e o domínio definitivo não foram alterados além das mudanças autorizadas de atendimento; revisão visual e teste de recebimento de mensagens ainda necessários. Registro REV-008 em `docs/CHECKPOINT-REVISAO-SITE.md`.

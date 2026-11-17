@@ -2,4 +2,37 @@
 import Layout from '../layouts/Layout.astro';
 import {site,whatsapp} from '../data/site';
 ---
-<Layout title="Contato e orçamentos"><section class="page-heading wrap"><span class="eyebrow">Vamos conversar</span><h1>Apresente a<br/>sua <em>obra.</em></h1><p class="lead">Conte o que precisa. Você pode enviar as informações pelo WhatsApp ou falar diretamente com a Alfa.</p></section><section class="section wrap compact-top contact-layout"><form class="quote-form" data-quote-form data-wa={'55'+site.phone}><h2>Solicite um orçamento</h2><p>Preencha os campos. O WhatsApp abrirá com a mensagem pronta para você conferir e enviar.</p><div class="form-grid"><label>Seu nome <span aria-hidden="true">*</span><input name="nome" autocomplete="name" required maxlength="100"/></label><label>WhatsApp ou telefone <span aria-hidden="true">*</span><input name="telefone" type="tel" autocomplete="tel" required pattern="[0-9()+ .-]{10,20}" title="Informe um telefone com DDD." maxlength="20"/></label><label>Empresa ou condomínio<input name="empresa" autocomplete="organization" maxlength="150"/></label><label>Cidade e estado <span aria-hidden="true">*</span><input name="cidade" autocomplete="address-level2" required maxlength="120"/></label><label class="full">Serviço desejado <span aria-hidden="true">*</span><select name="servico" required><option value="">Selecione</option><option>Corrimão duplo de alumínio para escadaria</option><option>Corrimão duplo de inox para rampa</option><option>Escadaria e rampa no mesmo projeto</option><option>Guarda-corpo</option><option>Vidro temperado</option><option>Outros serviços</option></select></label><label class="full">Sobre a sua obra<textarea name="mensagem" rows="4" maxlength="2000" placeholder="Etapa da obra, trechos envolvidos e o que você já tem de informações."></textarea></label></div><p class="form-note">Campos com * são obrigatórios. Ao continuar, os dados preenchidos serão incluídos na mensagem do WhatsApp. <a href="/politica-de-privacidade/">Leia a política de privacidade</a>.</p><button class="button" type="submit">Continuar no WhatsApp ↗</button><p role="status" aria-live="polite" data-form-status></p><noscript><p>Para usar o formulário, ative o JavaScript ou <a href={whatsapp()}>abra o WhatsApp diretamente</a>.</p></noscript></form><aside class="contact-card"><span class="eyebrow">Atendimento técnico</span><h2>Fale com o<br/>engenheiro Ernani.</h2><p>Tire suas dúvidas e apresente as necessidades da sua obra.</p><a class="contact-phone" href={'tel:+55'+site.phone}>{site.phoneLabel}</a><a class="button" href={whatsapp()} target="_blank" rel="noopener noreferrer">Abrir WhatsApp ↗</a><hr/><span class="eyebrow">Outros canais</span><p>Telefone: <a href={'tel:'+site.landlineHref}>{site.landline}</a></p><a href={'mailto:'+site.email}>{site.email}</a></aside></section></Layout>
+<Layout title="Contato e orçamentos">
+ <section class="page-heading wrap contact-heading">
+  <span class="eyebrow">Atendimento comercial / Alfa Corrimão</span>
+  <h1>Vamos falar<br/>da sua <em>obra.</em></h1>
+  <p class="lead">Pedir um orçamento é simples: abra o WhatsApp e conte o que sua obra precisa. Você pode enviar fotos, medidas e projeto diretamente na conversa.</p>
+  <div class="button-row"><a class="button" href={whatsapp()} target="_blank" rel="noopener noreferrer">Pedir orçamento pelo WhatsApp ↗</a></div>
+ </section>
+ <section class="section wrap compact-top contact-layout">
+  <aside class="contact-card contact-primary">
+   <span class="eyebrow">Orçamentos / WhatsApp comercial</span>
+   <h2>Fale com a Alfa<br/>pelo WhatsApp.</h2>
+   <p>O atendimento comercial recebe as informações da sua obra e encaminha o pedido para avaliação.</p>
+   <a class="contact-phone" href={whatsapp()} target="_blank" rel="noopener noreferrer">{site.whatsappLabel}</a>
+   <a class="button" href={whatsapp()} target="_blank" rel="noopener noreferrer">Abrir conversa no WhatsApp ↗</a>
+   <hr/>
+   <span class="eyebrow">Outros canais</span>
+   <p>Telefone fixo: <a href={'tel:'+site.landlineHref}>{site.landline}</a></p>
+   <p>E-mail: <a href={'mailto:'+site.email}>{site.email}</a></p>
+  </aside>
+  <div class="contact-how">
+   <span class="eyebrow">Para agilizar o atendimento</span>
+   <h2>O que você pode enviar?</h2>
+   <p>Conte a cidade, o tipo de obra e o serviço desejado. Se tiver fotos, metragens, planta ou memorial, encaminhe diretamente pelo WhatsApp.</p>
+   <p>Não precisa preencher cadastro para iniciar uma conversa.</p>
+  </div>
+ </section>
+ <section class="section wrap compact-top contact-extra">
+  <details class="contact-form-details">
+   <summary>Prefere preencher as informações antes de abrir o WhatsApp?</summary>
+   <p>Esta opção é apenas uma alternativa. O WhatsApp abre normalmente sem formulário.</p>
+   <form class="quote-form" data-quote-form data-wa={'55'+site.whatsappNumber}><h2>Formulário opcional</h2><p>Se quiser organizar os detalhes antes de iniciar a conversa, preencha os campos. A mensagem será preparada para o WhatsApp comercial.</p><div class="form-grid"><label>Seu nome <span aria-hidden="true">*</span><input name="nome" autocomplete="name" required maxlength="100"/></label><label>WhatsApp ou telefone <span aria-hidden="true">*</span><input name="telefone" type="tel" autocomplete="tel" required pattern="[0-9()+ .-]{10,20}" title="Informe um telefone com DDD." maxlength="20"/></label><label>Empresa ou condomínio<input name="empresa" autocomplete="organization" maxlength="150"/></label><label>Cidade e estado <span aria-hidden="true">*</span><input name="cidade" autocomplete="address-level2" required maxlength="120"/></label><label class="full">Serviço desejado <span aria-hidden="true">*</span><select name="servico" required><option value="">Selecione</option><option>Corrimão duplo de alumínio para escadaria</option><option>Corrimão duplo de inox para rampa</option><option>Escadaria e rampa no mesmo projeto</option><option>Guarda-corpo</option><option>Vidro temperado</option><option>Outros serviços</option></select></label><label class="full">Sobre a sua obra<textarea name="mensagem" rows="4" maxlength="2000" placeholder="Etapa da obra, trechos envolvidos e o que você já tem de informações."></textarea></label></div><p class="form-note">Campos com * são obrigatórios. Ao continuar, os dados preenchidos serão incluídos na mensagem do WhatsApp. <a href="/politica-de-privacidade/">Leia a política de privacidade</a>.</p><button class="button" type="submit">Continuar no WhatsApp ↗</button><p role="status" aria-live="polite" data-form-status></p><noscript><p>Para usar o formulário, ative o JavaScript ou <a href={whatsapp()}>abra o WhatsApp diretamente</a>.</p></noscript></form>
+  </details>
+ </section>
+</Layout>

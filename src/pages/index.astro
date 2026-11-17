@@ -4,6 +4,7 @@ import Carousel from '../components/Carousel.astro';
 import Photo from '../components/Photo.astro';
 import ProductCards from '../components/ProductCards.astro';
 import Callout from '../components/Callout.astro';
+import {whatsapp} from '../data/site';
 const slides=[
  {id:'ACF-011',label:'Rampas e acessos',title:'Soluções que acompanham a sua obra.',href:'/corrimaos/inox-rampas/'},
  {id:'ACF-127',label:'Escadarias',title:'Corrimãos duplos para edifícios.',href:'/corrimaos/aluminio-escadarias/'},
@@ -13,7 +14,7 @@ const slides=[
 ---
 <Layout title="Início">
 <section class="home-hero wrap">
-<div class="hero-copy"><span class="eyebrow"><span class="red-line"></span> Alfa Corrimão / Construção civil</span><h1>Corrimãos.<br/>Guarda-corpos.<br/><em>Vidro.</em></h1><p>Corrimãos para escadarias e rampas, guarda-corpos e vidro para edifícios, construtoras e condomínios.</p><div class="button-row"><a class="button" href="/contato/">Solicitar orçamento <span aria-hidden="true">↗</span></a><a class="text-link" href="/obras-realizadas/">Conheça as aplicações <span aria-hidden="true">↓</span></a></div><div class="hero-footnote"><span>Escadarias</span><span>Rampas</span><span>Áreas comuns</span></div></div>
+<div class="hero-copy"><span class="eyebrow"><span class="red-line"></span> Alfa Corrimão / Construção civil</span><h1>Corrimãos.<br/>Guarda-corpos.<br/><em>Vidro.</em></h1><p>Corrimãos para escadarias e rampas, guarda-corpos e vidro para edifícios, construtoras e condomínios.</p><div class="button-row"><a class="button" href={whatsapp()} target="_blank" rel="noopener noreferrer">Solicitar orçamento <span aria-hidden="true">↗</span></a><a class="text-link" href="/obras-realizadas/">Conheça as aplicações <span aria-hidden="true">↓</span></a></div><div class="hero-footnote"><span>Escadarias</span><span>Rampas</span><span>Áreas comuns</span></div></div>
 <Carousel slides={slides} name="Destaques de produtos e obras" hero/>
 </section>
 <div class="service-strip"><div class="wrap"><span>Para construtoras</span><span>Para condomínios</span><span>Para responsáveis por obras</span><a href="/construtoras-e-condominios/">Conheça o atendimento ↗</a></div></div>

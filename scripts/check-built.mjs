@@ -23,6 +23,22 @@ for(const file of htmlFiles){
  }
  for(const match of html.matchAll(/<img\b[^>]*>/g))assert.match(match[0],/alt="[^"]+"/);
 }
+// REV-008 — Todos os links de WhatsApp comercial devem abrir o mesmo destinatário.
+const commercialNumber='5511997531839';
+for (const file of htmlFiles) {
+ const html=await readFile(file,'utf8');
+ for (const match of html.matchAll(/href="https:\/\/wa\.me\/(\d+)/g)) {
+  assert.equal(match[1],commercialNumber,file+': WhatsApp não é o atendimento comercial');
+ }
+ assert.match(html,/class="button header-cta" href="https:\/\/wa\.me\/5511997531839/,'CTA do cabeçalho deve abrir WhatsApp');
+}
+const contactHtml=await readFile(join(root,'contato','index.html'),'utf8');
+const landingHtml=await readFile(join(root,'corrimaos-para-predios','index.html'),'utf8');
+assert.match(contactHtml,/data-wa="5511997531839"/,'Formulário opcional deve usar o WhatsApp comercial');
+assert.match(landingHtml,/data-wa="5511997531839"/,'Formulário da landing deve usar o WhatsApp comercial');
+assert.match(contactHtml,/<details class="contact-form-details"/,'Formulário de contato deve ser opcional e secundário');
+assert.match(contactHtml,/class="header-whatsapp" href="https:\/\/wa\.me\/5511997531839/,'WhatsApp visível no cabeçalho');
+assert.match(contactHtml,/class="floating-contact" href="https:\/\/wa\.me\/5511997531839/,'WhatsApp flutuante');
 const home=await readFile(join(root,'index.html'),'utf8');
 assert.equal(new Set([...home.matchAll(/data-image-id="([^"]+)"/g)].map(m=>m[1])).size,10,'Dez fotos distintas na home');
 for(const route of ['aluminio-escadarias','inox-rampas']){

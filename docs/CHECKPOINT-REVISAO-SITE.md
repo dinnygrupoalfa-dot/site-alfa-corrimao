@@ -15,7 +15,7 @@
 
 | Nº | Página | URL de revisão | Estado visual | Foco da conferência |
 | --- | --- | --- | --- | --- |
-| 01 | **Início** | https://alfa-corrimao-web.pages.dev/ | **Aguardando Dinny** | Logo, títulos, fotos principais, hero/carrossel 3,5s, destaque do píer, soluções, links e celular |
+| 01 | **Início** | https://alfa-corrimao-web.pages.dev/ | **REV-008 executada tecnicamente; aguardando novo print e aprovação** | Logo, títulos, fotos, carrossel, píer e **CTA WhatsApp de Edna no celular** |
 | 02 | Landing de anúncios | https://alfa-corrimao-web.pages.dev/corrimaos-para-predios/ | Aguardando | Texto do briefing, fotos da escadaria, corrimão duplo, rampas, chamadas, formulário e celular |
 | 03 | Corrimão alumínio / escadarias | https://alfa-corrimao-web.pages.dev/corrimaos/aluminio-escadarias/ | Aguardando | ACF-127 e ACF-126, produto correto, qualidade dos enquadramentos |
 | 04 | Corrimão inox / rampas | https://alfa-corrimao-web.pages.dev/corrimaos/inox-rampas/ | Aguardando | Fotos de rampas, continuidade do corrimão e terminologia sem alegar inox 304 sem prova |
@@ -27,7 +27,7 @@
 | 10 | Construtoras e condomínios | https://alfa-corrimao-web.pages.dev/construtoras-e-condominios/ | Aguardando | Público, benefícios, credibilidade e contato |
 | 11 | Quem somos | https://alfa-corrimao-web.pages.dev/quem-somos/ | Aguardando | História, marca, responsabilidades e informações confirmadas |
 | 12 | Acessibilidade e normas | https://alfa-corrimao-web.pages.dev/acessibilidade-e-normas/ | Aguardando | Referências técnicas e ausência de promessas indevidas |
-| 13 | Contato | https://alfa-corrimao-web.pages.dev/contato/ | Aguardando | WhatsApp, telefone, formulário e envio manual |
+| 13 | Contato | https://alfa-corrimao-web.pages.dev/contato/ | **Reorganizada; aguardando revisão visual** | WhatsApp comercial prioritário, fixo preservado, formulário opcional no final |
 | 14 | Blog | https://alfa-corrimao-web.pages.dev/blog/ | Aguardando | Estado sem artigos inventados |
 | 15 | Política de privacidade | https://alfa-corrimao-web.pages.dev/politica-de-privacidade/ | Aguardando | Dados e contatos publicados |
 | 16 | Termos de uso | https://alfa-corrimao-web.pages.dev/termos-de-uso/ | Aguardando | Revisão editorial/jurídica |
@@ -39,6 +39,9 @@
 - [ ] Fotografia de escadaria **ACF-127** adequada; nenhuma das seis fotos proibidas.
 - [ ] Carrossel avança a cada **3,5 segundos** e possui controles de pausa/setas.
 - [ ] Destaque do **Píer de Cubatão** aparece e leva às **46 fotos**.
+- [ ] Botões **Pedir/Solicitar orçamento** abrem diretamente o WhatsApp comercial da Edna **(11) 99753-1839**.
+- [ ] WhatsApp disponível no topo **e** flutuando ao rolar, sem quebrar o layout em 425 px.
+- [ ] Na página de Contato, WhatsApp é prioritário e o formulário ficou opcional no final.
 - [ ] Cards dos serviços e botões de orçamento direcionam corretamente.
 - [ ] Versão do celular não corta títulos, imagens, botões ou carrosséis.
 - [ ] Imagens carregam; qualidade e enquadramento aprovados.
@@ -52,6 +55,13 @@
 | REV-005 | Exclusão das seis fotos indevidas (AC-377/379/380/381/382/383) | Executada, proibida reimportação | docs/REVISOES-E-PRESTACAO-DE-CONTAS.md |
 | REV-006 | Triagem das novas fotos, Catálogo Mestre ACF-126–164 | Concluído e verificado | docs/ACERVO-LOTE-021.md |
 | REV-007 | Uso editorial do lote 021: Home, produtos, Obras, Píer e landing | **Publicado; aguarda revisão visual** | Commit `3454408165254b9839631d1d0317856a99b94533`; Cloudflare: 16 páginas, build e deploy success |
-| REV-008+ | Alterações solicitadas página a página | Ainda não abertas | Cada print e comentário recebido |
+| REV-008 | Checkpoint 01: WhatsApp da Edna, CTAs de orçamento e contato simplificado | **Código preparado; verificar build/deploy e prints** | Captura móvel de Dinny, 425 × 644; commit e deployment no registro REV-008 |
+| REV-009+ | Próximas alterações por página | Aguardando observações | Prints e comentários de Dinny |
 
 **Domínio:** esta revisão usa o subdomínio `pages.dev`; não houve alteração do domínio oficial ou DNS. O conteúdo permanece em `noindex` até a aprovação final de publicação comercial.
+
+## Checkpoint 01A — Correções solicitadas na Home (17/11/2026)
+
+**Solicitação de Dinny, a partir de print no Chrome responsivo (425 × 644):** adicionar WhatsApp no topo além do flutuante; redirecionar todos os CTAs de pedido de orçamento para **Edna (11) 99753-1839**; preservar telefone fixo **(11) 4357-3447**; reorganizar a página de contato, priorizando WhatsApp e deixando formulário somente como opção secundária no final. Na landing, os CTAs de orçamento passam a abrir WhatsApp diretamente; o formulário permanece como alternativa.
+
+**Estado:** alterações de código preparadas e em validação de implantação. Print **depois** e aprovação de Dinny ainda pendentes. Não mudar SEO, domínio ou garantia nesta intervenção.

@@ -57,3 +57,13 @@ Dinny autorizou explicitamente executar as etapas **1 a 3** do plano: comparar d
 **Evidência técnica:** commit `3454408165254b9839631d1d0317856a99b94533`, confirmação via API Cloudflare Pages de **build e deploy bem-sucedidos**, 16 páginas compiladas. O domínio oficial não foi tocado; site de revisão permanece com bloqueio de indexação.
 
 **Estado:** **publicado e tecnicamente compilado; ainda NÃO aprovado visualmente**. Prints antes/depois, correções pontuais e PDF final ficam para checkpoints subsequentes. As seis fotos reprovadas permanecem proibidas.
+
+## REV-008 — Atendimento comercial via WhatsApp (17/11/2026)
+
+**Origem:** observação de Dinny sobre a Home em tela responsiva 425 × 644. **Autorização expressa:** fazer as correções imediatamente, incluindo configuração central de contato.
+
+**Antes:** cabeçalho e botão principal da Home levavam a `/contato/`; formulário aparecia antes do WhatsApp; botões e formulários usavam o telefone técnico de Ernani; WhatsApp existia apenas flutuante no móvel.
+
+**Alteração autorizada:** o canal de orçamentos passa a ser **WhatsApp de Edna, (11) 99753-1839**. Site centralizado em `src/data/site.ts` (`whatsappNumber`), sem mudar o telefone fixo **(11) 4357-3447** nem apagar o contato técnico de Ernani. Botões de orçamento e 'fale conosco' direcionam ao WhatsApp comercial; cabeçalho móvel mostra botões separados de orçamento e WhatsApp, além do botão flutuante; página de contato agora dá prioridade à conversa e mantém formulário opcional em seção recolhida ao final; landing encaminha CTAs diretamente ao WhatsApp comercial e preserva o formulário alternativo.
+
+**Evidência antes:** print de Dinny na conversa de 17/11/2026 (Chrome, 425 × 644). **Pendente:** registro do commit, build e deploy Cloudflare, screenshot depois, teste de abertura no aparelho e confirmação de chegada da mensagem no WhatsApp de Edna. Não declarar aprovação visual ou recebimento até serem verificados.

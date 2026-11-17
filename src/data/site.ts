@@ -4,12 +4,15 @@ export const site = {
  engineer: 'Ernani',
  phone: '11947704632',
  phoneLabel: '(11) 94770-4632',
+ // Canal comercial de pedidos de orçamento: atendimento Edna.
+ whatsappNumber: '11997531839',
+ whatsappLabel: '(11) 99753-1839',
  landline: '(11) 4357-3447',
  landlineHref: '+551143573447',
  email: 'alfacorrimao@hotmail.com',
 };
 export const whatsapp = (message = 'Olá! Gostaria de solicitar um orçamento para minha obra.') =>
- 'https://wa.me/55' + site.phone + '?text=' + encodeURIComponent(message);
+ 'https://wa.me/55' + site.whatsappNumber + '?text=' + encodeURIComponent(message);
 export const nav = [
  {label:'Início',href:'/'},
  {label:'Quem somos',href:'/quem-somos/'},

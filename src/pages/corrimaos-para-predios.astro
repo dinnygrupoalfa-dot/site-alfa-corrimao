@@ -66,7 +66,7 @@ const nomeServico='Corrimão para escadaria ou rampa';
     <div class="wrap lp-quicknav-inner">
       <a href="#escadarias">01 / Corrimão duplo de alumínio para escadarias</a>
       <a href="#rampas">02 / Corrimão duplo de inox para rampas</a>
-      <a href="#orcamento">Solicitar orçamento</a>
+      <a href={whatsapp()} target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
       <small>Um só fornecedor para os dois serviços.</small>
     </div>
   </nav>
@@ -102,8 +102,8 @@ const nomeServico='Corrimão para escadaria ou rampa';
           <p>O corrimão duplo não é uma opção reservada apenas a escadas largas: a configuração deve atender aos requisitos normativos e ao projeto. Em escadarias de maior largura, a avaliação também considera a necessidade de corrimão intermediário.</p>
           <p class="lp-product-bullet">Alumínio, estrutura leve, versatilidade, facilidade de manutenção e agilidade de instalação.</p>
           <div class="lp-actions">
-            <a class="button" href="#orcamento" data-product-link="Corrimão duplo de alumínio para escadaria">Solicitar orçamento ↗</a>
-            <a class="lp-outline" href={whatsapp('Olá, Ernani. Gostaria de um orçamento de corrimão duplo de alumínio para escadaria de prédio.')} target="_blank" rel="noopener noreferrer">Falar com o engenheiro</a>
+            <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento para corrimão duplo de alumínio em escadaria de prédio.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
+            <a class="lp-outline" href={whatsapp('Olá! Gostaria de um orçamento de corrimão duplo de alumínio para escadaria de prédio.')} target="_blank" rel="noopener noreferrer">Conversar no WhatsApp</a>
           </div>
         </div>
       </div>
@@ -139,8 +139,8 @@ const nomeServico='Corrimão para escadaria ou rampa';
           <p>A proposta considera o uso em rampa, os acessos, os patamares, as extremidades e as exigências aplicáveis da NBR 9050. A solução em inox complementa o corrimão de alumínio das escadarias.</p>
           <p class="lp-product-bullet">Alumínio para escadarias e inox para rampas: soluções complementares para uma mesma obra.</p>
           <div class="lp-actions">
-            <a class="button" href="#orcamento" data-product-link="Corrimão duplo de inox para rampa">Solicitar orçamento ↗</a>
-            <a class="lp-outline" href={whatsapp('Olá, Ernani. Gostaria de um orçamento de corrimão duplo de inox para rampa de acessibilidade.')} target="_blank" rel="noopener noreferrer">Falar com o engenheiro</a>
+            <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento de corrimão duplo de inox para rampa de acessibilidade.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
+            <a class="lp-outline" href={whatsapp('Olá! Gostaria de um orçamento de corrimão duplo de inox para rampa de acessibilidade.')} target="_blank" rel="noopener noreferrer">Conversar no WhatsApp</a>
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@ const nomeServico='Corrimão para escadaria ou rampa';
       </div>
       <div>
         <p>O cliente que precisa adequar a escadaria também pode precisar de corrimãos para a rampa de acesso. A Alfa reúne as duas soluções, em alumínio e inox, em uma única conversa sobre a obra.</p>
-        <a class="button" href="#orcamento" data-product-link="Escadaria e rampa no mesmo projeto">Apresentar os dois serviços ↗</a>
+        <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento para escadaria e rampa do mesmo empreendimento.")} target="_blank" rel="noopener noreferrer">Apresentar os dois serviços ↗</a>
       </div>
     </div>
   </section>
@@ -196,17 +196,17 @@ const nomeServico='Corrimão para escadaria ou rampa';
       <div class="lp-card-grid">
         <article class="lp-card"><b>01 / Obra nova</b><p>Informe a cidade, a etapa da obra, as torres ou blocos e as informações disponíveis sobre a escadaria e a rampa.</p></article>
         <article class="lp-card"><b>02 / Condomínio</b><p>Apresente as necessidades de readequação e o prazo previsto para liberação do local.</p></article>
-        <article class="lp-card"><b>03 / Fale com o engenheiro</b><p>Tire suas dúvidas diretamente com Ernani. Se preferir, envie fotos e medidas antes da conversa.</p></article>
+        <article class="lp-card"><b>03 / Atendimento comercial</b><p>Converse diretamente pelo WhatsApp da Alfa e envie fotos e medidas do empreendimento, se disponíveis.</p></article>
       </div>
     </div>
   </section>
 
   <section id="orcamento" class="lp-contact">
     <div class="wrap lp-contact-grid">
-      <form class="quote-form" data-quote-form data-wa={'55'+site.phone}>
+      <form class="quote-form" data-quote-form data-wa={'55'+site.whatsappNumber}>
         <span class="eyebrow">Orçamento / Sem compromisso</span>
         <h2>Apresente sua escadaria ou rampa.</h2>
-        <p>Preencha as informações que tiver. O WhatsApp abrirá com a mensagem pronta para você conferir e enviar ao engenheiro Ernani.</p>
+        <p>Se preferir preencher os detalhes, esta opção prepara uma mensagem para enviar ao WhatsApp comercial. Você também pode conversar diretamente, sem formulário.</p>
         <div class="form-grid">
           <label>Seu nome <span aria-hidden="true">*</span><input name="nome" autocomplete="name" required maxlength="100"/></label>
           <label>WhatsApp ou telefone <span aria-hidden="true">*</span><input name="telefone" type="tel" autocomplete="tel" required pattern="[0-9()+ .-]{10,20}" title="Informe um telefone com DDD." maxlength="20"/></label>
@@ -230,11 +230,11 @@ const nomeServico='Corrimão para escadaria ou rampa';
         <noscript><p>Para utilizar o formulário, ative o JavaScript ou <a href={whatsapp()}>acesse diretamente o WhatsApp</a>.</p></noscript>
       </form>
       <aside class="contact-card">
-        <span class="eyebrow">Atendimento técnico</span>
-        <h2>Converse com o engenheiro Ernani.</h2>
-        <p>Solicite seu orçamento, apresente o projeto e tire dúvidas sobre as duas aplicações.</p>
-        <a class="contact-phone" href={'tel:+55'+site.phone}>{site.phoneLabel}</a>
-        <a class="button" href={whatsapp('Olá, Ernani. Gostaria de solicitar um orçamento de corrimão para meu empreendimento.')} target="_blank" rel="noopener noreferrer">Abrir WhatsApp ↗</a>
+        <span class="eyebrow">Atendimento comercial / WhatsApp</span>
+        <h2>Fale diretamente com a Alfa.</h2>
+        <p>Peça orçamento e apresente o projeto pelo WhatsApp, sem necessidade de preencher formulário.</p>
+        <a class="contact-phone" href={whatsapp()} target="_blank" rel="noopener noreferrer">{site.whatsappLabel}</a>
+        <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento de corrimão para meu empreendimento.")} target="_blank" rel="noopener noreferrer">Abrir WhatsApp ↗</a>
         <hr/>
         <p>Telefone: <a href={'tel:'+site.landlineHref}>{site.landline}</a></p>
         <p><a href={'mailto:'+site.email}>{site.email}</a></p>
@@ -252,9 +252,5 @@ const nomeServico='Corrimão para escadaria ou rampa';
   }
   preselect();
   window.addEventListener('hashchange',preselect);
-  document.querySelectorAll<HTMLAnchorElement>('[data-product-link]').forEach(link=>link.addEventListener('click',()=>{
-    if (!service) return;
-    service.value=link.dataset.productLink||'';
-  }));
 </script>
 </Layout>
