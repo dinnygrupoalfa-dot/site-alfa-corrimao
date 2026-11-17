@@ -31,18 +31,18 @@ const landingHtml=await readFile(join(root,'corrimaos-para-predios','index.html'
 for (const file of htmlFiles) {
  const html=await readFile(file,'utf8');
  const expectedNumber = file===join(root,'corrimaos-para-predios','index.html') ? campaignNumber : commercialNumber;
- for (const match of html.matchAll(/href="https:\\/\\/wa\\.me\\/(\\d+)/g)) {
+ for (const match of html.matchAll(/href="https:\/\/wa\.me\/(\d+)/g)) {
   assert.equal(match[1],expectedNumber,file+': destinatário de WhatsApp incorreto');
  }
- assert.match(html,new RegExp('class="button header-cta" href="https://wa\\\\.me/'+expectedNumber),'CTA do cabeçalho deve abrir WhatsApp correto');
+ assert.ok(html.includes('class="button header-cta" href="https://wa.me/'+expectedNumber),'CTA do cabeçalho deve abrir WhatsApp correto');
 }
 assert.match(contactHtml,/data-wa="5511997531839"/,'Formulário institucional deve usar Edna');
 assert.match(landingHtml,/data-wa="5511947704632"/,'Formulário da landing deve usar Ernani');
 assert.match(contactHtml,/<details class="contact-form-details"/,'Formulário de contato deve ser opcional e secundário');
-assert.match(contactHtml,/class="header-whatsapp" href="https:\\/\\/wa\\.me\\/5511997531839/,'WhatsApp institucional visível no cabeçalho');
-assert.match(contactHtml,/class="floating-contact" href="https:\\/\\/wa\\.me\\/5511997531839/,'WhatsApp institucional flutuante');
-assert.match(landingHtml,/class="header-whatsapp" href="https:\\/\\/wa\\.me\\/5511947704632/,'WhatsApp da campanha visível no cabeçalho');
-assert.match(landingHtml,/class="floating-contact" href="https:\\/\\/wa\\.me\\/5511947704632/,'WhatsApp da campanha flutuante');
+assert.match(contactHtml,/class="header-whatsapp" href="https:\/\/wa\.me\/5511997531839/,'WhatsApp institucional visível no cabeçalho');
+assert.match(contactHtml,/class="floating-contact" href="https:\/\/wa\.me\/5511997531839/,'WhatsApp institucional flutuante');
+assert.match(landingHtml,/class="header-whatsapp" href="https:\/\/wa\.me\/5511947704632/,'WhatsApp da campanha visível no cabeçalho');
+assert.match(landingHtml,/class="floating-contact" href="https:\/\/wa\.me\/5511947704632/,'WhatsApp da campanha flutuante');
 const home=await readFile(join(root,'index.html'),'utf8');
 assert.equal(new Set([...home.matchAll(/data-image-id="([^"]+)"/g)].map(m=>m[1])).size,10,'Dez fotos distintas na home');
 for(const route of ['aluminio-escadarias','inox-rampas']){
