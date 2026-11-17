@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LandingCarousel from '../components/LandingCarousel.astro';
-import {site,whatsapp} from '../data/site';
+import {site,technicalWhatsapp as whatsapp} from '../data/site';
 import '../styles/landing.css';
 
 // Fotos reais preservadas no acervo Alfa. Códigos AC correspondem às fotografias de origem;
@@ -41,7 +41,7 @@ const cores=[
 ];
 const nomeServico='Corrimão para escadaria ou rampa';
 ---
-<Layout title="Corrimãos de Parede NBR 9050 para Prédios" description="Corrimão duplo de alumínio para escadarias e corrimão duplo em inox para rampas de acessibilidade. Soluções Alfa Corrimão para prédios e condomínios. Solicite orçamento.">
+<Layout title="Corrimãos de Parede NBR 9050 para Prédios" description="Corrimão duplo de alumínio para escadarias e corrimão duplo em inox para rampas de acessibilidade. Soluções Alfa Corrimão para prédios e condomínios. Solicite orçamento." campaignLanding>
 <div class="landing">
   <section class="lp-top">
     <div class="wrap">
@@ -203,7 +203,7 @@ const nomeServico='Corrimão para escadaria ou rampa';
 
   <section id="orcamento" class="lp-contact">
     <div class="wrap lp-contact-grid">
-      <form class="quote-form" data-quote-form data-wa={'55'+site.whatsappNumber}>
+      <form class="quote-form" data-quote-form data-wa={'55'+site.phone}>
         <span class="eyebrow">Orçamento / Sem compromisso</span>
         <h2>Apresente sua escadaria ou rampa.</h2>
         <p>Se preferir preencher os detalhes, esta opção prepara uma mensagem para enviar ao WhatsApp comercial. Você também pode conversar diretamente, sem formulário.</p>
@@ -233,7 +233,7 @@ const nomeServico='Corrimão para escadaria ou rampa';
         <span class="eyebrow">Atendimento comercial / WhatsApp</span>
         <h2>Fale diretamente com a Alfa.</h2>
         <p>Peça orçamento e apresente o projeto pelo WhatsApp, sem necessidade de preencher formulário.</p>
-        <a class="contact-phone" href={whatsapp()} target="_blank" rel="noopener noreferrer">{site.whatsappLabel}</a>
+        <a class="contact-phone" href={whatsapp()} target="_blank" rel="noopener noreferrer">{site.phoneLabel}</a>
         <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento de corrimão para meu empreendimento.")} target="_blank" rel="noopener noreferrer">Abrir WhatsApp ↗</a>
         <hr/>
         <p>Telefone: <a href={'tel:'+site.landlineHref}>{site.landline}</a></p>
