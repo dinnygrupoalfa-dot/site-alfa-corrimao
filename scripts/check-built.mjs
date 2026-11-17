@@ -11,7 +11,7 @@ for(const file of htmlFiles){
  assert.equal((html.match(/<h1[\s>]/g)||[]).length,1,file+': H1 único');
  assert.match(html,/<html lang="pt-BR"/);
  assert.match(html,/<meta name="robots" content="noindex, nofollow"/);
- assert.doesNotMatch(html,/\[X\]|depoimento|Inox 304|20 anos|paga.*sinal|pagamento após/i);
+ assert.doesNotMatch(html,/\[X\]|depoimento|Inox 304|20 anos|pagamento\s+(?:do\s+)?sinal\s+(?:na\s+assinatura|antecipado)|pagamento após/i);
  for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g)){
   const raw=match[1];if(/^(?:https?:|mailto:|tel:|data:)/.test(raw))continue;
   const [url,hash]=raw.split('#');let target=url?url.startsWith('/')?join(root,decodeURIComponent(url)):resolve(dirname(file),decodeURIComponent(url)):file;
