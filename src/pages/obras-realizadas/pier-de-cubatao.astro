@@ -4,7 +4,7 @@ import Carousel from '../../components/Carousel.astro';
 import Photo from '../../components/Photo.astro';
 import Callout from '../../components/Callout.astro';
 import newImages from '../../data/new-images.json';
-const pier = newImages.filter(image => Number(image.id.slice(4))>=115 && Number(image.id.slice(4))<=164);
+const pier = newImages.filter(image => {const n=Number(image.id.slice(4)); return n>=115 && n<=164 && !(n>=126 && n<=129);});
 const categoryFor=(image:typeof pier[number])=>{
  const name=image.originalName.toLowerCase();
  if(/pessoas|carrinho|pergolado|mobiliario|bancos|faixa-tatil/.test(name)) return 'contexto';
