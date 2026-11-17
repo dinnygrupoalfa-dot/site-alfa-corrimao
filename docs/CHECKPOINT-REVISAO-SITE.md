@@ -65,3 +65,11 @@
 **Solicitação de Dinny, a partir de print no Chrome responsivo (425 × 644):** adicionar WhatsApp no topo além do flutuante; redirecionar todos os CTAs de pedido de orçamento para **Edna (11) 99753-1839**; preservar telefone fixo **(11) 4357-3447**; reorganizar a página de contato, priorizando WhatsApp e deixando formulário somente como opção secundária no final. Na landing, os CTAs de orçamento passam a abrir WhatsApp diretamente; o formulário permanece como alternativa.
 
 **Estado:** alterações de código preparadas e em validação de implantação. Print **depois** e aprovação de Dinny ainda pendentes. Não mudar SEO, domínio ou garantia nesta intervenção.
+
+## REV-009 — Cabeçalho móvel em linha única (17/11/2026)
+
+**Pedido:** a captura móvel enviada por Dinny mostrou dois andares de botões, consumindo espaço da Home. **Autorização:** “Ok” após proposta de compactar apenas o cabeçalho.
+
+**Mudança:** no celular, logotipo, Menu, Orçamento e atalho de WhatsApp ficam lado a lado; WhatsApp flutuante e telefone fixo continuam; CTA de orçamento mantém o número comercial da Edna. O atalho de WhatsApp tem identificação acessível. Sem alterações de conteúdo, SEO ou fotos.
+
+**Estado:** implementação solicitada, aguardando confirmação do build/deploy e nova captura móvel de Dinny. **Home ainda não aprovada.**
