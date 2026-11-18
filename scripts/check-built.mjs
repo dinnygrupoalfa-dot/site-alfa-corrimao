@@ -23,7 +23,7 @@ for(const file of htmlFiles){
  }
  for(const match of html.matchAll(/<img\b[^>]*>/g))assert.match(match[0],/alt="[^"]+"/);
 }
-// Os CTAs comerciais são da Edna; a landing oferece links técnicos separados para Ernani.
+// A página de vendas é exclusiva de Ernani; demais páginas preservam o atendimento da Edna.
 const commercialNumber='5511997531839';
 const campaignNumber='5511947704632';
 const contactHtml=await readFile(join(root,'contato','index.html'),'utf8');
@@ -32,21 +32,23 @@ for (const file of htmlFiles) {
  const html=await readFile(file,'utf8');
  const isLanding = file===join(root,'corrimaos-para-predios','index.html');
  const isHome = file===join(root,'index.html');
- const expectedHeaderNumber = commercialNumber;
+ const expectedHeaderNumber = isLanding ? campaignNumber : commercialNumber;
  for (const match of html.matchAll(/href="https:\/\/wa\.me\/(\d+)/g)) {
-  const allowed = match[1]===commercialNumber || ((isLanding || isHome) && match[1]===campaignNumber);
+  const allowed = isLanding ? match[1]===campaignNumber : (match[1]===commercialNumber || (isHome && match[1]===campaignNumber));
   assert.ok(allowed,file+': destinatário de WhatsApp incorreto ('+match[1]+')');
  }
  assert.ok(html.includes('class="button header-cta" href="https://wa.me/'+expectedHeaderNumber),'CTA do cabeçalho deve abrir WhatsApp correto');
 }
 assert.match(contactHtml,/data-wa="5511997531839"/,'Formulário institucional deve usar Edna');
-assert.match(landingHtml,/data-wa="5511997531839"/,'Formulário da landing deve usar Edna');
+assert.match(landingHtml,/data-wa="5511947704632"/,'Formulário da landing deve usar Ernani');
 assert.match(contactHtml,/<details class="contact-form-details"/,'Formulário de contato deve ser opcional e secundário');
 assert.match(contactHtml,/class="header-whatsapp" href="https:\/\/wa\.me\/5511997531839/,'WhatsApp institucional visível no cabeçalho');
 assert.match(contactHtml,/class="floating-contact" href="https:\/\/wa\.me\/5511997531839/,'WhatsApp institucional flutuante');
-assert.match(landingHtml,/class="header-whatsapp" href="https:\/\/wa\.me\/5511997531839/,'WhatsApp comercial visível no cabeçalho da landing');
-assert.match(landingHtml,/class="floating-contact" href="https:\/\/wa\.me\/5511997531839/,'WhatsApp comercial flutuante na landing');
+assert.match(landingHtml,/class="header-whatsapp" href="https:\/\/wa\.me\/5511947704632/,'WhatsApp de Ernani no cabeçalho da landing');
+assert.match(landingHtml,/class="floating-contact" href="https:\/\/wa\.me\/5511947704632/,'WhatsApp de Ernani flutuante na landing');
 assert.match(landingHtml,/href="https:\/\/wa\.me\/5511947704632/,'Contato técnico com Ernani deve permanecer disponível');
+assert.doesNotMatch(landingHtml,/https:\/\/wa\.me\/5511997531839/,'Nenhum CTA da página de vendas pode enviar para Edna');
+assert.match(landingHtml,/fotos de corrimãos da Alfa em escadarias e rampas/,'O carrossel de 30 fotos deve estar disponível');
 const home=await readFile(join(root,'index.html'),'utf8');
 assert.equal(new Set([...home.matchAll(/data-image-id="([^"]+)"/g)].map(m=>m[1])).size,10,'Dez fotos distintas na home');
 for(const route of ['aluminio-escadarias','inox-rampas']){
