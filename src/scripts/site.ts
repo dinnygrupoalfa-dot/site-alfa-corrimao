@@ -11,29 +11,36 @@ const mobileQuery=matchMedia('(max-width: 1050px)'); mobileQuery.addEventListene
 document.querySelectorAll<HTMLElement>('[data-carousel]').forEach(carousel=>{
  const track=carousel.querySelector<HTMLElement>('[data-track]')!;
  const slides=Array.from(track.querySelectorAll<HTMLElement>('[data-slide]'));
- const pause=carousel.querySelector<HTMLButtonElement>('[data-pause]')!;
+ const pause=carousel.querySelector<HTMLButtonElement>('[data-pause]');
+ const isSalesLanding=carousel.classList.contains('lp-carousel');
+ const precisePointer=matchMedia('(hover: hover) and (pointer: fine)');
  const dots=Array.from(carousel.querySelectorAll<HTMLButtonElement>('[data-goto]'));
  const counter=carousel.querySelector<HTMLElement>('[data-counter]')!;
  const status=carousel.querySelector<HTMLElement>('[data-carousel-status]')!;
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
- let index=0,paused=reduced.matches,hovered=false,focused=false,visible=true;
+ let index=0,paused=!isSalesLanding&&reduced.matches,hovered=false,focused=false,visible=true;
  let timer:ReturnType<typeof setInterval>|undefined;
- const render=()=>{slides.forEach((slide,i)=>{slide.inert=i!==index;});counter.textContent=String(index+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');dots.forEach((dot,i)=>dot.setAttribute('aria-pressed',String(index===i)));pause.textContent=paused?'Reproduzir':'Pausar';pause.setAttribute('aria-label',paused?'Reproduzir automaticamente':'Pausar reprodução automática');pause.setAttribute('aria-pressed',String(paused));};
- const go=(next:number,manual=false)=>{index=(next+slides.length)%slides.length;if(manual){paused=true;status.textContent='Fotografia '+(index+1)+' de '+slides.length;}track.scrollTo({left:slides[index].offsetLeft-track.offsetLeft,behavior:reduced.matches?'instant':'smooth'});render();updateTimer();};
+ const render=()=>{slides.forEach((slide,i)=>{slide.inert=i!==index;});counter.textContent=String(index+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');dots.forEach((dot,i)=>dot.setAttribute('aria-pressed',String(index===i)));if(pause){pause.textContent=paused?'Reproduzir':'Pausar';pause.setAttribute('aria-label',paused?'Reproduzir automaticamente':'Pausar reprodução automática');pause.setAttribute('aria-pressed',String(paused));}};
+ const go=(next:number,manual=false)=>{index=(next+slides.length)%slides.length;if(manual){if(!isSalesLanding)paused=true;status.textContent='Fotografia '+(index+1)+' de '+slides.length;}track.scrollTo({left:slides[index].offsetLeft-track.offsetLeft,behavior:reduced.matches?'instant':'smooth'});render();updateTimer();};
  const updateTimer=()=>{if(timer)clearInterval(timer);if(!paused&&!hovered&&!focused&&visible&&!document.hidden&&slides.length>1)timer=setInterval(()=>go(index+1),Number(carousel.dataset.interval)||6500);};
  carousel.querySelector('[data-prev]')?.addEventListener('click',()=>go(index-1,true));
  carousel.querySelector('[data-next]')?.addEventListener('click',()=>go(index+1,true));
  dots.forEach((dot,i)=>dot.addEventListener('click',()=>go(i,true)));
- pause.addEventListener('click',()=>{paused=!paused;render();updateTimer();});
+ pause?.addEventListener('click',()=>{paused=!paused;render();updateTimer();});
  track.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();go(index+(event.key==='ArrowRight'?1:-1),true);}});
- track.addEventListener('pointerdown',()=>{paused=true;render();updateTimer();});
+ // Na landing, deslizar as fotos pelo dedo não desliga a reprodução permanentemente.
+ if(!isSalesLanding)track.addEventListener('pointerdown',()=>{paused=true;render();updateTimer();});
  track.addEventListener('scroll',()=>{const nearest=slides.reduce((best,slide,i)=>Math.abs(slide.offsetLeft-track.offsetLeft-track.scrollLeft)<Math.abs(slides[best].offsetLeft-track.offsetLeft-track.scrollLeft)?i:best,0);if(nearest!==index){index=nearest;render();}},{passive:true});
- carousel.addEventListener('mouseenter',()=>{hovered=true;updateTimer();});
+ carousel.addEventListener('mouseenter',()=>{if(!isSalesLanding||precisePointer.matches){hovered=true;updateTimer();}});
  carousel.addEventListener('mouseleave',()=>{hovered=false;updateTimer();});
- carousel.addEventListener('focusin',()=>{focused=true;updateTimer();});
- carousel.addEventListener('focusout',()=>{setTimeout(()=>{focused=carousel.contains(document.activeElement);updateTimer();},0);});
+ // Em telas táteis, o foco dos botões pode persistir após o toque.
+ // Preserva o comportamento antigo nas outras páginas, sem interromper a landing.
+ if(!isSalesLanding){
+  carousel.addEventListener('focusin',()=>{focused=true;updateTimer();});
+  carousel.addEventListener('focusout',()=>{setTimeout(()=>{focused=carousel.contains(document.activeElement);updateTimer();},0);});
+ }
  document.addEventListener('visibilitychange',updateTimer);
- reduced.addEventListener('change',()=>{if(reduced.matches)paused=true;render();updateTimer();});
+ reduced.addEventListener('change',()=>{if(!isSalesLanding&&reduced.matches)paused=true;render();updateTimer();});
  if('IntersectionObserver' in window)new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;updateTimer();},{threshold:0.15}).observe(carousel);
  render();updateTimer();
 });
