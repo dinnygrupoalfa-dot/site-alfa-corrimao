@@ -36,11 +36,21 @@ const clientes = [
   </div>
 </section>
 <script>
- const controle=document.querySelector<HTMLButtonElement>('[data-clients-toggle]');
- const faixa=document.querySelector<HTMLElement>('.lp-clients');
- controle?.addEventListener('click',()=>{
-  const pausada=faixa?.classList.toggle('lp-clients-paused')??false;
-  controle.textContent=pausada?'Retomar movimento':'Pausar movimento';
-  controle.setAttribute('aria-pressed',String(pausada));
+ const controle = document.querySelector<HTMLButtonElement>('[data-clients-toggle]');
+ const faixa = document.querySelector<HTMLElement>('.lp-clients');
+ const reduzido = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
+ // Em navegadores móveis, tocar no botão não pode acionar pausa por :focus-within.
+ function definirMovimento(ativo:boolean) {
+   if (!controle || !faixa) return;
+   faixa.classList.toggle('lp-clients-paused', !ativo);
+   faixa.classList.toggle('lp-clients-motion-opt-in', ativo && reduzido);
+   controle.textContent = ativo ? 'Pausar movimento' : (reduzido ? 'Iniciar movimento' : 'Retomar movimento');
+   controle.setAttribute('aria-pressed', String(!ativo));
+ }
+ // A animação roda automaticamente, exceto quando o aparelho pede menos movimento.
+ definirMovimento(!reduzido);
+ controle?.addEventListener('click', () => {
+   const estaPausado = faixa?.classList.contains('lp-clients-paused') ?? true;
+   definirMovimento(estaPausado);
  });
 </script>
