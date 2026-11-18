@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import LandingCarousel from '../components/LandingCarousel.astro';
 import ClientMarquee from '../components/ClientMarquee.astro';
-import {site,whatsapp,technicalWhatsapp} from '../data/site';
+import {site,technicalWhatsapp} from '../data/site';
 import '../styles/landing.css';
 
 // Fotos reais preservadas no acervo Alfa. Códigos AC correspondem às fotografias de origem;
@@ -50,9 +50,10 @@ const cores=[
  {name:'RAL 9007',swatch:'#7d7f7d'},
  {name:'RAL 7034F',swatch:'#9f9a7a'}
 ];
+const fotosDestaque = [escadarias[5],rampas[0],...escadarias.filter((_,i)=>i!==5),...rampas.filter((_,i)=>i!==0)];
 const nomeServico='Corrimão para escadaria ou rampa';
 ---
-<Layout title="Corrimãos de Parede NBR 9050 para Prédios" description="Corrimão duplo de alumínio para escadarias e corrimão duplo em inox para rampas de acessibilidade. Soluções Alfa Corrimão para prédios e condomínios. Solicite orçamento.">
+<Layout title="Corrimãos de Parede NBR 9050 para Prédios" description="Corrimão duplo de alumínio para escadarias e corrimão duplo em inox para rampas de acessibilidade. Soluções Alfa Corrimão para prédios e condomínios. Orçamento com o engenheiro Ernani." campaignLanding>
 <div class="landing">
   <section class="lp-top">
     <div class="wrap">
@@ -61,7 +62,8 @@ const nomeServico='Corrimão para escadaria ou rampa';
         <div>
           <span class="eyebrow"><span class="red-line"></span> Alfa Corrimão / Escadarias e rampas</span>
           <h1>Corrimãos duplos para <em>escadarias e rampas.</em></h1>
-          <p class="lp-lead">Corrimão duplo de parede em alumínio para escadarias de prédios e corrimão duplo em inox para rampas de acesso. Duas alturas de apoio, 0,70 m e 0,92 m, em ambos os lados, conforme a <strong>ABNT NBR 9050</strong>.</p>
+          <p class="lp-hero-nbr">Em conformidade com a ABNT NBR 9050</p>
+          <p class="lp-lead">Corrimão duplo de parede em alumínio para escadarias de prédios e corrimão duplo em inox para rampas de acesso a PNE. Duas alturas de apoio, 0,70 m e 0,92 m, em ambos os lados, conforme a norma.</p>
           <div class="lp-actions">
             <a class="button" href="#escadarias">Corrimão para escadaria ↗</a>
             <a class="lp-outline" href="#rampas">Corrimão para rampa ↗</a>
@@ -69,7 +71,7 @@ const nomeServico='Corrimão para escadaria ou rampa';
           <p class="lp-muted">Solicite orçamento sem compromisso ou <a class="lp-engineer-cta" href={technicalWhatsapp("Olá, Ernani! Gostaria de tirar dúvidas sobre corrimãos para minha obra.")} target="_blank" rel="noopener noreferrer">fale com o engenheiro Ernani e tire suas dúvidas ↗</a>.</p>
           <div class="lp-facts"><span>Duas alturas de apoio</span><span>Alumínio e inox</span><span class="lp-promise">Nenhum pagamento antes de a obra começar</span></div>
         </div>
-        <LandingCarousel slides={[escadarias[5],rampas[0],escadarias[9],rampas[2],escadarias[10],rampas[6]]} name="Fotografias de corrimãos da Alfa em escadarias e rampas" intervalMs={3500}/>
+        <LandingCarousel slides={fotosDestaque} name="30 fotografias de corrimãos da Alfa em escadarias e rampas" intervalMs={3000}/>
       </div>
     </div>
   </section>
@@ -77,28 +79,39 @@ const nomeServico='Corrimão para escadaria ou rampa';
     <div class="wrap lp-quicknav-inner">
       <a href="#escadarias">01 / Corrimão duplo de alumínio para escadarias</a>
       <a href="#rampas">02 / Corrimão duplo de inox para rampas</a>
-      <a href={whatsapp()} target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+      <a href={technicalWhatsapp()} target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
       <small>Um só fornecedor para os dois serviços.</small>
     </div>
   </nav>
 
   <section id="normas" class="lp-technical">
     <div class="wrap">
-      <span class="eyebrow">Acessibilidade e segurança</span>
+      <span class="eyebrow">Por que a norma importa</span>
+      <div class="lp-avcb">
+        <div>
+          <h2>O corrimão é item avaliado na <em>vistoria do Corpo de Bombeiros.</em></h2>
+          <p>A NBR 9050 determina que os corrimãos sejam instalados em escadas e rampas em ambos os lados, em duas alturas — 0,92 m e 0,70 m —, independentemente da largura. Um corrimão fora do padrão pode dificultar a vistoria e a regularização do AVCB do edifício.</p>
+        </div>
+        <aside class="lp-avcb-note">
+          <strong>Regularização de escadarias e rampas</strong>
+          <p>A Alfa fornece o corrimão conforme os requisitos aplicáveis, com detalhamento técnico para a obra. A emissão do AVCB é atribuição do órgão competente.</p>
+        </aside>
+      </div>
+      <span class="eyebrow">Requisitos técnicos</span>
       <div class="lp-section-heading">
         <h2>O que a <em>NBR 9050</em> exige do corrimão.</h2>
-        <p>Corrimãos de escadarias e rampas integram as condições de acessibilidade e segurança verificadas na edificação. A Alfa fabrica e instala conforme as exigências aplicáveis à obra.</p>
+        <p>Os corrimãos são parte das exigências de acessibilidade e segurança verificadas no empreendimento. Veja os requisitos apresentados pelo engenheiro Ernani.</p>
       </div>
       <ul class="lp-technical-list">
-        <li><strong>Duas alturas nos dois lados</strong>0,92 m e 0,70 m, conforme a referência técnica do projeto (item 6.9.3.2).</li>
+        <li><strong>Duas alturas, ambos os lados</strong>0,92 m e 0,70 m, medidos da face superior do corrimão até o bocel ou quina do degrau (item 6.9.3.2).</li>
         <li><strong>Continuidade</strong>Sem interrupções nos patamares de escadas e rampas (item 6.9.3.3).</li>
-        <li><strong>Prolongamento</strong>Mínimo de 0,30 m nas extremidades (item 6.9.3.2).</li>
-        <li><strong>Empunhadura</strong>Seção circular de 30 mm a 45 mm, ou elíptica conforme o item 4.6.5.</li>
+        <li><strong>Prolongamento de 0,30 m</strong>Mínimo de 0,30 m nas extremidades do corrimão (item 6.9.3.2).</li>
+        <li><strong>Empunhadura</strong>Seção circular de 30 mm a 45 mm, ou elíptica de 45 mm por 30 mm, conforme o item 4.6.5.</li>
         <li><strong>Afastamento da parede</strong>Mínimo de 40 mm entre o corrimão e a parede (item 4.6.5).</li>
         <li><strong>Extremidades e sinalização</strong>Acabamento sem protuberância e sinalização aplicável, inclusive em Braille (itens 6.9.3.4 e 5.4.3).</li>
-        <li><strong>Corrimão intermediário</strong>Previsto para escadas e rampas largas, conforme o item 6.9.3.5 e as condições do projeto.</li>
+        <li><strong>Corrimão intermediário em escadas largas</strong>Para escadas e rampas com largura igual ou superior a 2,40 m, corrimão intermediário duplo nas duas alturas, preservando a passagem mínima de 1,20 m (item 6.9.3.5).</li>
       </ul>
-      <p class="lp-note">Referência: ABNT NBR 9050:2020, versão corrigida em 2021. Fornecemos o corrimão conforme as exigências aplicáveis, com detalhamento técnico para a obra. A emissão do AVCB é realizada pelo órgão competente.</p>
+      <p class="lp-note">Referência: ABNT NBR 9050:2020, versão corrigida em 2021. As condições finais são definidas no projeto e no escopo contratado.</p>
     </div>
   </section>
 
@@ -117,7 +130,7 @@ const nomeServico='Corrimão para escadaria ou rampa';
           <p>As duas alturas de apoio são previstas para escadarias, não apenas para escadas largas. Em escadas com maior largura, o projeto também considera o corrimão intermediário.</p>
           <p class="lp-product-bullet">Tubo redondo de alumínio de 38,1 mm e acessórios em alumínio. Estrutura leve, versátil e de fácil manutenção.</p>
           <div class="lp-actions">
-            <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento para corrimão duplo de alumínio em escadaria de prédio.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
+            <a class="button" href={technicalWhatsapp("Olá! Gostaria de solicitar um orçamento para corrimão duplo de alumínio em escadaria de prédio.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
             <a class="lp-outline" href={technicalWhatsapp("Olá, Ernani! Gostaria de esclarecer dúvidas técnicas sobre corrimãos de alumínio em escadarias.")} target="_blank" rel="noopener noreferrer">Fale com o engenheiro ↗</a>
           </div>
         </div>
@@ -154,7 +167,7 @@ const nomeServico='Corrimão para escadaria ou rampa';
           <p>A proposta considera o uso em rampa, os acessos, os patamares, as extremidades e as exigências aplicáveis da NBR 9050. A solução em inox complementa o corrimão de alumínio das escadarias.</p>
           <p class="lp-product-bullet">Alumínio para escadarias e inox para rampas: soluções complementares para uma mesma obra.</p>
           <div class="lp-actions">
-            <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento de corrimão duplo de inox para rampa de acessibilidade.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
+            <a class="button" href={technicalWhatsapp("Olá! Gostaria de solicitar um orçamento de corrimão duplo de inox para rampa de acessibilidade.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
             <a class="lp-outline" href={technicalWhatsapp("Olá, Ernani! Gostaria de tirar dúvidas técnicas sobre corrimãos de inox para rampas.")} target="_blank" rel="noopener noreferrer">Fale com o engenheiro ↗</a>
           </div>
         </div>
@@ -175,7 +188,7 @@ const nomeServico='Corrimão para escadaria ou rampa';
       </div>
       <div>
         <p>O cliente que precisa adequar a escadaria também pode precisar de corrimãos para a rampa de acesso. A Alfa reúne as duas soluções, em alumínio e inox, em uma única conversa sobre a obra.</p>
-        <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento para escadaria e rampa do mesmo empreendimento.")} target="_blank" rel="noopener noreferrer">Apresentar os dois serviços ↗</a>
+        <a class="button" href={technicalWhatsapp("Olá! Gostaria de solicitar um orçamento para escadaria e rampa do mesmo empreendimento.")} target="_blank" rel="noopener noreferrer">Apresentar os dois serviços ↗</a>
       </div>
     </div>
   </section>
@@ -215,7 +228,7 @@ const nomeServico='Corrimão para escadaria ou rampa';
         <article class="lp-step"><span class="lp-number">03 / Instalação</span><b>Execução da obra</b><p>Com o local liberado, a instalação é executada conforme o escopo contratado.</p></article>
         <article class="lp-step"><span class="lp-number">04 / Conclusão</span><b>Instalação concluída</b><p>O saldo é faturado após a conclusão e a conferência da instalação.</p></article>
       </div>
-      <a class="button lp-payment-cta" href={whatsapp("Olá! Gostaria de solicitar orçamento e conhecer as condições de contratação para minha obra.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
+      <a class="button lp-payment-cta" href={technicalWhatsapp("Olá! Gostaria de solicitar orçamento e conhecer as condições de contratação para minha obra.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
     </div>
   </section>
 
@@ -260,14 +273,14 @@ const nomeServico='Corrimão para escadaria ou rampa';
         <p class="form-note">* Campos obrigatórios. Os dados são colocados somente na mensagem do WhatsApp, para sua conferência e envio. Consulte a <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
         <button class="button" type="submit">Continuar no WhatsApp ↗</button>
         <p role="status" aria-live="polite" data-form-status></p>
-        <noscript><p>Para utilizar o formulário, ative o JavaScript ou <a href={whatsapp()}>acesse diretamente o WhatsApp</a>.</p></noscript>
+        <noscript><p>Para utilizar o formulário, ative o JavaScript ou <a href={technicalWhatsapp()}>acesse diretamente o WhatsApp</a>.</p></noscript>
       </form>
       <aside class="contact-card">
         <span class="eyebrow">Orçamentos / WhatsApp comercial</span>
         <h2>Peça seu orçamento.</h2>
         <p>Envie fotos, medidas aproximadas, planta ou memorial — o que você tiver. Atendimento comercial com Edna.</p>
-        <a class="contact-phone" href={whatsapp()} target="_blank" rel="noopener noreferrer">{site.whatsappLabel}</a>
-        <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento de corrimão para meu empreendimento.")} target="_blank" rel="noopener noreferrer">Abrir WhatsApp ↗</a>
+        <a class="contact-phone" href={technicalWhatsapp()} target="_blank" rel="noopener noreferrer">{site.whatsappLabel}</a>
+        <a class="button" href={technicalWhatsapp("Olá! Gostaria de solicitar um orçamento de corrimão para meu empreendimento.")} target="_blank" rel="noopener noreferrer">Abrir WhatsApp ↗</a>
         <hr/>
         <p>Telefone: <a href={'tel:'+site.landlineHref}>{site.landline}</a></p>
         <p><a href={'mailto:'+site.email}>{site.email}</a></p>
