@@ -53,3 +53,19 @@ test('faixa de clientes move automaticamente em mobile sem botão de pausa',()=>
   assert.match(script,/if\(pause\)/);
   assert.match(script,/if\(!isSalesLanding\)track\.addEventListener\('pointerdown'/);
 });
+
+test('credibilidade institucional: CNPJ, desde 2012 e cidade verificados',()=>{
+  const layout=readFileSync('src/layouts/Layout.astro','utf8');
+  const who=readFileSync('src/pages/quem-somos.astro','utf8');
+  const site=readFileSync('src/data/site.ts','utf8');
+  const css=readFileSync('src/styles/landing.css','utf8');
+  assert.ok(site.includes("cnpj: '17.119.304/0001-75'"));
+  assert.ok(site.includes("openedOn: '21/09/2012'"));
+  assert.ok(site.includes("cityState: 'São Bernardo do Campo – SP'"));
+  assert.ok(layout.includes('CNPJ: {site.cnpj}'));
+  assert.ok(page.includes('Alfa Corrimão.<br/><em>Desde 2012.</em>'));
+  assert.ok(page.includes('id="sobre-a-alfa"'));
+  assert.ok(who.includes('registro empresarial desde 21 de setembro de 2012'));
+  assert.match(css,/\.landing \.lp-client-logo\{[^}]*width:192px;height:102px/);
+  assert.match(css,/@media\(max-width:650px\)[\s\S]*?\.landing \.lp-client-logo\{width:174px;height:98px\}/);
+});
