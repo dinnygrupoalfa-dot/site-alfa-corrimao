@@ -265,10 +265,10 @@ const nomeServico='Corrimão para escadaria ou rampa';
 
   <section id="orcamento" class="lp-contact">
     <div class="wrap lp-contact-grid">
-      <form class="quote-form" data-quote-form data-wa={'55'+site.whatsappNumber}>
+      <form class="quote-form" data-quote-form data-wa={'55'+site.phone}>
         <span class="eyebrow">Orçamento / Sem compromisso</span>
         <h2>Apresente sua escadaria ou rampa.</h2>
-        <p>Preencha os dados para preparar seu pedido de orçamento no WhatsApp comercial da Alfa. Também é possível conversar diretamente, sem formulário.</p>
+        <p>O formulário prepara uma mensagem para o WhatsApp do engenheiro Ernani. Você confere e envia pelo aplicativo. Se preferir, fale diretamente, sem formulário.</p>
         <div class="form-grid">
           <label>Seu nome <span aria-hidden="true">*</span><input name="nome" autocomplete="name" required maxlength="100"/></label>
           <label>WhatsApp ou telefone <span aria-hidden="true">*</span><input name="telefone" type="tel" autocomplete="tel" required pattern="[0-9()+ .-]{10,20}" title="Informe um telefone com DDD." maxlength="20"/></label>
@@ -284,7 +284,22 @@ const nomeServico='Corrimão para escadaria ou rampa';
               <option>Escadaria e rampa no mesmo projeto</option>
             </select>
           </label>
-          <label class="full">Sobre a sua obra<textarea name="mensagem" rows="4" maxlength="2000" placeholder="Etapa da obra, fotos ou medidas disponíveis, necessidade e prazo estimado."></textarea></label>
+          <label>Etapa da obra<select name="etapa">
+            <option value="">Selecione se souber</option>
+            <option>Estudo ou orçamento</option>
+            <option>Projeto</option>
+            <option>Obra em execução</option>
+            <option>Edifício em uso / readequação</option>
+          </select></label>
+          <label>Perfil do empreendimento<select name="perfil">
+            <option value="">Selecione</option>
+            <option>Condomínio</option>
+            <option>Construtora / incorporadora</option>
+            <option>Empresa</option>
+            <option>Residência</option>
+            <option>Outro</option>
+          </select></label>
+          <label class="full">Sobre a sua obra<textarea name="mensagem" rows="4" maxlength="2000" placeholder="Medidas disponíveis, necessidade, prazos e outras informações."></textarea></label>
         </div>
         <p class="form-note">* Campos obrigatórios. Os dados são colocados somente na mensagem do WhatsApp, para sua conferência e envio. Consulte a <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
         <button class="button" type="submit">Continuar no WhatsApp ↗</button>
@@ -292,15 +307,15 @@ const nomeServico='Corrimão para escadaria ou rampa';
         <noscript><p>Para utilizar o formulário, ative o JavaScript ou <a href={technicalWhatsapp()}>acesse diretamente o WhatsApp</a>.</p></noscript>
       </form>
       <aside class="contact-card">
-        <span class="eyebrow">Orçamentos / WhatsApp comercial</span>
+        <span class="eyebrow">Contato direto / Engenheiro Ernani</span>
         <h2>Peça seu orçamento.</h2>
-        <p>Envie fotos, medidas aproximadas, planta ou memorial — o que você tiver. Atendimento comercial com Edna.</p>
-        <a class="contact-phone" href={technicalWhatsapp()} target="_blank" rel="noopener noreferrer">{site.whatsappLabel}</a>
+        <p>Prefere falar agora? Tire suas dúvidas diretamente com o engenheiro Ernani. Você pode enviar fotos, medidas aproximadas, planta ou memorial — o que tiver disponível.</p>
+        <a class="contact-phone" href={technicalWhatsapp()} target="_blank" rel="noopener noreferrer">{site.phoneLabel}</a>
         <a class="button" href={technicalWhatsapp("Olá! Gostaria de solicitar um orçamento de corrimão para meu empreendimento.")} target="_blank" rel="noopener noreferrer">Abrir WhatsApp ↗</a>
         <hr/>
         <p>Telefone: <a href={'tel:'+site.landlineHref}>{site.landline}</a></p>
         <p><a href={'mailto:'+site.email}>{site.email}</a></p>
-        <p class="lp-note">Dúvidas técnicas? <a class="lp-engineer-cta" href={technicalWhatsapp("Olá, Ernani! Quero tirar dúvidas técnicas sobre corrimãos.")} target="_blank" rel="noopener noreferrer">Fale com o engenheiro Ernani ↗</a></p><p class="lp-note">O envio do formulário depende da confirmação no seu aplicativo WhatsApp.</p>
+        <p class="lp-note">Quer conversar direto? <a class="lp-engineer-cta" href={technicalWhatsapp("Olá, Ernani! Quero tirar dúvidas técnicas sobre corrimãos.")} target="_blank" rel="noopener noreferrer">Fale com o engenheiro Ernani ↗</a></p><p class="lp-note">O envio do formulário depende da confirmação no seu aplicativo WhatsApp.</p>
       </aside>
     </div>
   </section>
