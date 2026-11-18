@@ -32,7 +32,7 @@ const pathname=Astro.url.pathname;
 <div><h2>Soluções</h2><ul>{products.map(p=><li><a href={p.href}>{p.title}</a></li>)}<li><a href="/acessibilidade-e-normas/">Acessibilidade e normas</a></li></ul></div>
 <div><h2>Alfa Corrimão</h2><ul><li><a href="/quem-somos/">Quem somos</a></li><li><a href="/construtoras-e-condominios/">Construtoras e condomínios</a></li><li><a href="/obras-realizadas/">Obras realizadas</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contato/">Contato e orçamentos</a></li></ul></div>
 <div><h2>Atendimento comercial</h2><a class="footer-phone" href={pageWhatsapp()} target="_blank" rel="noopener noreferrer">WhatsApp {pageWhatsappLabel}</a><p>Orçamentos e informações sobre sua obra.</p><a href={'mailto:'+site.email}>{site.email}</a><p>Telefone fixo: <a href={'tel:'+site.landlineHref}>{site.landline}</a></p></div>
-</div><div class="wrap footer-bottom"><span>© {new Date().getFullYear()} Alfa Corrimão</span><div><a href="/politica-de-privacidade/">Privacidade</a><a href="/termos-de-uso/">Termos de uso</a></div></div></footer>
+</div><div class="wrap footer-bottom"><span>© {new Date().getFullYear()} Alfa Corrimão · {site.cityState} · CNPJ: {site.cnpj}</span><div><a href="/politica-de-privacidade/">Privacidade</a><a href="/termos-de-uso/">Termos de uso</a></div></div></footer>
 <a class="floating-contact" href={pageWhatsapp()} target="_blank" rel="noopener noreferrer" aria-label="Conversar com a Alfa Corrimão no WhatsApp"><span aria-hidden="true">↗</span> WhatsApp</a>
 <script>import '../scripts/site';</script>
 </body></html>
