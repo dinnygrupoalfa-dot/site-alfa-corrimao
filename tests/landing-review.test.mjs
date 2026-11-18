@@ -21,11 +21,14 @@ test('clientes reais sem depoimentos inventados',()=>{
   assert.ok(!page.includes('[X]'));
 });
 
-test('orçamento e suporte técnico têm destinos distintos',()=>{
-  assert.ok(page.includes("import {site,whatsapp,technicalWhatsapp}"));
-  assert.ok(page.includes("data-wa={'55'+site.whatsappNumber}"));
+test('todos os orçamentos desta landing vão exclusivamente para Ernani',()=>{
+  assert.ok(page.includes("import {site,technicalWhatsapp}"));
+  assert.ok(page.includes("data-wa={'55'+site.phone}"));
   assert.ok(page.includes('technicalWhatsapp('));
-  assert.ok(!page.includes(' campaignLanding>'));
+  assert.ok(page.includes(' campaignLanding>'));
+  assert.ok(!page.includes('site.whatsappNumber'));
+  assert.ok(!page.includes('site.whatsappLabel'));
+  assert.ok(!page.includes('Atendimento comercial com Edna'));
 });
 
 test('condições aprovadas e dois produtos estão presentes',()=>{
@@ -68,4 +71,23 @@ test('credibilidade institucional: CNPJ, desde 2012 e cidade verificados',()=>{
   assert.ok(who.includes('registro empresarial desde 21 de setembro de 2012'));
   assert.match(css,/\.landing \.lp-client-logo\{[^}]*width:192px;height:102px/);
   assert.match(css,/@media\(max-width:650px\)[\s\S]*?\.landing \.lp-client-logo\{width:174px;height:98px\}/);
+});
+
+test('conteúdo comercial do Ernani e fotos completas no destaque',()=>{
+  const layout=readFileSync('src/layouts/Layout.astro','utf8');
+  const css=readFileSync('src/styles/landing.css','utf8');
+  assert.ok(page.includes('const fotosDestaque = [escadarias[5],rampas[0],...escadarias.filter((_,i)=>i!==5),...rampas.filter((_,i)=>i!==0)]'));
+  assert.ok(page.includes('slides={fotosDestaque}'));
+  assert.match(page,/name="30 fotografias de corrimãos da Alfa em escadarias e rampas" intervalMs=\{3000\}/);
+  assert.ok(page.includes('Em conformidade com a ABNT NBR 9050'));
+  assert.ok(page.includes('vistoria do Corpo de Bombeiros'));
+  assert.ok(page.includes('regularização do AVCB'));
+  assert.ok(page.includes('2,40 m'));
+  for(const word of ['Versátil','Agilidade na instalação','Estrutura leve','Fácil manutenção','rampas de acesso a PNE']){
+    assert.ok(page.includes(word),'Conteúdo faltante: '+word);
+  }
+  assert.ok(page.includes('name="etapa"'));
+  assert.ok(page.includes('name="perfil"'));
+  assert.ok(layout.includes("class={campaignLanding?'campaign-landing':undefined}"));
+  assert.ok(css.includes('body.campaign-landing .landing .lp-top h1'));
 });
