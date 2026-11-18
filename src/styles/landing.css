@@ -87,14 +87,10 @@
 .landing .lp-client-logo.dark{background:#283139;border-color:#45505b}
 .landing .lp-client-logo img{display:block;width:100%;height:100%;object-fit:contain;padding:10px 14px}
 @keyframes alfa-clientes-passagem{to{transform:translateX(-50%)}}
-/* Toque no celular não deve ficar preso no :hover nem :focus-within. Pausa explícita vale em todos os aparelhos. */
-.landing .lp-clients.lp-clients-paused .lp-clients-track{animation-play-state:paused}
-@media(hover:hover) and (pointer:fine){
- .landing .lp-clients-mask:hover .lp-clients-track{animation-play-state:paused}
+/* Apenas o mouse de desktop pausa a faixa, sem efeito de toque no celular. */
+@media (hover: hover) and (pointer: fine) {
+ .landing .lp-clients-mask:hover .lp-clients-track { animation-play-state: paused; }
 }
-.landing .lp-clients-bottom{display:flex;justify-content:flex-end;padding-top:17px}
-.landing .lp-clients-bottom button{background:transparent;color:#eff1f4;border:1px solid #8f969e;border-radius:7px;padding:9px 15px;font:inherit;font-size:.82rem;cursor:pointer}
-.landing .lp-clients-bottom button:focus-visible{outline:3px solid var(--lp-red);outline-offset:3px}
 .landing .lp-technical-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:28px 0 0;padding:0;list-style:none}
 .landing .lp-technical-list li{padding:18px 20px;border-left:3px solid var(--lp-red);background:#232528;color:#cbd0d3;line-height:1.6}
 .landing .lp-technical-list strong{display:block;color:#fff;margin-bottom:5px}
@@ -110,13 +106,15 @@
  .landing .lp-technical-list{grid-template-columns:1fr}
  .landing .lp-clients-head h2{font-size:clamp(2.05rem,9vw,2.8rem)}
 }
-/* Preserva a preferência de movimento reduzido, com opção explícita de reativar a faixa. */
-@media(prefers-reduced-motion:reduce){
- .landing .lp-clients-track{animation:none}
- .landing .lp-clients.lp-clients-motion-opt-in .lp-clients-track{animation:alfa-clientes-passagem 39s linear infinite}
-}
-@media(prefers-reduced-motion:reduce) and (max-width:650px){
- .landing .lp-clients.lp-clients-motion-opt-in .lp-clients-track{animation-duration:31s}
+/* Android: a regra global reduz a duração a 0,01ms !important.
+   Esta única faixa deve continuar em movimento, inclusive em telas pequenas. */
+@media (prefers-reduced-motion: reduce) {
+ .landing .lp-clients-track {
+  animation-name: alfa-clientes-passagem;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 54s !important;
+ }
 }
 
 /* Nas galerias extensas, navegação por setas e contador evita dezenas de pontos na tela. */
