@@ -83,7 +83,7 @@
 .landing .lp-clients-mask{overflow:hidden;mask-image:linear-gradient(90deg,transparent 0,#000 4%,#000 96%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 4%,#000 96%,transparent 100%)}
 .landing .lp-clients-track{display:flex;width:max-content;animation:alfa-clientes-passagem 39s linear infinite;will-change:transform}
 .landing .lp-clients-group{display:flex;flex:none;align-items:center;gap:15px;padding-right:15px}
-.landing .lp-client-logo{display:flex;justify-content:center;align-items:center;flex:none;width:220px;height:118px;border-radius:12px;background:#fff;border:1px solid #c5cbd2;overflow:hidden}
+.landing .lp-client-logo{display:flex;justify-content:center;align-items:center;flex:none;width:192px;height:102px;border-radius:12px;background:#fff;border:1px solid #c5cbd2;overflow:hidden}
 .landing .lp-client-logo.dark{background:#283139;border-color:#45505b}
 .landing .lp-client-logo img{display:block;width:100%;height:100%;object-fit:contain;padding:10px 14px}
 @keyframes alfa-clientes-passagem{to{transform:translateX(-50%)}}
@@ -119,3 +119,13 @@
 
 /* Nas galerias extensas, navegação por setas e contador evita dezenas de pontos na tela. */
 .landing .lp-product-grid .carousel-dots{display:none}
+
+/* Credibilidade institucional da Alfa na página de vendas */
+.landing .lp-about{padding:72px 0;border-bottom:1px solid #383c3f;background:#1d2022}
+.landing .lp-about-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:42px;align-items:start}
+.landing .lp-about h2{font-family:'Alfa Display',Arial,sans-serif;font-size:clamp(2.15rem,3.7vw,3.85rem);line-height:1.05;letter-spacing:-.045em;margin:0 0 20px}
+.landing .lp-about-city{font-size:.85rem;letter-spacing:.045em;color:#d3d5d6;font-weight:700}
+.landing .lp-about-grid>div:nth-child(2) p{line-height:1.7;color:#d3d6d8;font-size:1rem;margin-bottom:18px}
+.landing .lp-about-link{display:inline-block;margin-top:9px;border-bottom:1px solid #e34045;padding:4px 0;color:#fff;font-weight:700;font-size:.9rem}
+.landing .lp-about-link:hover{color:#f08788}
+@media(max-width:650px){.landing .lp-about{padding:53px 0}.landing .lp-about-grid{grid-template-columns:1fr;gap:23px}}
