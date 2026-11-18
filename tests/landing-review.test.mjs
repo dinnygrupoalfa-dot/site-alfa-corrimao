@@ -36,3 +36,20 @@ test('condições aprovadas e dois produtos estão presentes',()=>{
   assert.ok(page.includes('id="rampas"'));
   assert.ok(page.includes('O que a <em>NBR 9050</em> exige'));
 });
+
+test('faixa de clientes move automaticamente em mobile sem botão de pausa',()=>{
+  const css=readFileSync('src/styles/landing.css','utf8');
+  const global=readFileSync('src/styles/global.css','utf8');
+  const photos=readFileSync('src/components/LandingCarousel.astro','utf8');
+  const script=readFileSync('src/scripts/site.ts','utf8');
+  assert.doesNotMatch(clients,/data-clients-toggle|Pausar movimento|lp-clients-paused/);
+  assert.doesNotMatch(photos,/data-pause|>Pausar</);
+  assert.match(css,/\.landing \.lp-clients-track\{display:flex;width:max-content;animation:alfa-clientes-passagem 39s linear infinite/);
+  // Regressão: no Android, o global força animation-duration a 0,01ms!important.
+  // A faixa tem exceção específica e explícita no próprio CSS.
+  assert.match(global,/animation-duration:\.01ms!important/);
+  assert.match(css,/\.landing \.lp-clients-track \{[\s\S]*?animation-duration: 54s !important;/);
+  assert.match(css,/@media \(hover: hover\) and \(pointer: fine\)/);
+  assert.match(script,/if\(pause\)/);
+  assert.match(script,/if\(!isSalesLanding\)track\.addEventListener\('pointerdown'/);
+});
