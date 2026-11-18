@@ -1,5 +1,9 @@
 export const site = {
  name: 'Alfa Corrimão',
+ cnpj: '17.119.304/0001-75',
+ openedOn: '21/09/2012',
+ sinceYear: '2012',
+ cityState: 'São Bernardo do Campo – SP',
  description: 'Corrimãos para escadarias e rampas, guarda-corpos e soluções em vidro para edifícios, construtoras e condomínios.',
  engineer: 'Ernani',
  phone: '11947704632',
