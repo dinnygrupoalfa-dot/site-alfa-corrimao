@@ -48,7 +48,7 @@ assert.match(landingHtml,/class="header-whatsapp" href="https:\/\/wa\.me\/551194
 assert.match(landingHtml,/class="floating-contact" href="https:\/\/wa\.me\/5511947704632/,'WhatsApp de Ernani flutuante na landing');
 assert.match(landingHtml,/href="https:\/\/wa\.me\/5511947704632/,'Contato técnico com Ernani deve permanecer disponível');
 assert.doesNotMatch(landingHtml,/https:\/\/wa\.me\/5511997531839/,'Nenhum CTA da página de vendas pode enviar para Edna');
-assert.match(landingHtml,/fotos de corrimãos da Alfa em escadarias e rampas/,'O carrossel de 30 fotos deve estar disponível');
+assert.match(landingHtml,/30 fotografias de corrimãos da Alfa em escadarias e rampas/,'O carrossel de 30 fotos deve estar disponível');
 const home=await readFile(join(root,'index.html'),'utf8');
 assert.equal(new Set([...home.matchAll(/data-image-id="([^"]+)"/g)].map(m=>m[1])).size,10,'Dez fotos distintas na home');
 for(const route of ['aluminio-escadarias','inox-rampas']){
