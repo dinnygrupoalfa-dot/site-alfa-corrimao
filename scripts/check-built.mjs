@@ -50,7 +50,12 @@ assert.match(landingHtml,/href="https:\/\/wa\.me\/5511947704632/,'Contato técni
 assert.doesNotMatch(landingHtml,/https:\/\/wa\.me\/5511997531839/,'Nenhum CTA da página de vendas pode enviar para Edna');
 assert.match(landingHtml,/30 fotografias de corrimãos da Alfa em escadarias e rampas/,'O carrossel de 30 fotos deve estar disponível');
 const home=await readFile(join(root,'index.html'),'utf8');
-assert.equal(new Set([...home.matchAll(/data-image-id="([^"]+)"/g)].map(m=>m[1])).size,10,'Dez fotos distintas na home');
+const homePhotos=new Set([...home.matchAll(/data-image-id="([^"]+)"/g)].map(m=>m[1]));
+assert.ok(homePhotos.size>=9,'Home deve ter ao menos 9 fotografias catalogadas distintas além dos carrosséis de produtos.');
+const productGalleries=[...home.matchAll(/aria-label="Fotos de (Corrimão duplo de alumínio|Corrimão duplo de inox|Guarda-corpos|Soluções em vidro)"/g)];
+assert.equal(productGalleries.length,4,'Home deve ter carrossel separado para cada um dos quatro produtos.');
+assert.match(home,/Nossos principais clientes/);
+assert.match(home,/Logotipos de alguns clientes da Alfa Corrimão/);
 for(const route of ['aluminio-escadarias','inox-rampas']){
  const html=await readFile(join(root,'corrimaos',route,'index.html'),'utf8');
  const complement=route==='aluminio-escadarias'?'inox-rampas':'aluminio-escadarias';
@@ -60,4 +65,4 @@ const pier=await readFile(join(root,'obras-realizadas','pier-de-cubatao','index.
 const pierIds=new Set([...pier.matchAll(/data-image-id="(ACF-\d{3})"/g)].map(m=>m[1]).filter(id=>Number(id.slice(4))>=115&&Number(id.slice(4))<=164));
 assert.equal(pierIds.size,46,'O álbum do Píer deve exibir todas as 46 fotos diferentes.');
 for(const id of ['ACF-126','ACF-127','ACF-128','ACF-129']) assert.ok((await readFile(join(root,'obras-realizadas','index.html'),'utf8')).includes('data-image-id="'+id+'"') || (await readFile(join(root,'corrimaos','aluminio-escadarias','index.html'),'utf8')).includes('data-image-id="'+id+'"') || (await readFile(join(root,'guarda-corpos','index.html'),'utf8')).includes('data-image-id="'+id+'"'),id+' deve constar nas páginas correspondentes');
-console.log('OK: 16 páginas, '+checked+' links/arquivos locais, imagens, âncoras, H1, dez fotos na home, 46 do Píer e links entre produtos.');
+console.log('OK: 16 páginas, '+checked+' links/arquivos locais, imagens, âncoras, H1, fotografias na home e quatro carrosséis de produto, 46 do Píer e links entre produtos.');
