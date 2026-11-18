@@ -1,0 +1,22 @@
+---
+import type {HomePhoto} from '../data/home-gallery';
+interface Props {slides:HomePhoto[]; name:string; intervalMs?:number;}
+const {slides,name,intervalMs=3000}=Astro.props;
+---
+<section class="carousel lp-carousel home-product-carousel" data-carousel data-interval={intervalMs} aria-label={name} aria-roledescription="carrossel">
+  <div class="carousel-track" data-track tabindex="0" aria-label="Fotografias do produto; use as setas para navegar">
+    {slides.map((slide,index)=>
+      <figure class="carousel-slide" data-slide role="group" aria-roledescription="slide" aria-label={String(index+1)+' de '+slides.length}>
+        <img src={slide.src} alt={slide.alt} width="900" height="675" loading={index===0?'eager':'lazy'} decoding="async"/>
+      </figure>
+    )}
+  </div>
+  <div class="carousel-controls">
+    <span data-counter aria-live="off">01 / {String(slides.length).padStart(2,'0')}</span>
+    <div class="carousel-actions">
+      <button type="button" data-prev aria-label="Fotografia anterior">←</button>
+      <button type="button" data-next aria-label="Próxima fotografia">→</button>
+    </div>
+  </div>
+  <span class="sr-only" data-carousel-status role="status" aria-live="polite"></span>
+</section>
