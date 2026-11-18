@@ -74,3 +74,39 @@
 @media(min-width:1051px){
  .landing .lp-contact-grid{grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr)}
 }
+
+
+/* Landing de vendas / prova social com marcas reais — 18/11/2026 */
+.landing .lp-clients{padding:78px 0 67px;background:#16191b;border-top:1px solid #34373a;border-bottom:1px solid #34373a}
+.landing .lp-clients-head h2{font-family:'Alfa Display',Arial,sans-serif;font-size:clamp(2.1rem,3.5vw,3.65rem);line-height:1.08;letter-spacing:-.04em;margin:13px 0 12px}
+.landing .lp-clients-head p{margin:0 0 30px;color:#c6cbd0;line-height:1.5}
+.landing .lp-clients-mask{overflow:hidden;mask-image:linear-gradient(90deg,transparent 0,#000 4%,#000 96%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 4%,#000 96%,transparent 100%)}
+.landing .lp-clients-track{display:flex;width:max-content;animation:alfa-clientes-passagem 39s linear infinite;will-change:transform}
+.landing .lp-clients-group{display:flex;flex:none;align-items:center;gap:15px;padding-right:15px}
+.landing .lp-client-logo{display:flex;justify-content:center;align-items:center;flex:none;width:220px;height:118px;border-radius:12px;background:#fff;border:1px solid #c5cbd2;overflow:hidden}
+.landing .lp-client-logo.dark{background:#283139;border-color:#45505b}
+.landing .lp-client-logo img{display:block;width:100%;height:100%;object-fit:contain;padding:10px 14px}
+@keyframes alfa-clientes-passagem{to{transform:translateX(-50%)}}
+.landing .lp-clients:hover .lp-clients-track,.landing .lp-clients:focus-within .lp-clients-track,.landing .lp-clients.lp-clients-paused .lp-clients-track{animation-play-state:paused}
+.landing .lp-clients-bottom{display:flex;justify-content:flex-end;padding-top:17px}
+.landing .lp-clients-bottom button{background:transparent;color:#eff1f4;border:1px solid #8f969e;border-radius:7px;padding:9px 15px;font:inherit;font-size:.82rem;cursor:pointer}
+.landing .lp-clients-bottom button:focus-visible{outline:3px solid var(--lp-red);outline-offset:3px}
+.landing .lp-technical-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:28px 0 0;padding:0;list-style:none}
+.landing .lp-technical-list li{padding:18px 20px;border-left:3px solid var(--lp-red);background:#232528;color:#cbd0d3;line-height:1.6}
+.landing .lp-technical-list strong{display:block;color:#fff;margin-bottom:5px}
+.landing .lp-feature .lp-payment-intro{font-size:1.08rem;color:#f3f4f5;font-weight:650}
+.landing .lp-feature .lp-payment-cta{display:inline-flex;margin-top:25px}
+.landing .lp-facts .lp-promise{border-color:#d72d32;background:#411d20;color:#fff}
+.landing .lp-engineer-cta{display:inline-flex;align-items:center;gap:7px;color:#fff;text-decoration:underline;text-decoration-color:var(--lp-red);text-underline-offset:5px;font-weight:700}
+@media(max-width:650px){
+ .landing .lp-clients{padding:52px 0 46px}
+ .landing .lp-client-logo{width:174px;height:98px}
+ .landing .lp-clients-group{gap:12px;padding-right:12px}
+ .landing .lp-clients-track{animation-duration:31s}
+ .landing .lp-technical-list{grid-template-columns:1fr}
+ .landing .lp-clients-head h2{font-size:clamp(2.05rem,9vw,2.8rem)}
+}
+@media(prefers-reduced-motion:reduce){.landing .lp-clients-track{animation:none}}
+
+/* Nas galerias extensas, navegação por setas e contador evita dezenas de pontos na tela. */
+.landing .lp-product-grid .carousel-dots{display:none}

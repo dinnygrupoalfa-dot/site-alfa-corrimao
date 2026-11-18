@@ -1,0 +1,46 @@
+---
+/* Apenas clientes reais informados pela Alfa. Sem depoimentos ou endossos atribuídos. */
+const clientes = [
+ {nome:'Instituto Neymar Júnior',arquivo:'instituto-neymar-jr.webp',tema:'light'},
+ {nome:'PGC Engenharia',arquivo:'pgc-engenharia.webp',tema:'light'},
+ {nome:'Quali Engenharia',arquivo:'quali-engenharia.webp',tema:'light'},
+ {nome:'Árbore Engenharia',arquivo:'arbore.webp',tema:'light'},
+ {nome:'Construtora Phoenix',arquivo:'phoenix.webp',tema:'light'},
+ {nome:'Construtora Costa Hirota',arquivo:'costa-hirota.webp',tema:'light'},
+ {nome:'Soccer Grass',arquivo:'soccer-grass.webp',tema:'dark'},
+ {nome:'Grupo Mendes Engenharia',arquivo:'grupo-mendes.webp',tema:'dark'},
+ {nome:'Construtora Terracon',arquivo:'terracon.webp',tema:'dark'}
+];
+---
+<section id="clientes" class="lp-clients" aria-labelledby="lp-clients-title">
+  <div class="wrap lp-clients-head">
+    <span class="eyebrow">Alguns de nossos clientes</span>
+    <h2 id="lp-clients-title">Quem já confiou na <em>Alfa Corrimão.</em></h2>
+    <p>Empresas e instituições atendidas pela Alfa Corrimão.</p>
+  </div>
+  <div class="lp-clients-mask" aria-label="Logotipos de clientes da Alfa Corrimão">
+    <div class="lp-clients-track" data-clients-track>
+      {[0,1].map(copia =>
+        <div class="lp-clients-group" aria-hidden={copia===1?'true':undefined}>
+          {clientes.map(cliente =>
+            <div class={'lp-client-logo '+cliente.tema}>
+              <img src={'/images/clientes/'+cliente.arquivo} alt={copia===0?cliente.nome:''} width="600" height="220" loading="lazy" decoding="async"/>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+  <div class="wrap lp-clients-bottom">
+    <button type="button" data-clients-toggle aria-pressed="false">Pausar movimento</button>
+  </div>
+</section>
+<script>
+ const controle=document.querySelector<HTMLButtonElement>('[data-clients-toggle]');
+ const faixa=document.querySelector<HTMLElement>('.lp-clients');
+ controle?.addEventListener('click',()=>{
+  const pausada=faixa?.classList.toggle('lp-clients-paused')??false;
+  controle.textContent=pausada?'Retomar movimento':'Pausar movimento';
+  controle.setAttribute('aria-pressed',String(pausada));
+ });
+</script>
