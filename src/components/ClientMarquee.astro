@@ -24,7 +24,7 @@ const clientes = [
         <div class="lp-clients-group" aria-hidden={copia===1?'true':undefined}>
           {clientes.map(cliente =>
             <div class={'lp-client-logo '+cliente.tema}>
-              <img src={'/images/clientes/'+cliente.arquivo} alt={copia===0?cliente.nome:''} width="600" height="220" loading="lazy" decoding="async"/>
+              <img src={'/images/clientes/'+cliente.arquivo} alt={cliente.nome} width="600" height="220" loading="lazy" decoding="async"/>
             </div>
           )}
         </div>
