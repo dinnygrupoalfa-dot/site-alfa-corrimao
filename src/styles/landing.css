@@ -129,3 +129,60 @@
 .landing .lp-about-link{display:inline-block;margin-top:9px;border-bottom:1px solid #e34045;padding:4px 0;color:#fff;font-weight:700;font-size:.9rem}
 .landing .lp-about-link:hover{color:#f08788}
 @media(max-width:650px){.landing .lp-about{padding:53px 0}.landing .lp-about-grid{grid-template-columns:1fr;gap:23px}}
+
+
+/* Página de vendas: cabeçalho compacto e primeiro bloco ajustado ao desktop. */
+/* As páginas institucionais permanecem com seus estilos originais. */
+body.campaign-landing .topbar .wrap {min-height:30px}
+body.campaign-landing .header-inner {min-height:76px;gap:18px}
+body.campaign-landing .header-inner > .brand {width:130px}
+body.campaign-landing .header-inner > .brand img {max-height:56px}
+body.campaign-landing .header-cta {min-height:42px}
+body.campaign-landing .landing .lp-top {padding:30px 0 41px}
+body.campaign-landing .landing .lp-breadcrumb {margin-bottom:17px}
+body.campaign-landing .landing .lp-top-grid {grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:start;gap:clamp(24px,3.7vw,58px)}
+body.campaign-landing .landing .lp-top h1 {font-size:clamp(2.55rem,3.8vw,4.05rem);max-width:16ch;line-height:1.04;margin-bottom:12px}
+body.campaign-landing .landing .lp-top .eyebrow {margin-bottom:15px}
+body.campaign-landing .landing .lp-hero-nbr {color:#f1f1f1;font-weight:750;font-size:clamp(.92rem,1.1vw,1.06rem);letter-spacing:.02em;margin-bottom:15px}
+body.campaign-landing .landing .lp-top .lp-lead {font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.52}
+body.campaign-landing .landing .lp-top .lp-carousel {align-self:start;position:relative}
+body.campaign-landing .landing .lp-top .carousel-slide > img {height:clamp(335px,33vw,472px)}
+/* Setas laterais sobre a foto; o contador continua visível. */
+body.campaign-landing .landing .lp-top .carousel-controls {position:absolute;inset:0;background:transparent;border:0;padding:0;z-index:4;pointer-events:none}
+body.campaign-landing .landing .lp-top .carousel-actions {position:absolute;inset:50% 9px auto;transform:translateY(-50%);justify-content:space-between;pointer-events:none}
+body.campaign-landing .landing .lp-top .carousel-actions button {pointer-events:auto;min-width:42px;min-height:42px;border:1px solid #ffffff77;border-radius:50%;background:#101112bb;font-size:1.16rem;font-weight:700;color:#fff}
+body.campaign-landing .landing .lp-top .carousel-actions button:hover {background:#101112ee}
+body.campaign-landing .landing .lp-top [data-counter] {position:absolute;right:12px;bottom:11px;display:block;padding:5px 9px;background:#101112c9;border-radius:4px;color:#fff;font-size:.8rem}
+body.campaign-landing .landing .lp-top .carousel-dots {display:none}
+body.campaign-landing .landing .lp-facts .lp-promise {display:block;width:100%;max-width:530px;padding:13px 16px;background:#491c20;border-left:4px solid #ff6f75;border-radius:3px;font-size:.88rem;letter-spacing:0;text-transform:none;color:#fff;font-weight:850}
+
+/* Conteúdo técnico-comercial retomado do material aprovado por Ernani. */
+.landing .lp-avcb {display:grid;grid-template-columns:minmax(0,1.32fr) minmax(250px,.68fr);gap:clamp(20px,4vw,60px);align-items:center;padding:0 0 44px;margin:0 0 40px;border-bottom:1px solid #404346}
+.landing .lp-avcb h2 {font-size:clamp(2rem,3.25vw,3.5rem);letter-spacing:-.04em;line-height:1.06;margin:12px 0 18px}
+.landing .lp-avcb p {line-height:1.65;color:#d9dcdd;font-size:1rem}
+.landing .lp-avcb-note {background:#26292c;border:1px solid #53585d;border-left:4px solid var(--lp-red);padding:25px 22px}
+.landing .lp-avcb-note strong {display:block;color:#fff;font-size:1.08rem;margin-bottom:12px}
+.landing .lp-avcb-note p {margin:0;font-size:.92rem}
+.landing .lp-benefits {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 0}
+.landing .lp-benefits article {background:#242729;border:1px solid #46494b;padding:20px}
+.landing .lp-benefits strong {display:block;color:#fff;font-size:1.02rem;margin-bottom:8px}
+.landing .lp-benefits p {margin:0;color:#d1d3d5;font-size:.91rem;line-height:1.55}
+.landing .lp-ramp-check {border-top:1px solid #45494b;padding-top:26px;margin-top:28px}
+.landing .lp-ramp-check ul {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;list-style:none;padding:0;margin:20px 0 0}
+.landing .lp-ramp-check li {border-left:3px solid var(--lp-red);padding:12px 18px;background:#25282b;color:#ddd;line-height:1.55;font-size:.92rem}
+@media(max-width:1050px){
+ body.campaign-landing .header-inner {min-height:72px}
+ body.campaign-landing .landing .lp-top-grid {grid-template-columns:1fr}
+ body.campaign-landing .landing .lp-top .lp-carousel {width:100%}
+ .landing .lp-avcb {grid-template-columns:1fr;gap:12px}
+}
+@media(max-width:650px){
+ body.campaign-landing .header-inner > .brand {width:112px}
+ body.campaign-landing .header-inner > .brand img {max-height:52px}
+ body.campaign-landing .landing .lp-top {padding:26px 0 40px}
+ body.campaign-landing .landing .lp-top h1 {font-size:clamp(2.23rem,9vw,3.15rem);max-width:16ch}
+ body.campaign-landing .landing .lp-top .carousel-slide > img {height:380px}
+ body.campaign-landing .landing .lp-hero-nbr {font-size:.9rem}
+ .landing .lp-benefits,.landing .lp-ramp-check ul {grid-template-columns:1fr}
+ .landing .lp-avcb {padding-bottom:29px;margin-bottom:28px}
+}
