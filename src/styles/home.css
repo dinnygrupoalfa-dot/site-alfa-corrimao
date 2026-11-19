@@ -1,0 +1,202 @@
+/* Home institucional Alfa Corrimão — visual próprio, sem alterar landing e páginas de produto. */
+.institutional-home{overflow:clip}
+.institutional-home .home-intro{display:grid;grid-template-columns:minmax(0,.91fr) minmax(0,1.09fr);gap:clamp(25px,3.5vw,58px);align-items:center;padding-top:50px;padding-bottom:52px}
+.institutional-home .home-intro-copy{min-width:0}
+.institutional-home .home-intro .eyebrow{margin-bottom:23px}
+.institutional-home .home-intro h1{font-size:clamp(2.9rem,4.3vw,4.95rem);line-height:1.02;max-width:15ch;margin-bottom:24px}
+.institutional-home .home-intro-lead{font-size:clamp(1rem,1.2vw,1.16rem);max-width:52ch;line-height:1.6;color:#d4d5d5}
+.institutional-home .home-intro-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.institutional-home .home-outline-button{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:52px;border:1px solid #737779;padding:12px 18px;font-size:.85rem;font-weight:700}
+.institutional-home .home-outline-button:hover{border-color:#f8f8f8;background:#252729}
+.institutional-home .home-intro-specialty{display:inline-block;margin-top:27px;color:#efeeed;font-size:.85rem;border-bottom:1px solid #bd3639;text-underline-offset:4px;padding-bottom:4px}
+.institutional-home .home-intro-specialty:hover{color:#ff7679}
+.institutional-home .home-intro-visual{min-width:0}
+.institutional-home .home-intro .hero-carousel{border:1px solid #383a3c;background:#202224}
+.institutional-home .home-intro .hero-carousel .carousel-slide>img{height:520px;object-fit:cover}
+.institutional-home .home-intro .hero-carousel .carousel-slide figcaption{bottom:23px;left:24px;right:24px;max-width:84%}
+.institutional-home .home-intro .hero-carousel .slide-title{font-size:clamp(1.45rem,2vw,2.25rem)}
+.institutional-home .home-intro .hero-carousel .carousel-slide .eyebrow{margin-bottom:7px}
+.institutional-home .home-intro .hero-carousel .carousel-slide .text-link{margin-top:8px}
+.institutional-home .home-intro .hero-carousel .carousel-controls{position:absolute;z-index:3;inset:0;min-height:unset;background:transparent;border:0;pointer-events:none;padding:0}
+.institutional-home .home-intro .hero-carousel .carousel-actions{position:absolute;top:50%;left:10px;right:10px;display:flex;justify-content:space-between;transform:translateY(-50%)}
+.institutional-home .home-intro .hero-carousel .carousel-actions button{pointer-events:auto;width:42px;height:42px;border-radius:50%;background:#121314d1;border:1px solid #b4b5b6;color:white;font-size:1.15rem}
+.institutional-home .home-intro .hero-carousel [data-counter]{position:absolute;bottom:13px;right:15px;padding:5px 9px;background:#121314e0;border-radius:5px;color:white}
+.institutional-home .home-intro .hero-carousel .carousel-dots{display:none}
+
+.institutional-home .home-credentials{background:#1b1d1f;border-block:1px solid #404245}
+.institutional-home .home-credentials-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.institutional-home .home-credentials-grid>div{display:flex;flex-direction:column;justify-content:center;min-height:107px;padding:19px 25px;border-right:1px solid #45484a}
+.institutional-home .home-credentials-grid>div:first-child{padding-left:0}
+.institutional-home .home-credentials-grid>div:last-child{border-right:0}
+.institutional-home .home-credentials strong{font-size:1rem;color:#fff;margin-bottom:5px;line-height:1.3}
+.institutional-home .home-credentials span{font-size:.8rem;color:#b9bdbf;line-height:1.45}
+.institutional-home .home-section-intro{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.62fr);gap:clamp(22px,5vw,75px);align-items:end;margin-bottom:38px}
+.institutional-home .home-section-intro .eyebrow{margin-bottom:16px}
+.institutional-home .home-section-intro h2{font-size:clamp(2.15rem,3.25vw,3.65rem);margin-bottom:0}
+.institutional-home .home-section-intro>p{margin:0;font-size:.99rem;line-height:1.68;color:#bfc3c4}
+.institutional-home .home-services,.institutional-home .home-clients,.institutional-home .home-process{padding-block:80px}
+.institutional-home .home-services .product-grid{gap:18px}
+.institutional-home .home-services .product-card{transition:border-color .2s,transform .2s}
+.institutional-home .home-services .product-card:hover{border-color:#8c8f91;transform:translateY(-3px)}
+.institutional-home .home-services .photo-frame img{height:282px}
+.institutional-home .home-services .product-card-body{padding:25px 28px}
+.institutional-home .home-services .product-card h3{font-size:clamp(1.5rem,2vw,2rem);margin-bottom:12px}
+.institutional-home .home-services .product-card p{font-size:.93rem;min-height:50px;margin-bottom:15px}
+.institutional-home .home-services-footer{margin-top:28px;padding:22px 24px;border-left:3px solid #e23a3e;background:#202224;display:flex;gap:20px;justify-content:space-between;align-items:center}
+.institutional-home .home-services-footer p{margin:0;color:#fff;font-size:.94rem;font-weight:600}
+
+.institutional-home .home-work{padding-block:85px}
+.institutional-home .home-work-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.7fr);gap:17px}
+.institutional-home .home-work-highlight{position:relative;min-width:0;min-height:520px;overflow:hidden;background:#282a2c}
+.institutional-home .home-work-highlight>img{height:100%;position:absolute;inset:0;width:100%;object-fit:cover;transition:transform .35s}
+.institutional-home .home-work-highlight::after{content:'';position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#000d)}
+.institutional-home .home-work-highlight:hover>img,.institutional-home .home-work-side a:hover img{transform:scale(1.03)}
+.institutional-home .home-work-caption{position:absolute;z-index:1;bottom:26px;left:28px;right:24px;display:flex;flex-direction:column;gap:12px}
+.institutional-home .home-work-caption small{font-size:.69rem;letter-spacing:.09em;text-transform:uppercase;color:#fff;font-weight:700}
+.institutional-home .home-work-caption strong{font-family:'Alfa Display',Arial,sans-serif;font-size:clamp(1.6rem,2.9vw,3rem);line-height:1.08;max-width:21ch}
+.institutional-home .home-work-caption>span{font-size:.85rem;color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.institutional-home .home-work-side{display:grid;grid-template-rows:1fr 1fr;gap:17px;min-width:0}
+.institutional-home .home-work-side a{position:relative;min-height:250px;overflow:hidden;background:#26292b}
+.institutional-home .home-work-side img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.institutional-home .home-work-side a::after{content:'';position:absolute;inset:38% 0 0;background:linear-gradient(transparent,#000d)}
+.institutional-home .home-work-side a>span{position:absolute;z-index:1;left:20px;right:20px;bottom:18px;display:grid;gap:7px}
+.institutional-home .home-work-side strong{font-size:1.15rem}
+.institutional-home .home-work-side small{color:#fff;font-size:.8rem}
+.institutional-home .home-work-more{margin-top:25px}
+
+.institutional-home .home-clients{border-bottom:1px solid #393c3e}
+.institutional-home .home-client-names{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.institutional-home .home-client-names li{border:1px solid #4b4e50;background:#1d2022;padding:19px 18px;display:flex;align-items:center;min-height:77px;font-size:.93rem;font-weight:700;color:#e8eaeb;line-height:1.4}
+.institutional-home .home-client-names li:before{content:'';width:4px;height:22px;flex:none;background:#df353c;margin-right:12px}
+.institutional-home .home-about{padding-block:90px}
+.institutional-home .home-about-grid{display:grid;grid-template-columns:1fr .9fr;gap:clamp(32px,6vw,110px);align-items:center}
+.institutional-home .home-about .eyebrow{margin-bottom:16px}
+.institutional-home .home-about h2{font-size:clamp(2.2rem,3.5vw,3.7rem)}
+.institutional-home .home-about p{font-size:1.03rem;line-height:1.7;max-width:63ch}
+.institutional-home .home-about-details{border:1px solid #4a4d4f;background:#222426}
+.institutional-home .home-about-details>div{display:grid;grid-template-columns:.72fr 1fr;gap:18px;padding:22px 24px;border-bottom:1px solid #414547}
+.institutional-home .home-about-details>div:last-child{border-bottom:0}
+.institutional-home .home-about-details span{color:#aeb3b5;font-size:.83rem}
+.institutional-home .home-about-details strong{font-size:.95rem;line-height:1.45}
+.institutional-home .home-process-steps{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0;padding:0}
+.institutional-home .home-process-steps li{padding:30px;background:#1b1e20;border-top:3px solid #c62a31}
+.institutional-home .home-process-steps li>span{color:#fa686c;font-size:.78rem;font-weight:800;letter-spacing:.12em}
+.institutional-home .home-process-steps h3{font-size:1.48rem;margin:20px 0 12px}
+.institutional-home .home-process-steps p{font-size:.92rem;line-height:1.58;margin-bottom:0}
+.institutional-home .home-process-actions{display:flex;align-items:center;flex-wrap:wrap;gap:20px 26px;margin-top:28px}
+.institutional-home .callout{margin-bottom:75px}
+
+@media(max-width:1140px){
+ .institutional-home .home-intro{grid-template-columns:1fr;align-items:start;padding-top:35px}
+ .institutional-home .home-intro h1{max-width:18ch}
+ .institutional-home .home-intro .hero-carousel .carousel-slide>img{height:470px}
+ .institutional-home .home-client-names{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:800px){
+ .institutional-home .home-intro{padding-bottom:39px}
+ .institutional-home .home-credentials-grid{grid-template-columns:1fr}
+ .institutional-home .home-credentials-grid>div{min-height:70px;padding:16px 0;border-right:0;border-bottom:1px solid #3f4245}
+ .institutional-home .home-credentials-grid>div:last-child{border-bottom:0}
+ .institutional-home .home-section-intro{grid-template-columns:1fr;gap:14px}
+ .institutional-home .home-services,.institutional-home .home-work,.institutional-home .home-clients,.institutional-home .home-process,.institutional-home .home-about{padding-block:60px}
+ .institutional-home .home-work-grid{grid-template-columns:1fr}
+ .institutional-home .home-work-highlight{min-height:420px}
+ .institutional-home .home-work-side{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto}
+ .institutional-home .home-work-side a{min-height:220px}
+ .institutional-home .home-about-grid{grid-template-columns:1fr;gap:26px}
+ .institutional-home .home-process-steps{grid-template-columns:1fr}
+ .institutional-home .home-process-steps li{padding:23px}
+ .institutional-home .home-client-names{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .institutional-home .home-intro{gap:26px;padding-top:28px}
+ .institutional-home .home-intro h1{font-size:clamp(2.65rem,10.8vw,3.6rem);margin-bottom:18px}
+ .institutional-home .home-intro .eyebrow{font-size:.62rem;letter-spacing:.09em;margin-bottom:16px}
+ .institutional-home .home-intro-actions{margin-top:20px;gap:10px}
+ .institutional-home .home-intro-actions .button,.institutional-home .home-outline-button{width:100%;justify-content:space-between}
+ .institutional-home .home-intro .hero-carousel .carousel-slide>img{height:350px}
+ .institutional-home .home-intro .hero-carousel .carousel-slide figcaption{left:17px;bottom:22px;right:15px}
+ .institutional-home .home-intro .hero-carousel .slide-title{font-size:1.5rem}
+ .institutional-home .home-section-intro h2{font-size:clamp(2rem,8.7vw,2.65rem)}
+ .institutional-home .home-services .product-grid{grid-template-columns:1fr}
+ .institutional-home .home-services .photo-frame img{height:240px}
+ .institutional-home .home-services-footer{align-items:start;flex-direction:column;gap:10px}
+ .institutional-home .home-work-highlight{min-height:390px}
+ .institutional-home .home-work-caption{left:17px;right:17px;bottom:16px}
+ .institutional-home .home-work-side{grid-template-columns:1fr}
+ .institutional-home .home-work-side a{min-height:240px}
+ .institutional-home .home-client-names{grid-template-columns:1fr 1fr;gap:8px}
+ .institutional-home .home-client-names li{padding:13px 10px;font-size:.8rem;min-height:70px}
+ .institutional-home .home-client-names li:before{margin-right:8px}
+ .institutional-home .home-about-details>div{grid-template-columns:1fr;gap:6px;padding:18px}
+ .institutional-home .home-process-actions>.button{width:100%}
+}
+@media(max-width:370px){.institutional-home .home-client-names{grid-template-columns:1fr}}
+
+
+/* Revisão comercial: credibilidade sem caracterizar a Alfa como construtora de edifícios. */
+.institutional-home .home-credentials-simple{display:flex;justify-content:center;align-items:center;gap:17px;flex-wrap:wrap;min-height:88px;padding-block:18px;text-align:center}
+.institutional-home .home-credentials-simple strong{font-size:clamp(1.2rem,2.1vw,1.7rem);color:#fff}
+.institutional-home .home-credentials-simple span{font-size:.92rem;color:#d4d5d6}
+.institutional-home .home-credentials-simple span::before{content:"";height:20px;width:2px;background:#e23a3e;display:inline-block;vertical-align:middle;margin-right:17px}
+
+/* Vitrines por produto: todas as fotografias cadastradas de cada categoria. */
+.institutional-home .home-product-card{min-width:0;overflow:hidden}
+.institutional-home .home-product-carousel{position:relative;min-width:0;background:#202224}
+.institutional-home .home-product-carousel .carousel-track{width:100%;overflow-x:auto}
+.institutional-home .home-product-carousel .carousel-slide{height:300px}
+.institutional-home .home-product-carousel .carousel-slide>img{width:100%;height:300px;object-fit:cover}
+.institutional-home .home-product-carousel .carousel-slide::after{display:none}
+.institutional-home .home-product-carousel .carousel-controls{position:absolute;z-index:2;inset:0;min-height:0;border:0;background:transparent;padding:0;pointer-events:none}
+.institutional-home .home-product-carousel .carousel-actions{position:absolute;left:10px;right:10px;top:50%;transform:translateY(-50%);display:flex;justify-content:space-between;pointer-events:none}
+.institutional-home .home-product-carousel .carousel-actions button{pointer-events:auto;min-width:42px;min-height:42px;border-radius:50%;border:1px solid #c9c9c9;background:#111b;color:#fff;font-size:1.2rem}
+.institutional-home .home-product-carousel .carousel-actions button:hover{background:#111f}
+.institutional-home .home-product-carousel [data-counter]{position:absolute;bottom:12px;right:12px;background:#111e;color:#fff;padding:4px 9px;border-radius:4px;font-size:.75rem}
+.institutional-home .home-product-card .product-card-body{min-height:218px}
+.institutional-home .home-services-footer{gap:32px}
+.institutional-home .home-services-footer>p{max-width:72ch;line-height:1.55}
+.institutional-home .home-services-footer .text-link{flex-shrink:0}
+
+/* Clientes reais: mantém os nomes e acrescenta a faixa animada dos logotipos. */
+.institutional-home .home-client-marquee-title{font-size:1.4rem;margin:34px 0 20px}
+.institutional-home .home-clients-marquee{padding:0;margin:0}
+.institutional-home .home-clients-marquee .lp-clients-mask{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.institutional-home .home-clients-marquee .lp-clients-track{display:flex;width:max-content;animation:alfa-home-logos-move 38s linear infinite;will-change:transform}
+.institutional-home .home-clients-marquee .lp-clients-group{display:flex;flex:none;align-items:center;gap:12px;padding-right:12px}
+.institutional-home .home-clients-marquee .lp-client-logo{display:flex;align-items:center;justify-content:center;flex:none;width:192px;height:102px;background:#fff;border:1px solid #d5d7d9;border-radius:9px;overflow:hidden}
+.institutional-home .home-clients-marquee .lp-client-logo.dark{background:#fff;border-color:#d5d7d9}
+.institutional-home .home-clients-marquee .lp-client-logo img{display:block;width:100%;height:100%;object-fit:contain;padding:10px 12px}
+@keyframes alfa-home-logos-move{to{transform:translateX(-50%)}}
+@media(hover:hover) and (pointer:fine){
+ .institutional-home .home-clients-marquee .lp-clients-mask:hover .lp-clients-track{animation-play-state:paused}
+}
+@media(prefers-reduced-motion:reduce){
+ .institutional-home .home-clients-marquee .lp-clients-track{animation-duration:55s !important}
+}
+
+/* História sem repetição de CNPJ/razão social: esses dados já constam no rodapé. */
+.institutional-home .home-about-visual{position:relative;min-width:0}
+.institutional-home .home-about-visual img{display:block;width:100%;height:365px;object-fit:cover}
+.institutional-home .home-about-visual span{position:absolute;bottom:14px;left:15px;background:#131618eb;padding:8px 12px;font-size:.75rem;color:#fff}
+.institutional-home .home-talk{padding-block:66px 50px;border-bottom:1px solid #3c3e40}
+.institutional-home .home-talk .eyebrow{margin-bottom:16px}
+.institutional-home .home-talk h2{margin:0 0 17px;font-size:clamp(2.1rem,3.3vw,3.45rem)}
+.institutional-home .home-talk>p{max-width:700px;font-size:1.02rem}
+.institutional-home .home-talk-actions{display:flex;align-items:center;gap:18px 28px;flex-wrap:wrap;margin-top:21px}
+.institutional-home .home-talk-actions .text-link{font-size:.86rem}
+.institutional-home .callout{margin-top:65px}
+@media(max-width:800px){
+ .institutional-home .home-services-footer{flex-direction:column;align-items:flex-start;gap:12px}
+ .institutional-home .home-client-marquee-title{margin-top:26px}
+}
+@media(max-width:600px){
+ .institutional-home .home-credentials-simple{align-items:center;flex-direction:column;gap:4px;min-height:88px}
+ .institutional-home .home-credentials-simple span::before{display:none}
+ .institutional-home .home-product-carousel .carousel-slide,.institutional-home .home-product-carousel .carousel-slide>img{height:270px}
+ .institutional-home .home-product-card .product-card-body{min-height:auto}
+ .institutional-home .home-clients-marquee .lp-client-logo{width:172px;height:98px}
+ .institutional-home .home-clients-marquee .lp-clients-track{animation-duration:32s}
+ .institutional-home .home-about-visual img{height:300px}
+ .institutional-home .home-talk{padding-block:50px}
+ .institutional-home .home-talk-actions .button{width:100%}
+}

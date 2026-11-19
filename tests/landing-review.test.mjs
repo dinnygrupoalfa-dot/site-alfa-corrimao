@@ -32,7 +32,8 @@ test('todos os orçamentos desta landing vão exclusivamente para Ernani',()=>{
 });
 
 test('condições aprovadas e dois produtos estão presentes',()=>{
-  assert.ok(page.includes('Nenhum pagamento antes de a obra começar'));
+  assert.ok(page.includes('Sinal na entrega dos materiais, conforme contrato'));
+  assert.ok(!page.includes('Nenhum pagamento antes de a obra começar'));
   assert.ok(page.includes('Material recebido na obra'));
   assert.ok(page.includes('após a conclusão e a conferência da instalação'));
   assert.ok(page.includes('id="escadarias"'));
@@ -68,7 +69,9 @@ test('credibilidade institucional: CNPJ, desde 2012 e cidade verificados',()=>{
   assert.ok(layout.includes('CNPJ: {site.cnpj}'));
   assert.ok(page.includes('Alfa Corrimão.<br/><em>Desde 2012.</em>'));
   assert.ok(page.includes('id="sobre-a-alfa"'));
-  assert.ok(who.includes('registro empresarial desde 21 de setembro de 2012'));
+  assert.ok(who.includes('Fundada em 2012'));
+  assert.ok(who.includes('sede própria'));
+  assert.ok(who.includes('Ernani e Enéias'));
   assert.match(css,/\.landing \.lp-client-logo\{[^}]*width:192px;height:102px/);
   assert.match(css,/@media\(max-width:650px\)[\s\S]*?\.landing \.lp-client-logo\{width:174px;height:98px\}/);
 });
@@ -83,7 +86,7 @@ test('conteúdo comercial do Ernani e fotos completas no destaque',()=>{
   assert.ok(page.includes('vistoria do Corpo de Bombeiros'));
   assert.ok(page.includes('regularização do AVCB'));
   assert.ok(page.includes('2,40 m'));
-  for(const word of ['Versátil','Agilidade na instalação','Estrutura leve','Fácil manutenção','rampas de acesso a PNE']){
+  for(const word of ['Versátil','Agilidade na instalação','Estrutura leve','Fácil manutenção','rampas acessíveis']){
     assert.ok(page.includes(word),'Conteúdo faltante: '+word);
   }
   assert.ok(page.includes('name="etapa"'));

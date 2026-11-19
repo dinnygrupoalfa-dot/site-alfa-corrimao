@@ -22,10 +22,10 @@ export const technicalWhatsapp = (message = 'Olá! Gostaria de tirar uma dúvida
  'https://wa.me/55' + site.phone + '?text=' + encodeURIComponent(message);
 export const nav = [
  {label:'Início',href:'/'},
- {label:'Quem somos',href:'/quem-somos/'},
- {label:'Soluções',href:'/corrimaos/'},
- {label:'Para sua obra',href:'/construtoras-e-condominios/'},
- {label:'Obras',href:'/obras-realizadas/'},
+ {label:'Quem Somos',href:'/quem-somos/'},
+ {label:'Produtos',href:'/corrimaos/'},
+ {label:'Obras Realizadas',href:'/obras-realizadas/'},
+ {label:'Construtoras e Condomínios',href:'/construtoras-e-condominios/'},
  {label:'Contato',href:'/contato/'},
 ];
 export const products = [

@@ -1,5 +1,7 @@
 ---
 /* Apenas clientes reais informados pela Alfa. Sem depoimentos ou endossos atribuídos. */
+interface Props {compact?:boolean;}
+const {compact=false}=Astro.props;
 const clientes = [
  {nome:'Instituto Neymar Júnior',arquivo:'instituto-neymar-jr.webp',tema:'light'},
  {nome:'PGC Engenharia',arquivo:'pgc-engenharia.webp',tema:'light'},
@@ -12,12 +14,12 @@ const clientes = [
  {nome:'Construtora Terracon',arquivo:'terracon.webp',tema:'dark'}
 ];
 ---
-<section id="clientes" class="lp-clients" aria-labelledby="lp-clients-title">
-  <div class="wrap lp-clients-head">
+<section id={compact?undefined:'clientes'} class:list={['lp-clients',{'home-clients-marquee':compact}]} aria-labelledby={compact?undefined:'lp-clients-title'} aria-label={compact?'Logotipos de alguns clientes da Alfa Corrimão':undefined}>
+  {!compact&&<div class="wrap lp-clients-head">
     <span class="eyebrow">Alguns de nossos clientes</span>
     <h2 id="lp-clients-title">Quem já confiou na <em>Alfa Corrimão.</em></h2>
     <p>Empresas e instituições atendidas pela Alfa Corrimão.</p>
-  </div>
+  </div>}
   <div class="lp-clients-mask" aria-label="Logotipos de clientes da Alfa Corrimão">
     <div class="lp-clients-track" data-clients-track>
       {[0,1].map(copia =>
