@@ -1,0 +1,6 @@
+# Redirecionamentos candidatos da migracao WordPress -> Astro.
+# So publicar depois de validar equivalencia de conteudo e testar URLs.
+/servico/corrimao/ /corrimaos/ 301
+/servico/guarda-corpo/ /guarda-corpos/ 301
+/servico/abnt-e-acessibilidade/ /acessibilidade-e-normas/ 301
+/servico/vidros-temperados/ /vidro-temperado/ 301

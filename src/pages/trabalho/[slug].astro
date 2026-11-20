@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+type Work = { id: number; slug: string; url: string; title: string; description: string; date: string; images_status?: string };
+const datasets = import.meta.glob('../../data/legacy-works*.json', { eager: true, import: 'default' });
+export function getStaticPaths() {
+  const files = import.meta.glob('../../data/legacy-works*.json', { eager: true, import: 'default' });
+  const works = Object.values(files).flatMap(value => Array.isArray(value) ? value : []) as Work[];
+  const slugs = new Set<string>();
+  return works.map(work => {
+    if (!/^[a-z0-9-]+$/.test(work.slug)) throw new Error('Slug invalido: ' + work.slug);
+    if (slugs.has(work.slug)) throw new Error('Slug duplicado: ' + work.slug);
+    slugs.add(work.slug);
+    return { params: { slug: work.slug }, props: { work } };
+  });
+}
+const { work } = Astro.props as { work: Work };
+---
+<Layout title={work.title} description={work.description.slice(0,160) || work.title}>
+  <div class="wrap breadcrumb"><a href="/">Início</a><span>/</span><a href="/obras-realizadas/">Obras realizadas</a><span>/</span><span>{work.title}</span></div>
+  <section class="page-heading wrap compact-top">
+    <span class="eyebrow">Acervo histórico Alfa Corrimão</span>
+    <h1>{work.title}</h1>
+    {work.description && <p class="lead">{work.description}</p>}
+    <p>Registro histórico publicado originalmente em {work.date}.</p>
+    <a class="text-link" href="/obras-realizadas/">Conheça outras obras ↗</a>
+  </section>
+</Layout>
