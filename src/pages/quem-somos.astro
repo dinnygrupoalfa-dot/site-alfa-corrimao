@@ -1,7 +1,86 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Photo from '../components/Photo.astro';
+import ClientMarquee from '../components/ClientMarquee.astro';
 import Callout from '../components/Callout.astro';
-import {whatsapp} from '../data/site';
+import '../styles/about.css';
 ---
-<Layout title="Quem somos"><section class="page-heading wrap"><span class="eyebrow">A Alfa Corrimão</span><h1>Soluções para quem<br/>constrói e <em>transforma.</em></h1><p class="lead">Corrimãos, guarda-corpos e soluções em vidro para edifícios, construtoras e condomínios.</p></section><section class="section wrap compact-top split"><div class="editorial-photo"><Photo id="ACF-011"/><span class="photo-label">Rampas e acessos / Acervo Alfa</span></div><div class="editorial-copy"><h2>Da escadaria<br/>aos espaços de acesso.</h2><p>A Alfa Corrimão trabalha com corrimão duplo de parede em alumínio para escadarias e corrimão duplo em aço inox para rampas de acessibilidade.</p><p>O portfólio reúne também aplicações de guarda-corpos e soluções em vidro. O atendimento recebe demandas de obras novas e de readequação em edifícios.</p><p>Para dúvidas técnicas e informações sobre sua obra, fale com o engenheiro Ernani.</p><a class="text-link" href={whatsapp()} target="_blank" rel="noopener noreferrer">Fale conosco pelo WhatsApp ↗</a></div></section><Callout/></Layout>
+<Layout title="Quem Somos" description="Conheça a história da Alfa Corrimão: experiência familiar, engenharia, fabricação própria e equipes de instalação para obras de construtoras e condomínios.">
+<div class="about-page">
+  <section class="about-hero wrap" aria-labelledby="about-title">
+    <div class="about-hero-copy">
+      <span class="eyebrow"><span class="red-line"></span> Quem somos · Alfa Corrimão</span>
+      <h1 id="about-title">Uma história em família. <em>Experiência para a sua obra.</em></h1>
+      <p class="about-lead">A experiência de quem cresceu trabalhando com construção, fabricação e instalação — hoje aplicada a corrimãos, guarda-corpos, vidro e estruturas metálicas.</p>
+      <div class="about-actions">
+        <a class="button" href="/obras-realizadas/">Conheça nossas obras ↗</a>
+        <a class="about-outline" href="/corrimaos/">Veja nossos produtos ↗</a>
+      </div>
+      <p class="about-date"><strong>Desde 2012</strong> · Uma empresa que cresceu com o trabalho da família Saldanha.</p>
+    </div>
+    <figure class="about-photo about-photo-hero">
+      <Photo id="ACF-127" eager sizes="(max-width:800px) 100vw, 50vw"/>
+      <figcaption>Corrimãos duplos em escadaria · Obra do acervo Alfa</figcaption>
+    </figure>
+  </section>
+
+  <section class="about-story about-section section-muted" id="nossa-historia" aria-labelledby="about-story-title">
+    <div class="wrap about-split">
+      <div class="about-story-title">
+        <span class="eyebrow">Nossa trajetória</span>
+        <h2 id="about-story-title">O conhecimento passou de pai para filhos. <em>O trabalho fez a empresa crescer.</em></h2>
+      </div>
+      <div class="about-copy">
+        <p>Antes mesmo da fundação da Alfa Corrimão, Ernani e Enéias já aprendiam a profissão trabalhando, ainda jovens, com o pai, Francisco Saldanha.</p>
+        <p>O trabalho começou no ambiente da família, ganhou espaço, passou por imóveis alugados e galpões e, com o crescimento da empresa, chegou à conquista de uma sede própria.</p>
+        <p>Fundada em 2012, a Alfa reúne essa experiência prática a uma estrutura preparada para fabricar e instalar soluções para obras de diferentes portes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section wrap" id="experiencia" aria-labelledby="about-experience-title">
+    <div class="about-feature">
+      <div class="about-feature-visual">
+        <Photo id="ACF-005" sizes="(max-width:800px) 100vw, 48vw"/>
+        <span>Guarda-corpo de vidro e metal em escadaria · Acervo Alfa</span>
+      </div>
+      <div class="about-feature-copy">
+        <span class="eyebrow">Conhecimento técnico e atendimento</span>
+        <h2 id="about-experience-title">Experiência na fabricação. <em>Compromisso na execução.</em></h2>
+        <p>Ernani, engenheiro, atua na frente técnica dos serviços. Enéias reúne a experiência do ofício ao relacionamento direto com os clientes.</p>
+        <p>A Alfa desenvolve e fabrica peças e soluções sob medida, de acordo com o projeto e as necessidades de cada obra. O trabalho reúne fabricação, transporte e instalação.</p>
+        <p>A experiência da empresa inclui construção e estruturas metálicas, inclusive galpões. Atualmente, o foco comercial está nos <a href="/corrimaos/aluminio-escadarias/">corrimãos para escadarias</a>, <a href="/corrimaos/inox-rampas/">corrimãos para rampas</a>, <a href="/guarda-corpos/">guarda-corpos</a> e <a href="/vidro-temperado/">soluções em vidro</a>.</p>
+        <a class="text-link" href="/corrimaos-para-predios/">Corrimãos duplos para escadarias e rampas ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section about-structure section-muted" id="estrutura" aria-labelledby="about-structure-title">
+    <div class="wrap about-feature about-feature-reverse">
+      <div class="about-feature-copy">
+        <span class="eyebrow">Estrutura própria</span>
+        <h2 id="about-structure-title">Da fabricação <em>à instalação.</em></h2>
+        <p>Hoje, a Alfa Corrimão conta com sede própria, maquinário, frota de veículos e equipes especializadas em instalação.</p>
+        <p>Essa estrutura sustenta o atendimento de construtoras, condomínios e empreendimentos que precisam de soluções fabricadas para a obra e executadas em campo.</p>
+        <a class="text-link" href="/construtoras-e-condominios/">Soluções para construtoras e condomínios ↗</a>
+      </div>
+      <div class="about-feature-visual">
+        <Photo id="ACF-011" sizes="(max-width:800px) 100vw, 48vw"/>
+        <span>Corrimãos em acesso a edifício · Acervo Alfa</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-clients about-section" id="clientes" aria-labelledby="about-clients-title">
+    <div class="wrap about-clients-copy">
+      <span class="eyebrow">Relações construídas com trabalho</span>
+      <h2 id="about-clients-title">Grandes clientes. <em>Relações duradouras.</em></h2>
+      <p>Ao longo dos anos, a Alfa atendeu construtoras, empresas e instituições e desenvolveu relacionamentos que vão além de uma contratação. A confiança é construída na qualidade do serviço e no relacionamento com cada cliente.</p>
+      <a class="text-link" href="/obras-realizadas/">Veja trabalhos da Alfa ↗</a>
+    </div>
+    <ClientMarquee compact/>
+  </section>
+
+  <Callout title="Sua obra precisa de experiência e capacidade de execução?" text="Conheça as soluções da Alfa Corrimão em fabricação e instalação de corrimãos, guarda-corpos e vidro. Converse com nossa equipe sobre o seu projeto."/>
+</div>
+</Layout>

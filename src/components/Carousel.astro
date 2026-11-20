@@ -1,10 +1,10 @@
 ---
 import Photo from './Photo.astro';
 interface Slide {id:string; title:string; label:string; href?:string;}
-interface Props {slides:Slide[]; name:string; hero?:boolean; intervalMs?:number;}
-const {slides,name,hero=false,intervalMs=3500}=Astro.props;
+interface Props {slides:Slide[]; name:string; hero?:boolean; intervalMs?:number; noPause?:boolean;}
+const {slides,name,hero=false,intervalMs=3500,noPause=false}=Astro.props;
 ---
-<section class:list={['carousel',{ 'hero-carousel':hero }]} data-carousel data-interval={intervalMs} aria-label={name} aria-roledescription="carrossel">
+<section class:list={['carousel',{ 'hero-carousel':hero, 'lp-carousel':noPause }]} data-carousel data-interval={intervalMs} aria-label={name} aria-roledescription="carrossel">
  <div class="carousel-track" data-track tabindex="0" aria-label="Fotografias; use as setas para navegar">
   {slides.map((slide,index)=><figure class="carousel-slide" data-slide role="group" aria-roledescription="slide" aria-label={String(index+1)+' de '+slides.length}>
    <Photo id={slide.id} eager={hero&&index===0} sizes={hero?'(max-width: 900px) 100vw, 62vw':'(max-width: 700px) 100vw, 80vw'}/>
@@ -14,7 +14,7 @@ const {slides,name,hero=false,intervalMs=3500}=Astro.props;
  <div class="carousel-controls">
   <span data-counter aria-live="off">01 / {String(slides.length).padStart(2,'0')}</span>
   <div class="carousel-dots" aria-label="Escolher fotografia">{slides.map((_,i)=><button type="button" data-goto={i} aria-label={'Ver fotografia '+(i+1)} aria-pressed={i===0}><span></span></button>)}</div>
-  <div class="carousel-actions"><button type="button" data-prev aria-label="Fotografia anterior">←</button><button type="button" data-pause aria-label="Pausar reprodução automática" aria-pressed="false">Pausar</button><button type="button" data-next aria-label="Próxima fotografia">→</button></div>
+  <div class="carousel-actions"><button type="button" data-prev aria-label="Fotografia anterior">←</button>{!noPause&&<button type="button" data-pause aria-label="Pausar reprodução automática" aria-pressed="false">Pausar</button>}<button type="button" data-next aria-label="Próxima fotografia">→</button></div>
  </div>
  <span class="sr-only" data-carousel-status role="status" aria-live="polite"></span>
 </section>

@@ -3,24 +3,135 @@ import Layout from '../layouts/Layout.astro';
 import Carousel from '../components/Carousel.astro';
 import Photo from '../components/Photo.astro';
 import ProductCards from '../components/ProductCards.astro';
+import ClientMarquee from '../components/ClientMarquee.astro';
 import Callout from '../components/Callout.astro';
-import {technicalWhatsapp} from '../data/site';
+import {whatsapp,technicalWhatsapp} from '../data/site';
+import '../styles/home.css';
+
 const slides=[
- {id:'ACF-011',label:'Rampas e acessos',title:'Soluções que acompanham a sua obra.',href:'/corrimaos/inox-rampas/'},
- {id:'ACF-127',label:'Escadarias',title:'Corrimãos duplos para edifícios.',href:'/corrimaos/aluminio-escadarias/'},
- {id:'ACF-116',label:'Obras',title:'Píer de Cubatão: guarda-corpos e circulação.',href:'/obras-realizadas/pier-de-cubatao/'},
- {id:'ACF-003',label:'Acessibilidade',title:'Do acesso ao percurso.',href:'/acessibilidade-e-normas/'},
+ {id:'ACF-127',label:'Corrimão duplo / Escadarias',title:'Apoio em duas alturas nas escadarias.',href:'/corrimaos/aluminio-escadarias/'},
+ {id:'ACF-011',label:'Corrimãos / Rampas de acesso',title:'Corrimãos para acessibilidade e circulação.',href:'/corrimaos/inox-rampas/'},
+ {id:'ACF-023',label:'Guarda-corpos / Áreas comuns',title:'Proteção integrada aos espaços do condomínio.',href:'/guarda-corpos/'},
+ {id:'ACF-005',label:'Guarda-corpos / Vidro e metal',title:'Soluções para escadarias e áreas de acesso.',href:'/guarda-corpos/'},
+ {id:'ACF-121',label:'Obras / Píer de Cubatão',title:'Detalhes de um trabalho registrado em fotografias.',href:'/obras-realizadas/pier-de-cubatao/'},
+ {id:'ACF-028',label:'Soluções em vidro / Sacadas',title:'Fechamentos em vidro para edifícios.',href:'/vidro-temperado/'},
+ {id:'ACF-003',label:'Rampas / Percurso externo',title:'Corrimãos duplos em acessos externos.',href:'/corrimaos/inox-rampas/'},
+ {id:'ACF-030',label:'Soluções em vidro / Portas',title:'Portas e fechamentos para diferentes ambientes.',href:'/vidro-temperado/'},
+];
+const clientes=[
+ 'Instituto Neymar Júnior',
+ 'Construtora Sobloco',
+ 'Construtora Terracon',
+ 'Soccer Grass',
+ 'Construtora Costa Hirota',
+ 'Construtora Árbore',
+ 'Construtora Phoenix',
+ 'Construtora PGC',
+ 'Prefeitura de Cubatão',
+ 'Quali Engenharia',
+ 'Jestec Engenharia',
+ 'Grupo Mendes Engenharia'
 ];
 ---
-<Layout title="Início">
-<section class="home-hero wrap">
-<div class="hero-copy"><span class="eyebrow"><span class="red-line"></span> Alfa Corrimão / Construção civil</span><h1>Corrimãos.<br/>Guarda-corpos.<br/><em>Vidro.</em></h1><p>Corrimãos para escadarias e rampas, guarda-corpos e vidro para edifícios, construtoras e condomínios.</p><div class="button-row"><a class="button" href="/obras-realizadas/">Conheça nossas obras <span aria-hidden="true">↗</span></a></div><div class="hero-footnote"><span>Escadarias</span><span>Rampas</span><span>Áreas comuns</span></div></div>
-<Carousel slides={slides} name="Destaques de produtos e obras" hero/>
-</section>
-<div class="service-strip"><div class="wrap"><span>Para construtoras</span><span>Para condomínios</span><span>Para responsáveis por obras</span><a href="/construtoras-e-condominios/">Conheça o atendimento ↗</a></div></div>
-<section class="section wrap"><div class="split"><div class="editorial-photo"><a href="/obras-realizadas/pier-de-cubatao/" aria-label="Abrir álbum do Píer de Cubatão"><Photo id="ACF-121" sizes="(max-width:800px) 100vw, 50vw"/></a><span class="photo-label">Píer de Cubatão / Álbum de obra</span></div><div class="editorial-copy"><span class="eyebrow">Obras realizadas / Novo álbum</span><h2>Uma obra.<br/>Muitas perspectivas.</h2><p>Conheça o registro fotográfico do Píer de Cubatão, com passarelas, guarda-corpos e diferentes vistas da área de circulação.</p><p>O álbum reúne 46 fotografias distintas, organizadas para facilitar a visualização de cada detalhe.</p><a class="text-link" href="/obras-realizadas/pier-de-cubatao/">Explorar as 46 fotografias ↗</a></div></div></section>
-<section class="section wrap"><div class="section-heading"><div><span class="eyebrow">Soluções Alfa</span><h2>Da escadaria à rampa.<br/>Um projeto conectado.</h2></div><p>Conheça os dois produtos prioritários e as demais soluções para o seu edifício.</p></div><ProductCards/></section>
-<section class="section section-muted"><div class="wrap split"><div class="editorial-photo"><Photo id="ACF-023"/><span class="photo-label">Guarda-corpos / Áreas comuns</span></div><div class="editorial-copy"><span class="eyebrow">Para quem constrói e administra</span><h2>A sua obra começa<br/>com uma boa conversa.</h2><p>Obra nova, readequação de condomínio ou contratação por etapas: apresente a necessidade e as informações disponíveis.</p><ul class="feature-list"><li><strong>Escadarias e rampas</strong><span>Corrimãos de alumínio e inox no mesmo fornecedor.</span></li><li><strong>Equipe técnica</strong><span>Tire suas dúvidas sobre o projeto e a aplicação. <a href={technicalWhatsapp()} target="_blank" rel="noopener noreferrer">Equipe técnica ↗</a></span></li><li><strong>Informações para orçamento</strong><span>Compartilhe fotos, medidas e projeto, se disponíveis.</span></li></ul><a class="text-link" href="/construtoras-e-condominios/">Soluções para sua obra ↗</a></div></div></section>
-<section class="section wrap"><div class="section-heading"><div><span class="eyebrow">Acessibilidade e projeto</span><h2>Informação clara.<br/>Escolhas bem orientadas.</h2></div><p>O corrimão integra a circulação da edificação. Conheça a relação entre acessibilidade, projeto e adequações para vistoria.</p></div><div class="info-grid"><a href="/corrimaos/aluminio-escadarias/"><span>01</span><h3>Escadarias de edifícios</h3><p>Corrimão duplo de parede em alumínio para escadas residenciais, comerciais e industriais.</p><b>Conhecer produto ↗</b></a><a href="/corrimaos/inox-rampas/"><span>02</span><h3>Rampas de acesso</h3><p>Corrimão duplo em inox para rampas de acessibilidade em edifícios e empreendimentos.</p><b>Conhecer produto ↗</b></a><a href="/acessibilidade-e-normas/"><span>03</span><h3>Acessibilidade e normas</h3><p>Entenda o papel do corrimão e a importância da avaliação do projeto.</p><b>Saiba mais ↗</b></a></div></section>
-<Callout/>
+<Layout title="Início" description="Alfa Corrimão: fabricação e instalação de corrimãos, guarda-corpos e soluções em vidro para construtoras, edifícios e condomínios. São Bernardo do Campo – SP. Desde 2012.">
+<div class="institutional-home">
+  <section class="home-intro wrap" aria-labelledby="home-title">
+    <div class="home-intro-copy">
+      <span class="eyebrow"><span class="red-line"></span> Alfa Corrimão · Fabricação e instalação</span>
+      <h1 id="home-title">Corrimãos e guarda-corpos <em>para a sua obra.</em></h1>
+      <p class="home-intro-lead">Fabricação e instalação de corrimãos para escadarias e rampas, guarda-corpos e soluções em vidro para construtoras, edifícios e condomínios.</p>
+      <div class="home-intro-actions">
+        <a class="button" href={whatsapp('Olá! Quero solicitar um orçamento para minha obra.')} target="_blank" rel="noopener noreferrer">Solicitar orçamento <span aria-hidden="true">↗</span></a>
+        <a class="home-outline-button" href="/obras-realizadas/">Conhecer nossas obras <span aria-hidden="true">↗</span></a>
+      </div>
+      <a class="home-intro-specialty" href="/corrimaos-para-predios/">Corrimão duplo para escadarias e rampas: conheça a solução <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="home-intro-visual">
+      <Carousel slides={slides} name="Fotografias de corrimãos, guarda-corpos e vidro em obras" hero intervalMs={3500} noPause/>
+    </div>
+  </section>
+
+  <div class="home-credentials" aria-label="Histórico da Alfa Corrimão">
+    <div class="wrap home-credentials-simple"><strong>Desde 2012.</strong><span>Experiência em corrimãos, guarda-corpos e soluções em vidro.</span></div>
+  </div>
+
+  <section class="section home-services wrap" id="produtos">
+    <div class="home-section-intro">
+      <div><span class="eyebrow">Produtos e aplicações</span><h2>O que a Alfa <em>fabrica e instala.</em></h2></div>
+      <p>Da escadaria à sacada: encontre a solução que seu empreendimento precisa e veja fotografias de aplicações reais.</p>
+    </div>
+    <ProductCards galleries/>
+    <div class="home-services-footer">
+      <p>Precisa de corrimãos duplos para escadarias e rampas de acesso para pessoas com deficiência ou mobilidade reduzida?</p>
+      <a class="text-link" href="/corrimaos-para-predios/">Conheça as soluções em alumínio e inox ↗</a>
+    </div>
+  </section>
+
+  <section class="section section-muted home-work" id="obras">
+    <div class="wrap">
+      <div class="home-section-intro">
+        <div><span class="eyebrow">Obras e aplicações</span><h2>Veja <em>nosso trabalho.</em></h2></div>
+        <p>Corrimãos, guarda-corpos e vidro instalados em escadarias, acessos e áreas comuns.</p>
+      </div>
+      <div class="home-work-grid">
+        <a class="home-work-highlight" href="/guarda-corpos/" aria-label="Conheça os guarda-corpos e corrimãos da Alfa">
+          <Photo id="ACF-005" sizes="(max-width:800px) 100vw, 60vw"/>
+          <span class="home-work-caption"><small>Guarda-corpos e corrimãos</small><strong>Detalhes que fazem parte da sua obra.</strong><span>Conhecer soluções ↗</span></span>
+        </a>
+        <div class="home-work-side">
+          <a href="/corrimaos/aluminio-escadarias/">
+            <Photo id="ACF-009" sizes="(max-width:800px) 100vw, 40vw"/>
+            <span><strong>Corrimãos para escadarias</strong><small>Conhecer produto ↗</small></span>
+          </a>
+          <a href="/guarda-corpos/">
+            <Photo id="ACF-023" sizes="(max-width:800px) 100vw, 40vw"/>
+            <span><strong>Guarda-corpos para áreas comuns</strong><small>Conhecer produto ↗</small></span>
+          </a>
+        </div>
+      </div>
+      <a class="text-link home-work-more" href="/obras-realizadas/">Conheça nossas obras ↗</a>
+    </div>
+  </section>
+
+  <section class="section home-clients" id="clientes">
+    <div class="wrap">
+      <div class="home-section-intro">
+        <div><span class="eyebrow">Experiência com empresas e instituições</span><h2>Quem já confiou <em>na Alfa Corrimão.</em></h2></div>
+        <p>Empresas e instituições que já contrataram serviços da Alfa Corrimão.</p>
+      </div>
+      <ul class="home-client-names">
+        {clientes.map(nome=><li>{nome}</li>)}
+      </ul>
+      <h3 class="home-client-marquee-title">Nossos principais clientes</h3>
+    </div>
+    <ClientMarquee compact/>
+  </section>
+
+  <section class="section section-muted home-about" id="quem-somos">
+    <div class="wrap home-about-grid">
+      <div>
+        <span class="eyebrow">Conheça a Alfa Corrimão</span>
+        <h2>Especialistas em <em>soluções para obras.</em></h2>
+        <p>Desde 2012, a Alfa Corrimão fabrica e instala corrimãos, guarda-corpos e soluções em vidro. Nosso trabalho pode ser visto nas obras e nos serviços que realizamos para empresas e condomínios.</p>
+        <a class="text-link" href="/quem-somos/">Saiba mais sobre a Alfa ↗</a>
+      </div>
+      <div class="home-about-visual">
+        <Photo id="ACF-127" sizes="(max-width:800px) 100vw, 50vw"/>
+        <span>Corrimãos duplos em escadaria.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section home-talk wrap">
+    <span class="eyebrow">Atendimento</span>
+    <h2>Converse <em>com a Alfa.</em></h2>
+    <p>Está planejando uma instalação ou precisa de uma solução para sua obra? Fale diretamente com a nossa equipe.</p>
+    <div class="home-talk-actions">
+      <a class="button" href={whatsapp('Olá! Gostaria de solicitar um orçamento para minha obra.')} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
+      <a class="text-link" href={technicalWhatsapp('Olá, Ernani! Gostaria de tirar dúvidas técnicas sobre corrimãos ou guarda-corpos.')} target="_blank" rel="noopener noreferrer">Dúvidas técnicas com Ernani ↗</a>
+    </div>
+  </section>
+
+  <Callout title="Sua obra precisa de corrimãos, guarda-corpos ou vidro?" text="Chame a Alfa. Somos especialistas em fabricação e instalação de corrimãos, guarda-corpos e soluções em vidro."/>
+</div>
 </Layout>

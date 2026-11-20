@@ -1,5 +1,9 @@
 export const site = {
  name: 'Alfa Corrimão',
+ cnpj: '17.119.304/0001-75',
+ openedOn: '21/09/2012',
+ sinceYear: '2012',
+ cityState: 'São Bernardo do Campo – SP',
  description: 'Corrimãos para escadarias e rampas, guarda-corpos e soluções em vidro para edifícios, construtoras e condomínios.',
  engineer: 'Ernani',
  phone: '11947704632',
@@ -18,10 +22,10 @@ export const technicalWhatsapp = (message = 'Olá! Gostaria de tirar uma dúvida
  'https://wa.me/55' + site.phone + '?text=' + encodeURIComponent(message);
 export const nav = [
  {label:'Início',href:'/'},
- {label:'Quem somos',href:'/quem-somos/'},
- {label:'Soluções',href:'/corrimaos/'},
- {label:'Para sua obra',href:'/construtoras-e-condominios/'},
- {label:'Obras',href:'/obras-realizadas/'},
+ {label:'Quem Somos',href:'/quem-somos/'},
+ {label:'Produtos',href:'/corrimaos/'},
+ {label:'Obras Realizadas',href:'/obras-realizadas/'},
+ {label:'Construtoras e Condomínios',href:'/construtoras-e-condominios/'},
  {label:'Contato',href:'/contato/'},
 ];
 export const products = [

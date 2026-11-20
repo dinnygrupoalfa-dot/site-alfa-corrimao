@@ -1,0 +1,45 @@
+/* Página institucional Quem Somos. Estilos isolados para não alterar a landing de anúncios. */
+.about-page{overflow:hidden}
+.about-page em{font-style:normal;color:#e34045}
+.about-page .about-hero{display:grid;grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);gap:clamp(28px,4vw,68px);align-items:center;padding-top:66px;padding-bottom:77px}
+.about-page .about-hero h1{font-size:clamp(2.8rem,4.55vw,5rem);line-height:1.04;margin:0 0 25px}
+.about-page .about-lead{font-size:clamp(1rem,1.25vw,1.15rem);line-height:1.65;max-width:55ch;color:#d5d8d9}
+.about-page .about-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:30px 0 28px}
+.about-page .about-outline{display:inline-flex;align-items:center;justify-content:center;min-height:52px;border:1px solid #686c70;padding:13px 22px;font-size:.86rem;font-weight:700}
+.about-page .about-outline:hover{border-color:white;background:#26282a}
+.about-page .about-date{font-size:.79rem;border-top:1px solid #393c3e;padding-top:20px;margin:0}
+.about-page .about-date strong{color:white}
+.about-page .about-photo{position:relative;margin:0;overflow:hidden;background:#222426}
+.about-page .about-photo img{display:block;width:100%;height:570px;object-fit:cover}
+.about-page .about-photo figcaption,.about-page .about-feature-visual>span{position:absolute;left:16px;bottom:15px;background:#121415eb;border:1px solid #474b4d;color:#fff;font-size:.73rem;padding:8px 12px;max-width:calc(100% - 32px)}
+.about-page .about-section{padding-block:83px}
+.about-page .about-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,95px);align-items:start}
+.about-page .about-story-title h2{font-size:clamp(2.2rem,3.5vw,3.85rem);margin:0}
+.about-page .about-copy{border-left:2px solid #ba3034;padding-left:30px}
+.about-page .about-copy p,.about-page .about-feature-copy p{font-size:1.02rem;line-height:1.75;color:#d0d3d4}
+.about-page .about-copy p:last-child,.about-page .about-feature-copy p:last-of-type{margin-bottom:0}
+.about-page .about-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(34px,5vw,82px);align-items:center}
+.about-page .about-feature-visual{position:relative;min-width:0;background:#27292b;overflow:hidden}
+.about-page .about-feature-visual img{display:block;width:100%;height:515px;object-fit:cover}
+.about-page .about-feature-copy h2{font-size:clamp(2.15rem,3.3vw,3.6rem);margin:0 0 26px}
+.about-page .about-feature-copy .text-link{margin-top:24px}
+.about-page .about-feature-copy p a{text-decoration:underline;text-decoration-color:#a5a9aa;text-underline-offset:4px}
+.about-page .about-feature-copy p a:hover{color:white;text-decoration-color:#e34045}
+.about-page .about-feature-reverse{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.about-page .about-clients{text-align:center;padding-bottom:70px}
+.about-page .about-clients-copy{max-width:850px}
+.about-page .about-clients-copy h2{font-size:clamp(2.35rem,3.5vw,3.8rem)}
+.about-page .about-clients-copy p{font-size:1.04rem;color:#d0d3d4;max-width:760px;margin:0 auto 15px}
+.about-page .about-clients-copy .text-link{margin:6px auto 38px}
+.about-page .home-clients-marquee{padding:0;margin:0}
+.about-page .home-clients-marquee .lp-clients-mask{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.about-page .home-clients-marquee .lp-clients-track{display:flex;width:max-content;animation:alfa-about-logos-move 39s linear infinite;will-change:transform}
+.about-page .home-clients-marquee .lp-clients-group{display:flex;flex:none;align-items:center;gap:15px;padding-right:15px}
+.about-page .home-clients-marquee .lp-client-logo{display:flex;align-items:center;justify-content:center;flex:none;width:205px;height:110px;background:#fff;border:1px solid #d5d7d9;border-radius:9px;overflow:hidden}
+.about-page .home-clients-marquee .lp-client-logo img{display:block;width:100%;height:100%;object-fit:contain;padding:10px 13px}
+@keyframes alfa-about-logos-move{to{transform:translateX(-50%)}}
+@media(hover:hover) and (pointer:fine){.about-page .home-clients-marquee .lp-clients-mask:hover .lp-clients-track{animation-play-state:paused}}
+@media(prefers-reduced-motion:reduce){.about-page .home-clients-marquee .lp-clients-track{animation:none;transform:none;max-width:100%;overflow-x:auto;scrollbar-width:thin}.about-page .home-clients-marquee .lp-clients-mask{mask-image:none;-webkit-mask-image:none}}
+.about-page .callout{margin-top:0}
+@media(max-width:900px){.about-page .about-hero,.about-page .about-split,.about-page .about-feature,.about-page .about-feature-reverse{grid-template-columns:1fr}.about-page .about-hero{padding-top:35px;padding-bottom:50px}.about-page .about-photo img{height:490px}.about-page .about-feature-visual img{height:450px}.about-page .about-structure .about-feature-copy{order:1}.about-page .about-structure .about-feature-visual{order:2}.about-page .about-section{padding-block:60px}}
+@media(max-width:600px){.about-page .about-hero h1{font-size:clamp(2.5rem,10vw,3.65rem)}.about-page .about-photo img{height:320px}.about-page .about-feature-visual img{height:315px}.about-page .about-actions .button,.about-page .about-actions .about-outline{width:100%}.about-page .about-copy{padding-left:20px}.about-page .about-clients{text-align:left}.about-page .about-clients-copy .text-link{margin-left:0}.about-page .home-clients-marquee .lp-client-logo{width:170px;height:95px}.about-page .home-clients-marquee .lp-clients-track{animation-duration:31s}}

@@ -1,35 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LandingCarousel from '../components/LandingCarousel.astro';
-import {site,technicalWhatsapp as whatsapp} from '../data/site';
+import ClientMarquee from '../components/ClientMarquee.astro';
+import {site,technicalWhatsapp} from '../data/site';
 import '../styles/landing.css';
 
 // Fotos reais preservadas no acervo Alfa. Códigos AC correspondem às fotografias de origem;
 // ACF são os IDs de rastreabilidade usados pelo site Astro. Material visível na foto não
 // comprova a liga metálica; o produto é descrito conforme as informações da empresa.
 const escadarias = [
- {src:'/images/acf-127.jpeg',alt:'Escadaria interna com corrimãos brancos duplos nas paredes e patamar.',label:'Escadarias / Vista geral',title:'Corrimão duplo nas escadarias do edifício.',code:'Acervo ACF-127'},
- {src:'/images/acf-001-1280.webp',alt:'Escadaria em dois lances com corrimãos brancos duplos fixados às paredes.',label:'Escadarias / Parede',title:'Corrimãos duplos acompanhando dois lances.',code:'Acervo AC-370 · ACF-001'},
- {src:'/images/landing-escada-ac363.jpg',alt:'Corrimãos pretos contornando o patamar de uma escadaria.',label:'Escadarias / Preto',title:'Contorno do patamar em acabamento escuro.',code:'Acervo AC-363'},
- {src:'/images/landing-escada-ac371.jpg',alt:'Escadaria em concreto com corrimãos duplos brancos nas laterais.',label:'Escadarias / Dois lados',title:'Dois níveis de apoio nas paredes.',code:'Acervo AC-371'},
- {src:'/images/acf-009-1280.webp',alt:'Escada com piso escuro e corrimãos brancos duplos nas duas paredes.',label:'Escadarias / Vista geral',title:'Corrimãos brancos em escada de edifício.',code:'Acervo AC-366 · ACF-009'},
- {src:'/images/landing-escada-ac374.jpg',alt:'Mudança de direção de corrimãos brancos em patamar.',label:'Escadarias / Detalhe',title:'Continuidade no encontro entre lances.',code:'Acervo AC-374'},
- {src:'/images/landing-escada-ac369.jpg',alt:'Escadaria interna com corrimãos duplos brancos e patamar.',label:'Escadarias / Instalação',title:'Percurso acompanhado pelos corrimãos.',code:'Acervo AC-369'},
- {src:'/images/landing-escada-ac372.jpg',alt:'Corrimãos brancos acompanhando um canto de patamar.',label:'Escadarias / Contorno',title:'Solução para mudanças de direção.',code:'Acervo AC-372'},
- {src:'/images/landing-escada-ac364.jpg',alt:'Corrimãos pretos em escadaria de concreto e patamar.',label:'Escadarias / Preto',title:'Outra opção de acabamento para escadas.',code:'Acervo AC-364'},
- {src:'/images/acf-126.jpeg',alt:'Registro de corrimão duplo branco em escadaria durante a obra.',label:'Escadarias / Instalação',title:'Corrimãos duplos em instalação.',code:'Acervo ACF-126'}
+ {"src":"/images/landing-20261118/ESC-01-corrimaos-duplos-metalicos-escadaria-vista-descida.jpeg","alt":"Corrimãos duplos nas paredes, vista de descida da escadaria.","label":"Escadarias / Obra real","title":"Corrimãos duplos nas paredes, vista de descida da escadaria.","code":"Foto ESC-01 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-02-corrimao-duplo-branco-patamar-de-escada.jpeg","alt":"Corrimão duplo branco no patamar da escada.","label":"Escadarias / Obra real","title":"Corrimão duplo branco no patamar da escada.","code":"Foto ESC-02 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-03-corrimao-duplo-branco-escada-vista-superior.jpeg","alt":"Escadaria com corrimãos brancos vista de cima.","label":"Escadarias / Obra real","title":"Escadaria com corrimãos brancos vista de cima.","code":"Foto ESC-03 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-04-corrimao-duplo-branco-canto-patamar.jpeg","alt":"Corrimãos brancos contornando o canto do patamar.","label":"Escadarias / Obra real","title":"Corrimãos brancos contornando o canto do patamar.","code":"Foto ESC-04 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-05-corrimao-duplo-branco-curva-patamar-vista-acima.jpeg","alt":"Curva de corrimãos brancos em patamar, vista superior.","label":"Escadarias / Obra real","title":"Curva de corrimãos brancos em patamar, vista superior.","code":"Foto ESC-05 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-06-corrimao-duplo-branco-dois-lances-escada.jpeg","alt":"Corrimãos brancos em dois lances da escadaria.","label":"Escadarias / Obra real","title":"Corrimãos brancos em dois lances da escadaria.","code":"Foto ESC-06 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-07-corrimaos-duplos-brancos-escada-vista-descida.jpeg","alt":"Escadaria com corrimãos brancos vista de descida.","label":"Escadarias / Obra real","title":"Escadaria com corrimãos brancos vista de descida.","code":"Foto ESC-07 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-08-corrimao-duplo-branco-patamar-detalhe.jpeg","alt":"Detalhe lateral de corrimão duplo branco no patamar.","label":"Escadarias / Obra real","title":"Detalhe lateral de corrimão duplo branco no patamar.","code":"Foto ESC-08 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-09-corrimao-duplo-branco-escadaria-com-guarda-corpo-madeira.jpeg","alt":"Corrimão branco de parede e guarda-corpo de madeira.","label":"Escadarias / Obra real","title":"Corrimão branco de parede e guarda-corpo de madeira.","code":"Foto ESC-09 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-10-corrimaos-duplos-brancos-escadaria-piso-escuro.jpeg","alt":"Escadaria de piso escuro com corrimãos duplos brancos.","label":"Escadarias / Obra real","title":"Escadaria de piso escuro com corrimãos duplos brancos.","code":"Foto ESC-10 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-11-corrimao-duplo-preto-escadaria-paredes-concreto.jpeg","alt":"Corrimão duplo preto em escadaria com paredes de concreto.","label":"Escadarias / Obra real","title":"Corrimão duplo preto em escadaria com paredes de concreto.","code":"Foto ESC-11 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-12-corrimao-duplo-preto-curva-de-patamar.jpeg","alt":"Corrimãos pretos contornando pilares e patamar.","label":"Escadarias / Obra real","title":"Corrimãos pretos contornando pilares e patamar.","code":"Foto ESC-12 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-13-corrimao-duplo-preto-escada-vista-superior.jpeg","alt":"Escadaria de concreto com corrimãos pretos vista superior.","label":"Escadarias / Obra real","title":"Escadaria de concreto com corrimãos pretos vista superior.","code":"Foto ESC-13 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-14-corrimaos-duplos-pretos-escadaria-vista-descida.jpeg","alt":"Corrimãos duplos pretos nas laterais de escadaria.","label":"Escadarias / Obra real","title":"Corrimãos duplos pretos nas laterais de escadaria.","code":"Foto ESC-14 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-15-corrimao-duplo-preto-escadaria-concreto-aparente.jpeg","alt":"Escadaria em concreto aparente com corrimãos pretos.","label":"Escadarias / Obra real","title":"Escadaria em concreto aparente com corrimãos pretos.","code":"Foto ESC-15 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-16-corrimao-duplo-branco-escadaria-vista-lateral.jpeg","alt":"Corrimãos brancos em escadaria clara e patamar lateral.","label":"Escadarias / Obra real","title":"Corrimãos brancos em escadaria clara e patamar lateral.","code":"Foto ESC-16 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/ESC-17-escadaria-entrada-predio-corrimaos-e-guarda-corpos.jpeg","alt":"Escadaria de entrada com corrimãos e guarda-corpos.","label":"Escadarias / Obra real","title":"Escadaria de entrada com corrimãos e guarda-corpos.","code":"Foto ESC-17 · Acervo Alfa"}
 ];
 const rampas = [
- {src:'/images/acf-003-1280.webp',alt:'Rampa externa sinuosa com corrimãos metálicos em duas alturas e vegetação ao lado.',label:'Rampas / Acesso externo',title:'Corrimãos acompanhando o percurso da rampa.',code:'ACF-003'},
- {src:'/images/landing-rampa-paralelas.jpg',alt:'Duas rampas paralelas de entrada de edifício com corrimãos metálicos.',label:'Rampas / Prédios',title:'Rampas paralelas em acesso de edifício.',code:'Acervo Alfa / rampas'},
- {src:'/images/landing-rampa-fachada-vidro.jpg',alt:'Rampa de acesso junto a fachada de vidro e corrimãos de metal polido.',label:'Rampas / Fachada',title:'Acesso ao condomínio junto à fachada.',code:'Acervo Alfa / rampas'},
- {src:'/images/acf-004-1280.webp',alt:'Rampa reta com dois corrimãos paralelos em cada lateral.',label:'Rampas / Acessibilidade',title:'Apoio em duas alturas na entrada.',code:'ACF-004'},
- {src:'/images/landing-rampa-jardim.jpg',alt:'Rampa com corrimão metálico junto a jardim de condomínio.',label:'Rampas / Jardim',title:'Percurso de acesso em área externa.',code:'Acervo Alfa / rampas'},
- {src:'/images/landing-rampa-longa-fachada.jpg',alt:'Rampa longa em frente a edifício envidraçado, com corrimãos metálicos.',label:'Rampas / Percursos',title:'Solução para acessos de maior extensão.',code:'Acervo Alfa / rampas'},
- {src:'/images/landing-rampa-comercio.jpg',alt:'Corrimãos metálicos duplos em rampa de acesso a comércio.',label:'Rampas / Comércio',title:'Rampa em entrada comercial.',code:'Acervo Alfa / rampas'},
- {src:'/images/acf-011-1280.webp',alt:'Rampa externa com corrimãos metálicos e escadaria ao lado de fachada de edifício.',label:'Rampas / Edifícios',title:'Escada e rampa na mesma obra.',code:'ACF-011'},
- {src:'/images/landing-rampa-longa-predio.jpg',alt:'Percurso longo de rampa em prédio com corrimãos metálicos.',label:'Rampas / Percurso longo',title:'Corrimãos ao longo da circulação.',code:'Acervo Alfa / rampas'},
- {src:'/images/landing-rampa-acesso-frontal.jpg',alt:'Acesso frontal a edifício com corrimão metálico em rampa.',label:'Rampas / Entrada',title:'Acessos de edifícios e condomínios.',code:'Acervo Alfa / rampas'}
+ {"src":"/images/landing-20261118/RMP-01-rampa-acesso-externa-corrimaos-metalicos-vista-superior.jpeg","alt":"Rampa externa com corrimãos metálicos e guarda-corpo de vidro.","label":"Rampas / Obra real","title":"Rampa externa com corrimãos metálicos e guarda-corpo de vidro.","code":"Foto RMP-01 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/RMP-02-rampa-e-escadaria-degraus-azuis-condominio.jpeg","alt":"Rampa e escadaria com degraus azuis na entrada do edifício.","label":"Rampas / Obra real","title":"Rampa e escadaria com degraus azuis na entrada do edifício.","code":"Foto RMP-02 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/RMP-03-rampa-acesso-corrimaos-metalicos-jardim.jpeg","alt":"Rampa externa com corrimãos metálicos junto ao jardim.","label":"Rampas / Obra real","title":"Rampa externa com corrimãos metálicos junto ao jardim.","code":"Foto RMP-03 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/RMP-04-rampa-corredor-externo-corrimaos-vista-frontal.jpeg","alt":"Rampa em corredor externo com corrimãos laterais.","label":"Rampas / Obra real","title":"Rampa em corredor externo com corrimãos laterais.","code":"Foto RMP-04 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/RMP-05-rampa-corredor-externo-corrimaos-vista-alternativa.jpeg","alt":"Outra vista da rampa longa em corredor externo.","label":"Rampas / Obra real","title":"Outra vista da rampa longa em corredor externo.","code":"Foto RMP-05 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/RMP-06-rampa-fachada-condominio-guarda-corpos-metalicos.jpeg","alt":"Acesso ao condomínio com rampa e guarda-corpos metálicos.","label":"Rampas / Obra real","title":"Acesso ao condomínio com rampa e guarda-corpos metálicos.","code":"Foto RMP-06 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/RMP-07-rampa-e-escadaria-corrimaos-acesso-predio.jpeg","alt":"Rampa e escadaria próximas à fachada do edifício.","label":"Rampas / Obra real","title":"Rampa e escadaria próximas à fachada do edifício.","code":"Foto RMP-07 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/RMP-08-rampa-externa-corrimaos-metalicos-vista-lateral.jpeg","alt":"Vista lateral de rampa externa com corrimãos.","label":"Rampas / Obra real","title":"Vista lateral de rampa externa com corrimãos.","code":"Foto RMP-08 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/RMP-09-rampa-escadaria-degraus-azuis-vista-lateral.jpeg","alt":"Outro ângulo da rampa e escada com degraus azuis.","label":"Rampas / Obra real","title":"Outro ângulo da rampa e escada com degraus azuis.","code":"Foto RMP-09 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/RMP-10-rampa-acesso-externa-mesma-vista-de-rmp01.jpeg","alt":"Rampa externa com corrimãos e guarda-corpo de vidro.","label":"Rampas / Obra real","title":"Rampa externa com corrimãos e guarda-corpo de vidro.","code":"Foto RMP-10 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/RMP-11-rampa-corrimaos-metalicos-caminhos-paralelos.jpeg","alt":"Rampas paralelas em acesso externo com corrimãos.","label":"Rampas / Obra real","title":"Rampas paralelas em acesso externo com corrimãos.","code":"Foto RMP-11 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/RMP-12-rampa-externa-guarda-corpos-e-corrimaos-laterais.jpeg","alt":"Rampa externa entre fachada e muro com guarda-corpos.","label":"Rampas / Obra real","title":"Rampa externa entre fachada e muro com guarda-corpos.","code":"Foto RMP-12 · Acervo Alfa"},
+ {"src":"/images/landing-20261118/RMP-13-rampa-condominio-corrimaos-duplos-vista-descida.jpeg","alt":"Rampa de condomínio com corrimãos duplos nas laterais.","label":"Rampas / Obra real","title":"Rampa de condomínio com corrimãos duplos nas laterais.","code":"Foto RMP-13 · Acervo Alfa"}
 ];
 const cores=[
  {name:'Branco',swatch:'#e9e9e5'},
@@ -39,9 +50,9 @@ const cores=[
  {name:'RAL 9007',swatch:'#7d7f7d'},
  {name:'RAL 7034F',swatch:'#9f9a7a'}
 ];
-const nomeServico='Corrimão para escadaria ou rampa';
+const fotosDestaque = [escadarias[5],rampas[0],...escadarias.filter((_,i)=>i!==5),...rampas.filter((_,i)=>i!==0)];
 ---
-<Layout title="Corrimãos de Parede NBR 9050 para Prédios" description="Corrimão duplo de alumínio para escadarias e corrimão duplo em inox para rampas de acessibilidade. Soluções Alfa Corrimão para prédios e condomínios. Solicite orçamento." campaignLanding>
+<Layout title="Corrimãos de Parede NBR 9050 para Prédios" description="Corrimão duplo de alumínio para escadarias e corrimão duplo em inox para rampas de acessibilidade. Soluções Alfa Corrimão para prédios e condomínios. Orçamento com o engenheiro Ernani." campaignLanding>
 <div class="landing">
   <section class="lp-top">
     <div class="wrap">
@@ -49,16 +60,17 @@ const nomeServico='Corrimão para escadaria ou rampa';
       <div class="lp-top-grid">
         <div>
           <span class="eyebrow"><span class="red-line"></span> Alfa Corrimão / Escadarias e rampas</span>
-          <h1>Corrimãos de parede para <em>escadarias e rampas.</em></h1>
-          <p class="lp-lead">Corrimão duplo de alumínio para escadarias de prédios e corrimão duplo em inox para rampas de acessibilidade. Atendimento para obras novas, condomínios e readequações, com referência à <strong>ABNT NBR 9050</strong>.</p>
+          <h1>Corrimãos duplos para <em>escadarias e rampas.</em></h1>
+          <p class="lp-hero-nbr">Em conformidade com a ABNT NBR 9050</p>
+          <p class="lp-lead">Corrimão duplo de parede em alumínio para escadarias de prédios e corrimão duplo em inox para rampas de acessibilidade. Duas alturas de apoio, 0,70 m e 0,92 m, em ambos os lados, conforme a norma.</p>
           <div class="lp-actions">
             <a class="button" href="#escadarias">Corrimão para escadaria ↗</a>
             <a class="lp-outline" href="#rampas">Corrimão para rampa ↗</a>
           </div>
-          <p class="lp-muted">Solicite orçamento sem compromisso. Atendimento direto com o engenheiro Ernani: <a class="lp-anchor-link" href={'tel:+55'+site.phone}>{site.phoneLabel}</a>.</p>
-          <div class="lp-facts"><span>Duas alturas de apoio</span><span>Alumínio e inox</span><span>Contrato e proposta por obra</span></div>
+          <p class="lp-muted">Solicite orçamento sem compromisso ou <a class="lp-engineer-cta" href={technicalWhatsapp("Olá, Ernani! Gostaria de tirar dúvidas sobre corrimãos para minha obra.")} target="_blank" rel="noopener noreferrer">fale com o engenheiro Ernani e tire suas dúvidas ↗</a>.</p>
+          <div class="lp-facts"><span>Duas alturas de apoio</span><span>Alumínio e inox</span><span class="lp-promise">Sinal na entrega dos materiais, conforme contrato</span></div>
         </div>
-        <LandingCarousel slides={[escadarias[0],rampas[0],escadarias[1],rampas[1],escadarias[2],rampas[2]]} name="Fotografias de corrimãos da Alfa em escadarias e rampas" intervalMs={3500}/>
+        <LandingCarousel slides={fotosDestaque} name="30 fotografias de corrimãos da Alfa em escadarias e rampas" intervalMs={3000}/>
       </div>
     </div>
   </section>
@@ -66,44 +78,59 @@ const nomeServico='Corrimão para escadaria ou rampa';
     <div class="wrap lp-quicknav-inner">
       <a href="#escadarias">01 / Corrimão duplo de alumínio para escadarias</a>
       <a href="#rampas">02 / Corrimão duplo de inox para rampas</a>
-      <a href={whatsapp()} target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+      <a href={technicalWhatsapp()} target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
       <small>Um só fornecedor para os dois serviços.</small>
     </div>
   </nav>
 
   <section id="normas" class="lp-technical">
     <div class="wrap">
-      <span class="eyebrow">Acessibilidade e segurança</span>
+      <span class="eyebrow">Por que a norma importa</span>
+      <div class="lp-avcb">
+        <div>
+          <h2>O corrimão é item avaliado na <em>vistoria do Corpo de Bombeiros.</em></h2>
+          <p>A NBR 9050 determina que os corrimãos sejam instalados em escadas e rampas em ambos os lados, em duas alturas — 0,92 m e 0,70 m —, independentemente da largura. Um corrimão fora do padrão pode dificultar a vistoria e a regularização do AVCB do edifício.</p>
+        </div>
+        <aside class="lp-avcb-note">
+          <strong>Regularização de escadarias e rampas</strong>
+          <p>A Alfa fornece o corrimão conforme os requisitos aplicáveis, com detalhamento técnico para a obra. A emissão do AVCB é atribuição do órgão competente.</p>
+        </aside>
+      </div>
+      <span class="eyebrow">Requisitos técnicos</span>
       <div class="lp-section-heading">
-        <h2>O corrimão faz parte da <em>adequação do edifício.</em></h2>
-        <p>A NBR 9050 apresenta critérios de projeto e instalação para corrimãos em escadas e rampas. Os detalhes devem ser avaliados de acordo com a edificação e as normas aplicáveis ao projeto. Uma instalação inadequada pode resultar em exigências durante a vistoria.</p>
+        <h2>O que a <em>NBR 9050</em> exige do corrimão.</h2>
+        <p>Os corrimãos são parte das exigências de acessibilidade e segurança verificadas no empreendimento. Veja os requisitos apresentados pelo engenheiro Ernani.</p>
       </div>
-      <div class="lp-card-grid">
-        <article class="lp-card"><b>Duas alturas de apoio</b><p>O documento técnico da Alfa considera corrimãos a 0,70 m e 0,92 m, conforme o contexto de escadas e rampas.</p></article>
-        <article class="lp-card"><b>Continuidade do percurso</b><p>Avaliamos lances, patamares, mudanças de direção e prolongamentos necessários em cada projeto.</p></article>
-        <article class="lp-card"><b>Acabamento e fixação</b><p>Empunhadura, distância da parede, terminações, contraste e sinalização são verificados conforme a aplicação.</p></article>
-      </div>
-      <p class="lp-note">A Alfa fornece e instala corrimãos. A emissão do AVCB depende do processo e das autoridades competentes; a instalação de um único item não garante aprovação da vistoria.</p>
+      <ul class="lp-technical-list">
+        <li><strong>Duas alturas, ambos os lados</strong>0,92 m e 0,70 m, medidos da face superior do corrimão até o bocel ou quina do degrau (item 6.9.3.2).</li>
+        <li><strong>Continuidade</strong>Sem interrupções nos patamares de escadas e rampas (item 6.9.3.3).</li>
+        <li><strong>Prolongamento de 0,30 m</strong>Mínimo de 0,30 m nas extremidades do corrimão (item 6.9.3.2).</li>
+        <li><strong>Empunhadura</strong>Seção circular de 30 mm a 45 mm, ou elíptica de 45 mm por 30 mm, conforme o item 4.6.5.</li>
+        <li><strong>Afastamento da parede</strong>Mínimo de 40 mm entre o corrimão e a parede (item 4.6.5).</li>
+        <li><strong>Extremidades e sinalização</strong>Acabamento sem protuberância e sinalização aplicável, inclusive em Braille (itens 6.9.3.4 e 5.4.3).</li>
+        <li><strong>Corrimão intermediário em escadas largas</strong>Para escadas e rampas com largura igual ou superior a 2,40 m, corrimão intermediário duplo nas duas alturas, preservando a passagem mínima de 1,20 m (item 6.9.3.5).</li>
+      </ul>
+      <p class="lp-note">Referência: ABNT NBR 9050:2020, versão corrigida em 2021. As condições finais são definidas no projeto e no escopo contratado.</p>
     </div>
   </section>
 
-  <section id="escadarias" class="lp-section">
+    <section id="escadarias" class="lp-section">
     <div class="wrap">
       <div class="lp-section-heading">
         <span class="eyebrow">01 / Solução para escadarias</span>
         <h2>Corrimão duplo de <em>alumínio</em> para escadarias de prédios.</h2>
-        <p>Corrimão de parede contínuo para escadas de edifícios residenciais, comerciais e industriais, incluindo escadarias de emergência. Fabricação e instalação de acordo com o escopo e as exigências aplicáveis à obra.</p>
+        <p>Corrimão duplo de parede em alumínio para escadarias de edifícios residenciais, comerciais e industriais, incluindo escadas de incêndio. Leve, resistente à corrosão e de baixa manutenção, atende obras novas e readequações de condomínio.</p>
       </div>
       <div class="lp-product-grid">
         <LandingCarousel slides={escadarias} name="Fotografias reais de corrimãos em escadarias" intervalMs={3500}/>
         <div>
           <span class="eyebrow">Produto / Alumínio</span>
           <p class="lp-lead">Do lance ao patamar, uma solução em duas alturas de apoio, com fixação na parede e traçado adaptado à escadaria.</p>
-          <p>O corrimão duplo não é uma opção reservada apenas a escadas largas: a configuração deve atender aos requisitos normativos e ao projeto. Em escadarias de maior largura, a avaliação também considera a necessidade de corrimão intermediário.</p>
-          <p class="lp-product-bullet">Alumínio, estrutura leve, versatilidade, facilidade de manutenção e agilidade de instalação.</p>
+          <p>Duas alturas de apoio, 0,70 m e 0,92 m, em ambos os lados, independentemente da largura da escadaria. Para escadas a partir de 2,40 m de largura, a referência técnica prevê corrimão intermediário duplo.</p>
+          <p class="lp-product-bullet">Tubo redondo de alumínio de 38,1 mm e acessórios em alumínio. Estrutura leve, versátil e de fácil manutenção.</p>
           <div class="lp-actions">
-            <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento para corrimão duplo de alumínio em escadaria de prédio.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
-            <a class="lp-outline" href={whatsapp('Olá! Gostaria de um orçamento de corrimão duplo de alumínio para escadaria de prédio.')} target="_blank" rel="noopener noreferrer">Conversar no WhatsApp</a>
+            <a class="button" href={technicalWhatsapp("Olá! Gostaria de solicitar um orçamento para corrimão duplo de alumínio em escadaria de prédio.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
+            <a class="lp-outline" href={technicalWhatsapp("Olá, Ernani! Gostaria de esclarecer dúvidas técnicas sobre corrimãos de alumínio em escadarias.")} target="_blank" rel="noopener noreferrer">Fale com o engenheiro ↗</a>
           </div>
         </div>
       </div>
@@ -118,9 +145,16 @@ const nomeServico='Corrimão para escadaria ou rampa';
         </tbody>
       </table>
       <h3 class="lp-section-sub">Cores e acabamentos</h3>
-      <p class="lp-muted">Branco, preto, bronze e tons de cinza informados no levantamento comercial da Alfa. As amostras abaixo são apenas referências visuais; confirmar a cor exata e a disponibilidade na proposta.</p>
+      <p class="lp-muted">Acabamento em pintura eletrostática. Branco, preto, bronze e tons de cinza; a cor final é definida na proposta conforme a obra.</p>
       <div class="lp-colors">{cores.map(c=><div class="lp-color"><i style={'--swatch:'+c.swatch} aria-hidden="true"></i><span>{c.name}</span></div>)}</div>
-      <p class="lp-note">A referência “RAL 7034F” está reproduzida como informada no material original; a codificação e o acabamento deverão ser confirmados com o fornecedor. O contraste com as paredes também deve ser avaliado.</p>
+      <p class="lp-note">O contraste visual entre o corrimão e a parede é considerado na escolha do acabamento, conforme a referência da NBR 9050 para contraste de 30 pontos de LRV.</p>
+      <h3 class="lp-section-sub">Vantagens do corrimão de alumínio</h3>
+      <div class="lp-benefits">
+        <article><strong>Versátil</strong><p>Adapta-se a diferentes traçados, patamares e mudanças de direção.</p></article>
+        <article><strong>Agilidade na instalação</strong><p>A estrutura leve e os acessórios em alumínio facilitam a montagem na obra.</p></article>
+        <article><strong>Estrutura leve</strong><p>Facilidade de manuseio e de fixação durante a instalação.</p></article>
+        <article><strong>Fácil manutenção</strong><p>Alumínio resistente à corrosão, com limpeza simples.</p></article>
+      </div>
     </div>
   </section>
 
@@ -128,26 +162,35 @@ const nomeServico='Corrimão para escadaria ou rampa';
     <div class="wrap">
       <div class="lp-section-heading">
         <span class="eyebrow">02 / Solução para rampas de acessibilidade</span>
-        <h2>Corrimão duplo em <em>inox</em> para rampas de acesso.</h2>
-        <p>Corrimãos de duas alturas para rampas de acesso de pessoas com deficiência ou mobilidade reduzida, em edifícios, condomínios e empreendimentos. O projeto orienta o traçado, as fixações e os detalhes de acabamento.</p>
+        <h2>Corrimão duplo em <em>inox</em> para rampas acessíveis.</h2>
+        <p>Para rampas de acesso a pessoas com deficiência ou mobilidade reduzida em prédios, condomínios, empresas e espaços de uso público. O inox é indicado para rampas expostas ao tempo e à umidade, com acabamento e fixações definidos no projeto.</p>
       </div>
       <div class="lp-product-grid">
         <LandingCarousel slides={rampas} name="Fotografias reais de corrimãos em rampas" intervalMs={3500}/>
         <div>
           <span class="eyebrow">Produto / Inox</span>
-          <p class="lp-lead">Duas alturas de apoio em cada lado, continuidade dos corrimãos e acabamento adequado ao ambiente de instalação.</p>
+          <p class="lp-lead">Duas alturas de apoio em cada lado — 0,70 m e 0,92 m — acompanhando a inclinação da rampa, conforme a NBR 9050.</p>
           <p>A proposta considera o uso em rampa, os acessos, os patamares, as extremidades e as exigências aplicáveis da NBR 9050. A solução em inox complementa o corrimão de alumínio das escadarias.</p>
           <p class="lp-product-bullet">Alumínio para escadarias e inox para rampas: soluções complementares para uma mesma obra.</p>
           <div class="lp-actions">
-            <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento de corrimão duplo de inox para rampa de acessibilidade.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
-            <a class="lp-outline" href={whatsapp('Olá! Gostaria de um orçamento de corrimão duplo de inox para rampa de acessibilidade.')} target="_blank" rel="noopener noreferrer">Conversar no WhatsApp</a>
+            <a class="button" href={technicalWhatsapp("Olá! Gostaria de solicitar um orçamento de corrimão duplo de inox para rampa de acessibilidade.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
+            <a class="lp-outline" href={technicalWhatsapp("Olá, Ernani! Gostaria de tirar dúvidas técnicas sobre corrimãos de inox para rampas.")} target="_blank" rel="noopener noreferrer">Fale com o engenheiro ↗</a>
           </div>
         </div>
       </div>
       <div class="lp-card-grid">
-        <article class="lp-card"><b>Duas alturas em cada lado</b><p>O percurso da rampa exige uma solução que atenda à acessibilidade, com as alturas de apoio previstas no projeto.</p></article>
-        <article class="lp-card"><b>Inox para acessos e áreas externas</b><p>Material proposto para rampas da Alfa. Liga, acabamento e fixações são detalhados na proposta técnica.</p></article>
-        <article class="lp-card"><b>Continuidade e prolongamentos</b><p>O desenho da rampa e seus patamares orientam a continuidade dos corrimãos e o tratamento das extremidades.</p></article>
+        <article class="lp-card"><b>Duas alturas em cada lado</b><p>0,70 m e 0,92 m do piso, acompanhando a inclinação da rampa, nos dois lados do percurso.</p></article>
+        <article class="lp-card"><b>Inox para acessos e áreas externas</b><p>Indicado para rampas expostas ao tempo, à umidade e à lavagem frequente. A liga e o acabamento são definidos na proposta.</p></article>
+        <article class="lp-card"><b>Continuidade e prolongamentos</b><p>Sem interrupções nos patamares, com prolongamento mínimo de 0,30 m nas extremidades e acabamento sem protuberâncias.</p></article>
+      </div>
+      <div class="lp-ramp-check">
+        <h3 class="lp-section-sub">Rampas acessíveis: requisitos da norma</h3>
+        <ul>
+          <li>Corrimão em duas alturas em cada lado, ao longo da rampa (item 6.6.2.6).</li>
+          <li>Continuidade nos patamares (item 6.9.3.3).</li>
+          <li>Prolongamento mínimo de 0,30 m nas extremidades (item 6.9.3.2).</li>
+          <li>Seção circular de 30 mm a 45 mm e afastamento mínimo de 40 mm da parede (item 4.6.5).</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -159,44 +202,62 @@ const nomeServico='Corrimão para escadaria ou rampa';
         <h2>Escadaria e rampa <em>no mesmo projeto.</em></h2>
       </div>
       <div>
-        <p>O cliente que precisa adequar a escadaria também pode precisar de corrimãos para a rampa de acesso. A Alfa reúne as duas soluções, em alumínio e inox, em uma única conversa sobre a obra.</p>
-        <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento para escadaria e rampa do mesmo empreendimento.")} target="_blank" rel="noopener noreferrer">Apresentar os dois serviços ↗</a>
+        <p>Quem precisa de corrimão para a escadaria muitas vezes também precisa de corrimãos para a rampa de acesso. A Alfa fabrica os dois — alumínio para escadarias e inox para rampas — com um único fornecedor e menos interfaces na obra.</p>
+        <a class="button" href={technicalWhatsapp("Olá! Gostaria de solicitar um orçamento para escadaria e rampa do mesmo empreendimento.")} target="_blank" rel="noopener noreferrer">Apresentar os dois serviços ↗</a>
       </div>
     </div>
   </section>
 
-  <section class="lp-feature">
+  <ClientMarquee />
+
+  <section class="lp-about" id="sobre-a-alfa" aria-labelledby="lp-about-title">
+    <div class="wrap lp-about-grid">
+      <div>
+        <span class="eyebrow">A empresa por trás da sua obra</span>
+        <h2 id="lp-about-title">Alfa Corrimão.<br/><em>Desde 2012.</em></h2>
+        <p class="lp-about-city">São Bernardo do Campo – SP</p>
+      </div>
+      <div>
+        <p>Desde 2012, a Alfa Corrimão reúne a experiência de uma família que cresceu trabalhando com construção e fabricação. Com sede própria, estrutura de produção e equipes de instalação, atende construtoras, edifícios e condomínios.</p>
+        <p>A Alfa fabrica corrimãos duplos de parede em alumínio para escadarias e corrimãos duplos em inox para rampas. O engenheiro Ernani atende diretamente as dúvidas técnicas e os pedidos de orçamento desta página.</p>
+        <div class="lp-about-actions"><a class="lp-about-link" href="/quem-somos/">Conheça nossa história e estrutura ↗</a><a class="lp-about-link" href="/obras-realizadas/">Veja obras realizadas ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-feature" id="contratacao">
     <div class="wrap">
       <div class="lp-feature-grid">
         <div>
-          <span class="eyebrow">Transparência comercial</span>
-          <h2>Como funciona <em>a contratação.</em></h2>
+          <span class="eyebrow">Condição comercial</span>
+          <h2>O primeiro pagamento acontece <em>na entrega dos materiais.</em></h2>
         </div>
         <div>
-          <p>O contrato define o escopo, os prazos e os marcos de pagamento. Conforme o processo descrito pela Alfa, não há cobrança no ato da assinatura do contrato. O sinal e o saldo seguem as condições acordadas para cada obra.</p>
-          <p class="lp-note">A data de entrega dos materiais, eventual armazenagem e outras condições operacionais são tratadas na proposta e no contrato, não como promessa genérica nesta página.</p>
+          <p class="lp-payment-intro">A Alfa trabalha com contrato assinado e marcos de pagamento definidos. O primeiro valor é faturado na etapa de entrega dos materiais, com nota fiscal; o saldo é faturado após a instalação e conferência.</p>
+          <p>As condições específicas são formalizadas na proposta e no contrato de cada obra.</p>
         </div>
       </div>
       <div class="lp-steps">
-        <article class="lp-step"><span class="lp-number">01 / Contratação</span><b>Contrato assinado</b><p>Escopo, material, prazo e condições de pagamento definidos por escrito.</p></article>
-        <article class="lp-step"><span class="lp-number">02 / Preparação</span><b>Material reservado</b><p>A Alfa organiza a compra e a preparação dos materiais da obra contratada.</p></article>
-        <article class="lp-step"><span class="lp-number">03 / Faturamento</span><b>Material e sinal</b><p>O sinal é vinculado ao marco de entrega ou disponibilização acordado em contrato.</p></article>
-        <article class="lp-step"><span class="lp-number">04 / Execução</span><b>Instalação concluída</b><p>O saldo segue as condições de conclusão e conferência combinadas com o cliente.</p></article>
+        <article class="lp-step"><span class="lp-number">01 / Contratação</span><b>Contrato assinado</b><p>Escopo, prazo, material e condições definidos por escrito. A Alfa inicia a compra dos materiais.</p></article>
+        <article class="lp-step"><span class="lp-number">02 / Entrega</span><b>Material recebido na obra</b><p>O sinal é faturado no marco de entrega dos materiais, com nota fiscal, conforme o contrato.</p></article>
+        <article class="lp-step"><span class="lp-number">03 / Instalação</span><b>Execução da obra</b><p>Com o local liberado, a instalação é executada conforme o escopo contratado.</p></article>
+        <article class="lp-step"><span class="lp-number">04 / Conclusão</span><b>Instalação concluída</b><p>O saldo é faturado após a conclusão e a conferência da instalação.</p></article>
       </div>
+      <a class="button lp-payment-cta" href={technicalWhatsapp("Olá! Gostaria de solicitar orçamento e conhecer as condições de contratação para minha obra.")} target="_blank" rel="noopener noreferrer">Solicitar orçamento ↗</a>
     </div>
   </section>
 
-  <section class="lp-section" id="atendimento">
+    <section class="lp-section" id="atendimento">
     <div class="wrap">
       <div class="lp-section-heading">
         <span class="eyebrow">Construtoras e condomínios</span>
-        <h2>Do planejamento à <em>readequação.</em></h2>
-        <p>Atendemos demandas de obras novas, condomínios e contratação por etapas. Você pode apresentar um produto ou as duas soluções juntas.</p>
+        <h2>Do planejamento à <em>readequação do condomínio.</em></h2>
+        <p>Atendemos construtoras, incorporadoras e administradoras de condomínios em São Paulo e região. Você pode solicitar os dois serviços no mesmo orçamento.</p>
       </div>
       <div class="lp-card-grid">
-        <article class="lp-card"><b>01 / Obra nova</b><p>Informe a cidade, a etapa da obra, as torres ou blocos e as informações disponíveis sobre a escadaria e a rampa.</p></article>
-        <article class="lp-card"><b>02 / Condomínio</b><p>Apresente as necessidades de readequação e o prazo previsto para liberação do local.</p></article>
-        <article class="lp-card"><b>03 / Atendimento comercial</b><p>Converse diretamente pelo WhatsApp da Alfa e envie fotos e medidas do empreendimento, se disponíveis.</p></article>
+        <article class="lp-card"><b>01 / Obra nova</b><p>Construtoras e incorporadoras podem apresentar projeto, etapa da obra, pavimentos e quantidade de torres para elaboração da proposta.</p></article>
+        <article class="lp-card"><b>02 / Readequação</b><p>Condomínios podem apresentar a escadaria existente, o que precisa ser revisto e fotos ou medidas disponíveis.</p></article>
+        <article class="lp-card"><b>03 / Fale com o engenheiro</b><p>Tire todas as suas dúvidas diretamente com o engenheiro Ernani, sem intermediário e sem compromisso. Se preferir, envie as fotos e medidas primeiro.</p><a class="lp-engineer-cta" href={technicalWhatsapp("Olá, Ernani! Gostaria de conversar sobre os corrimãos de uma obra.")} target="_blank" rel="noopener noreferrer">Tirar dúvidas com Ernani ↗</a></article>
       </div>
     </div>
   </section>
@@ -206,7 +267,7 @@ const nomeServico='Corrimão para escadaria ou rampa';
       <form class="quote-form" data-quote-form data-wa={'55'+site.phone}>
         <span class="eyebrow">Orçamento / Sem compromisso</span>
         <h2>Apresente sua escadaria ou rampa.</h2>
-        <p>Se preferir preencher os detalhes, esta opção prepara uma mensagem para enviar ao WhatsApp comercial. Você também pode conversar diretamente, sem formulário.</p>
+        <p>O formulário prepara uma mensagem para o WhatsApp do engenheiro Ernani. Você confere e envia pelo aplicativo. Se preferir, fale diretamente, sem formulário.</p>
         <div class="form-grid">
           <label>Seu nome <span aria-hidden="true">*</span><input name="nome" autocomplete="name" required maxlength="100"/></label>
           <label>WhatsApp ou telefone <span aria-hidden="true">*</span><input name="telefone" type="tel" autocomplete="tel" required pattern="[0-9()+ .-]{10,20}" title="Informe um telefone com DDD." maxlength="20"/></label>
@@ -222,23 +283,38 @@ const nomeServico='Corrimão para escadaria ou rampa';
               <option>Escadaria e rampa no mesmo projeto</option>
             </select>
           </label>
-          <label class="full">Sobre a sua obra<textarea name="mensagem" rows="4" maxlength="2000" placeholder="Etapa da obra, fotos ou medidas disponíveis, necessidade e prazo estimado."></textarea></label>
+          <label>Etapa da obra<select name="etapa">
+            <option value="">Selecione se souber</option>
+            <option>Estudo ou orçamento</option>
+            <option>Projeto</option>
+            <option>Obra em execução</option>
+            <option>Edifício em uso / readequação</option>
+          </select></label>
+          <label>Perfil do empreendimento<select name="perfil">
+            <option value="">Selecione</option>
+            <option>Condomínio</option>
+            <option>Construtora / incorporadora</option>
+            <option>Empresa</option>
+            <option>Residência</option>
+            <option>Outro</option>
+          </select></label>
+          <label class="full">Sobre a sua obra<textarea name="mensagem" rows="4" maxlength="2000" placeholder="Medidas disponíveis, necessidade, prazos e outras informações."></textarea></label>
         </div>
         <p class="form-note">* Campos obrigatórios. Os dados são colocados somente na mensagem do WhatsApp, para sua conferência e envio. Consulte a <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
         <button class="button" type="submit">Continuar no WhatsApp ↗</button>
         <p role="status" aria-live="polite" data-form-status></p>
-        <noscript><p>Para utilizar o formulário, ative o JavaScript ou <a href={whatsapp()}>acesse diretamente o WhatsApp</a>.</p></noscript>
+        <noscript><p>Para utilizar o formulário, ative o JavaScript ou <a href={technicalWhatsapp()}>acesse diretamente o WhatsApp</a>.</p></noscript>
       </form>
       <aside class="contact-card">
-        <span class="eyebrow">Atendimento comercial / WhatsApp</span>
-        <h2>Fale diretamente com a Alfa.</h2>
-        <p>Peça orçamento e apresente o projeto pelo WhatsApp, sem necessidade de preencher formulário.</p>
-        <a class="contact-phone" href={whatsapp()} target="_blank" rel="noopener noreferrer">{site.phoneLabel}</a>
-        <a class="button" href={whatsapp("Olá! Gostaria de solicitar um orçamento de corrimão para meu empreendimento.")} target="_blank" rel="noopener noreferrer">Abrir WhatsApp ↗</a>
+        <span class="eyebrow">Contato direto / Engenheiro Ernani</span>
+        <h2>Peça seu orçamento.</h2>
+        <p>Prefere falar agora? Tire suas dúvidas diretamente com o engenheiro Ernani. Você pode enviar fotos, medidas aproximadas, planta ou memorial — o que tiver disponível.</p>
+        <a class="contact-phone" href={technicalWhatsapp()} target="_blank" rel="noopener noreferrer">{site.phoneLabel}</a>
+        <a class="button" href={technicalWhatsapp("Olá! Gostaria de solicitar um orçamento de corrimão para meu empreendimento.")} target="_blank" rel="noopener noreferrer">Abrir WhatsApp ↗</a>
         <hr/>
         <p>Telefone: <a href={'tel:'+site.landlineHref}>{site.landline}</a></p>
         <p><a href={'mailto:'+site.email}>{site.email}</a></p>
-        <p class="lp-note">O envio do formulário depende da confirmação no seu aplicativo WhatsApp.</p>
+        <p class="lp-note">Quer conversar direto? <a class="lp-engineer-cta" href={technicalWhatsapp("Olá, Ernani! Quero tirar dúvidas técnicas sobre corrimãos.")} target="_blank" rel="noopener noreferrer">Fale com o engenheiro Ernani ↗</a></p><p class="lp-note">O envio do formulário depende da confirmação no seu aplicativo WhatsApp.</p>
       </aside>
     </div>
   </section>

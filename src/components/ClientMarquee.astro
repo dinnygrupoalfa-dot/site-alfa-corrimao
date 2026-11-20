@@ -1,0 +1,36 @@
+---
+/* Apenas clientes reais informados pela Alfa. Sem depoimentos ou endossos atribuídos. */
+interface Props {compact?:boolean;}
+const {compact=false}=Astro.props;
+const clientes = [
+ {nome:'Instituto Neymar Júnior',arquivo:'instituto-neymar-jr.webp',tema:'light'},
+ {nome:'PGC Engenharia',arquivo:'pgc-engenharia.webp',tema:'light'},
+ {nome:'Quali Engenharia',arquivo:'quali-engenharia.webp',tema:'light'},
+ {nome:'Árbore Engenharia',arquivo:'arbore.webp',tema:'light'},
+ {nome:'Construtora Phoenix',arquivo:'phoenix.webp',tema:'light'},
+ {nome:'Construtora Costa Hirota',arquivo:'costa-hirota.webp',tema:'light'},
+ {nome:'Soccer Grass',arquivo:'soccer-grass.webp',tema:'dark'},
+ {nome:'Grupo Mendes Engenharia',arquivo:'grupo-mendes.webp',tema:'dark'},
+ {nome:'Construtora Terracon',arquivo:'terracon.webp',tema:'dark'}
+];
+---
+<section id={compact?undefined:'clientes'} class:list={['lp-clients',{'home-clients-marquee':compact}]} aria-labelledby={compact?undefined:'lp-clients-title'} aria-label={compact?'Logotipos de alguns clientes da Alfa Corrimão':undefined}>
+  {!compact&&<div class="wrap lp-clients-head">
+    <span class="eyebrow">Alguns de nossos clientes</span>
+    <h2 id="lp-clients-title">Quem já confiou na <em>Alfa Corrimão.</em></h2>
+    <p>Empresas e instituições atendidas pela Alfa Corrimão.</p>
+  </div>}
+  <div class="lp-clients-mask" aria-label="Logotipos de clientes da Alfa Corrimão">
+    <div class="lp-clients-track" data-clients-track>
+      {[0,1].map(copia =>
+        <div class="lp-clients-group" aria-hidden={copia===1?'true':undefined}>
+          {clientes.map(cliente =>
+            <div class={'lp-client-logo '+cliente.tema}>
+              <img src={'/images/clientes/'+cliente.arquivo} alt={cliente.nome} width="600" height="220" loading="lazy" decoding="async"/>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+</section>

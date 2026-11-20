@@ -10,7 +10,11 @@
     "check": "astro check",
     "test": "node --test tests/*.test.mjs",
     "test:site": "node scripts/check-built.mjs",
-    "images:optimize": "node scripts/optimize-images.mjs"
+    "images:optimize": "node scripts/optimize-images.mjs",
+    "predev": "node scripts/prepare-landing-logos.mjs",
+    "prebuild": "node scripts/prepare-landing-logos.mjs",
+    "precheck": "node scripts/prepare-landing-logos.mjs",
+    "pretest": "node scripts/prepare-landing-logos.mjs"
   },
   "dependencies": {
     "astro": "7.4.12"
