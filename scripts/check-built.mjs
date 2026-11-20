@@ -4,13 +4,13 @@ import assert from 'node:assert/strict';
 const root=resolve('dist');
 async function walk(dir){const files=[];for(const item of await readdir(dir,{withFileTypes:true})){const p=join(dir,item.name);if(item.isDirectory())files.push(...await walk(p));else files.push(p);}return files;}
 const htmlFiles=(await walk(root)).filter(p=>p.endsWith('.html'));
-assert.equal(htmlFiles.length,16,'As 16 páginas devem existir, incluindo landing de anúncios e galeria do Píer de Cubatão.');
+assert.equal(htmlFiles.length,20,'As 20 páginas devem existir, incluindo landing de anúncios e galeria do Píer de Cubatão.');
 let checked=0;
 for(const file of htmlFiles){
  const html=await readFile(file,'utf8');
  assert.equal((html.match(/<h1[\s>]/g)||[]).length,1,file+': H1 único');
  assert.match(html,/<html lang="pt-BR"/);
- assert.match(html,/<meta name="robots" content="noindex, nofollow"/);
+ assert.match(html,/<meta name="robots" content="index, follow"/);
  assert.doesNotMatch(html,/\[X\]|depoimento|Inox 304|20 anos|pagamento\s+(?:do\s+)?sinal\s+(?:na\s+assinatura|antecipado)|pagamento após/i);
  for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g)){
   const raw=match[1];if(/^(?:https?:|mailto:|tel:|data:)/.test(raw))continue;
@@ -65,4 +65,4 @@ const pier=await readFile(join(root,'obras-realizadas','pier-de-cubatao','index.
 const pierIds=new Set([...pier.matchAll(/data-image-id="(ACF-\d{3})"/g)].map(m=>m[1]).filter(id=>Number(id.slice(4))>=115&&Number(id.slice(4))<=164));
 assert.equal(pierIds.size,46,'O álbum do Píer deve exibir todas as 46 fotos diferentes.');
 for(const id of ['ACF-126','ACF-127','ACF-128','ACF-129']) assert.ok((await readFile(join(root,'obras-realizadas','index.html'),'utf8')).includes('data-image-id="'+id+'"') || (await readFile(join(root,'corrimaos','aluminio-escadarias','index.html'),'utf8')).includes('data-image-id="'+id+'"') || (await readFile(join(root,'guarda-corpos','index.html'),'utf8')).includes('data-image-id="'+id+'"'),id+' deve constar nas páginas correspondentes');
-console.log('OK: 16 páginas, '+checked+' links/arquivos locais, imagens, âncoras, H1, fotografias na home e quatro carrosséis de produto, 46 do Píer e links entre produtos.');
+console.log('OK: 20 páginas, '+checked+' links/arquivos locais, imagens, âncoras, H1, fotografias na home e quatro carrosséis de produto, 46 do Píer e links entre produtos.');
