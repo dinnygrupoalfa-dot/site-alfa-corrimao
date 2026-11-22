@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Alfa Corrimão">
+  <style>
+    .outer{fill:#ffffff}.inner{fill:#ee171e}
+    @media(prefers-color-scheme:light){.outer{fill:#ed171e}.inner{fill:#ffffff}}
+  </style>
+  <rect width="128" height="128" rx="19" fill="#08090a"/>
+  <path class="outer" d="M15 105 52 27h24l37 78H94L64 48l-30 57Z"/>
+  <path class="inner" d="M42 105 57 72h21l20 33H80L70 87H65l-9 18Z"/>
+</svg>
